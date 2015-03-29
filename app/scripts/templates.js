@@ -1,0 +1,1 @@
+angular.module("portfolio").run(["$templateCache", function($templateCache) {$templateCache.put("scripts/view/base.html","<h1>Hello World!</h1>");}]);
