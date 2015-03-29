@@ -1,0 +1,7 @@
+{
+  "name": "dh",
+  "private": true,
+  "devDependencies": {
+    "jasmine": "~2.2.1"
+  }
+}
