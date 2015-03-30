@@ -15,7 +15,7 @@
 }
 
 .menu-icon {
-	@include img-replace("icon/menu.svg", 38px, 20px, inline-block);	
+	@include img-replace("icon/menu.svg", 32px, 20px, inline-block);	
 }
 
 .search-icon {
@@ -31,6 +31,6 @@
 }
 
 .caret-icon {
-	@include img-replace("icon/caret.svg", 20px, 11px, inline-block);
+	@include img-replace("icon/caret.svg", 18px, 13px, inline-block);
 }
 
