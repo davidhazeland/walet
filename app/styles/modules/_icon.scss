@@ -1,0 +1,24 @@
+.logo {
+	@include img-replace("walet.svg", 84px, 28px, inline-block);
+}
+
+.close-icon {
+	@include img-replace("icon/close.svg", 25px, 25px, inline-block);
+}
+
+.tick-icon {
+	@include img-replace("icon/tick.svg", 25px, 18px, inline-block);
+}
+
+.menu-icon {
+	@include img-replace("icon/menu.svg", 38px, 20px, inline-block);	
+}
+
+.search-icon {
+	@include img-replace("icon/search.svg", 25px, 25px, inline-block);
+}
+
+.add-icon {
+	@include img-replace("icon/add.svg", 25px, 25px, inline-block);
+}
+
