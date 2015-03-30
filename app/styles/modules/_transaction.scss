@@ -1,0 +1,25 @@
+.transaction {
+	margin-top: 10px;
+	&__item {
+		border-bottom: 1px solid #ccc;
+		&:last-child {
+			border-bottom: none;
+		}
+		a {
+			display: block;
+			padding: 7px 0;
+			.name {
+				color: $dark-gray--tint;
+			}
+
+			.tag,
+			.date {
+				color: $medium-gray--shade;
+			}
+
+			.value {
+				color: $grass--shade;
+			}
+		}
+	}
+}

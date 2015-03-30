@@ -1,0 +1,15 @@
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.group {
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

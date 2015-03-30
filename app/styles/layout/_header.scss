@@ -2,6 +2,9 @@ header {
 	height: 56px;
 	background: $blue-jeans--shade;
 	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
 	.logo {
 		margin-top: 14px;
 		margin-left: -10px;
