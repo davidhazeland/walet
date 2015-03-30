@@ -1,0 +1,17 @@
+header {
+	height: 56px;
+	background: $blue-jeans--shade;
+	text-align: center;
+	.logo {
+		margin-top: 14px;
+		margin-left: -10px;
+	}
+	.menu-icon {
+		float: left;
+		margin-top: 18px;
+	}
+	.add-icon {
+		float: right;
+		margin-top: 15px;
+	}
+}
