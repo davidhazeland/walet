@@ -1,3 +1,5 @@
 #feature {
-	transform: translate(80%, 0);
+	position: relative;
+	z-index: 2;
+	transition: transform 0.3s;
 }

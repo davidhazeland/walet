@@ -3,7 +3,7 @@
 /* global define */
 
 define([
-
+	'./header'
 	], 
 function(){
 	

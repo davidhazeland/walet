@@ -1,0 +1,11 @@
+#feature {
+	&.collapsed {
+		transform: translate(80%, 0);
+	}
+}
+
+#menu {
+	&.collapsed {
+		//visibility: collapse;
+	}
+}

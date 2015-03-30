@@ -1,4 +1,4 @@
-<div id="menu">
+<div id="menu" class="collapsed">
 	<section id="account">
 		<div class="container">
 			<img src="images/avatar.jpg" class="ava"/>
@@ -33,10 +33,10 @@
 	<p class="copyright">Copyright 2015 by <span>David Hazeland</span></p>
 </div>
 <div id="feature">
-	<header>
+	<header ng-controller="HeaderCtrl">
 		<div class="container">
 			<a href="#" class="logo"></a>
-			<i class="menu-icon"></i>
+			<i class="menu-icon" ng-click="toggleMenu()"></i>
 			<i class="add-icon"></i>
 		</div>	
 	</header>
