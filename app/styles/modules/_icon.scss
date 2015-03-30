@@ -6,6 +6,10 @@
 	@include img-replace("icon/close.svg", 25px, 25px, inline-block);
 }
 
+.cancel-icon {
+	@include img-replace("icon/cancel.svg", 16px, 16px, inline-block);
+}
+
 .tick-icon {
 	@include img-replace("icon/tick.svg", 25px, 18px, inline-block);
 }
@@ -15,7 +19,7 @@
 }
 
 .search-icon {
-	@include img-replace("icon/search.svg", 25px, 25px, inline-block);
+	@include img-replace("icon/search.svg", 16px, 16px, inline-block);
 }
 
 .add-icon {

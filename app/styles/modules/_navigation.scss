@@ -1,0 +1,14 @@
+.navigation {
+	&__item {
+		//font-family: $font-family--secondary;
+		//font-weight: $font-weight--bold;
+		padding: 0 5%;
+		line-height: em(32px, 16px);
+		&:active {
+			background: lighten($black, 10%);
+		}
+		&--current {
+			background: $black;
+		}
+	}
+}

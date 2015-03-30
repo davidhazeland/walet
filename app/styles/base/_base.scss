@@ -11,6 +11,11 @@
    user-select: none;
 }
 
+html,
+body {
+	height: 100%;
+}
+
 body {
 	color: $dark-gray--shade;
 	font-size: em($base__font-size);
