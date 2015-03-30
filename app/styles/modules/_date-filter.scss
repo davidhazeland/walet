@@ -1,0 +1,13 @@
+.date-filter {
+	&__icon {
+		margin-top: 10px;
+		margin-right: 5px;
+		vertical-align: sub;
+	}
+	&__selection {
+		color: $dark-gray--tint;
+	}
+	&__caret {
+		margin-left: 3px;
+	}
+}

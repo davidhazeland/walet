@@ -22,3 +22,11 @@
 	@include img-replace("icon/add.svg", 25px, 25px, inline-block);
 }
 
+.calendar-icon {
+	@include img-replace("icon/calendar.svg", 23px, 21px, inline-block);
+}
+
+.caret-icon {
+	@include img-replace("icon/caret.svg", 20px, 11px, inline-block);
+}
+
