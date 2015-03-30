@@ -1,1 +1,1 @@
-angular.module("portfolio").run(["$templateCache", function($templateCache) {$templateCache.put("scripts/view/base.html","<h1>Hello World!</h1>");}]);
+angular.module("portfolio").run(["$templateCache", function($templateCache) {$templateCache.put("scripts/view/base.html","<header>\r\n	<div class=\"container\">\r\n		<a href=\"#\" class=\"logo\"></a>\r\n		<span class=\"menu-icon\"></span>\r\n		<span class=\"add-icon\"></span>\r\n	</div>	\r\n</header>");}]);
