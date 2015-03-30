@@ -18,9 +18,9 @@ body {
 
 body {
 	color: $dark-gray--shade;
+	font-family: $font-family--primary;
 	font-size: em($base__font-size);
 	line-height: em($base__line-height, $base__font-size)
-
 }
 
 ul {
