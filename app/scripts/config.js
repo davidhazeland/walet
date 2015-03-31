@@ -16,9 +16,10 @@ require.config({
         }
     },
     paths: {
+        spec: '../../spec',
         angular: '../../bower_components/angular/angular.min',
         angularMock: '../../bower_components/angular-mocks/angular-mocks',
         jquery: '../../bower_components/jquery/dist/jquery.min',
-        spec: '../../spec'
+        chartjs: '../../bower_components/chartjs/Chart.min'
     }
 });

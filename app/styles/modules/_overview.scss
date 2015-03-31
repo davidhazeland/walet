@@ -1,0 +1,21 @@
+.overview {
+	&__item {
+		.net-worth-value {
+			color: $grass--shade;
+		}	
+
+		.expense-value {
+			color: $grapefruit--shade;
+		}	
+
+		.income-value {
+			color: $grass--shade;
+		}
+		&--current {
+			span:first-child {
+				font-weight: $font-weight--bold;
+			}
+		}
+	}
+	
+}

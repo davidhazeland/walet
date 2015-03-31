@@ -41,12 +41,15 @@
 		</div>	
 	</header>
 	<section id="content">
-		<div class="container">
+		<div class="container hidden">
 			<div class="date-filter">
 				<span class="date-filter__icon calendar-icon"></span>
 				<span class="date-filter__selection">This Month</span>
 				<span class="date-filter__caret caret-icon"></span>
 			</div>
+			<span class="total">
+				130769$
+			</span>
 			<ul class="transaction">
 				<li class="transaction__item">
 					<a href="#">
@@ -182,5 +185,34 @@
 				</li>
 			</ul>
 		</div>
+		<div class="container">
+			<div class="date-filter">
+				<span class="date-filter__icon calendar-icon"></span>
+				<span class="date-filter__selection">This Month</span>
+				<span class="date-filter__caret caret-icon"></span>
+			</div>
+			<div class="overview">
+				<p class="overview__item group">
+					<span class="net-worth fl">Net Worth</span>
+					<span class="net-worth-value fr">$1369</span>
+				</p>
+				<p class="overview__item overview__item--current group">
+					<span class="expense fl">Expense</span>
+					<span class="expense-value fr">$700</span>
+				</p>
+				<p class="overview__item group">
+					<span class="income fl">Income</span>
+					<span class="income-value fr">$2144</span>
+				</p>
+			</div>
+			<div class="chart" ng-controller="ChartCtrl">
+				<canvas id="expense"></canvas>
+				<h4>Compare Expense vs Income</h4>
+				<canvas id="compare"></canvas>
+			</div>
+		</div>
 	</section>
+</div>
+<div id="popup">
+	
 </div>

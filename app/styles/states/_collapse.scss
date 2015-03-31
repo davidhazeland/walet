@@ -6,6 +6,10 @@
 
 #menu {
 	&.collapsed {
-		//visibility: collapse;
+		visibility: collapse;
 	}
+}
+
+.hidden {
+	display: none;
 }

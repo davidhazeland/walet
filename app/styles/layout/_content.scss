@@ -1,4 +1,9 @@
 #content {
 	//margin-top: 56px;
 	background-color: $white;
+	.total {
+		float: right;
+		margin-top: 15px;
+		color: $grass--shade;
+	}
 }
