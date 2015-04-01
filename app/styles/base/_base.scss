@@ -38,3 +38,20 @@ a {
 input {
 	outline: none;
 }
+
+
+::-webkit-input-placeholder {
+   color: $medium-gray--shade;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $medium-gray--shade;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $medium-gray--shade;  
+}
+
+:-ms-input-placeholder {  
+   color: $medium-gray--shade;  
+}

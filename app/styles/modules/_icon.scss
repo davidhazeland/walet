@@ -34,3 +34,6 @@
 	@include img-replace("icon/caret.svg", 18px, 13px, inline-block);
 }
 
+.caret-white-icon {
+	@include img-replace("icon/caret-white.svg", 18px, 13px, inline-block);
+}
