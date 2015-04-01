@@ -3,7 +3,7 @@
 }
 
 .close-icon {
-	@include img-replace("icon/close.svg", 25px, 25px, inline-block);
+	@include img-replace("icon/close.svg", 18px, 18px, inline-block);
 }
 
 .cancel-icon {
@@ -11,7 +11,7 @@
 }
 
 .tick-icon {
-	@include img-replace("icon/tick.svg", 25px, 18px, inline-block);
+	@include img-replace("icon/tick.svg", 22px, 16px, inline-block);
 }
 
 .menu-icon {
