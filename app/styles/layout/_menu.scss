@@ -3,17 +3,28 @@
 	top: 0;
 	z-index: 1;
 	height: 100%;
-	width: 80%;
+	width: 250px;
 	background: $dark-gray--shade;
-	color: $white;
+	@include mq(large) {
+		position: fixed;
+		float: left;
+		width: 170px;
+		display: block;
+		z-index: 2;
+	}
 	.copyright {
 		position: absolute;
 		bottom: 0px;
 		left: 5%;
+		color: $white;
 		font-size: em(13px);
 		//margin: 10px 0;
 		span {
 			font-weight: $font-weight--bold;
 		}
+	}
+	.account {
+		position: absolute;
+		bottom: 15px;
 	}
 }

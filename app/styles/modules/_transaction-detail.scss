@@ -4,6 +4,11 @@
 	left: 5%;
 	width: 90%;
 	background: $white;
+	@include mq(large){
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+	}
 	&__title {
 		margin: 0;
 		padding: 10px 15px;

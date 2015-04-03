@@ -1,6 +1,6 @@
 #feature {
 	&.collapsed {
-		transform: translate(80%, 0);
+		transform: translate(250px, 0);
 	}
 }
 
@@ -12,4 +12,22 @@
 
 .hidden {
 	display: none;
+}
+
+.is-expanded-desktop {
+	@include mq(small) {
+		display: none;
+	}
+	@include mq(medium) {
+		display: none;
+	}
+	@include mq(large) {
+		display: initial;
+	}
+}
+
+.is-collapsed-desktop {
+	@include mq(large) {
+		display: none;
+	}
 }

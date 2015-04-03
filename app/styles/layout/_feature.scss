@@ -1,5 +1,14 @@
 #feature {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	transition: transform 0.3s;
+	@include mq(large) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding-left: 170px;
+		box-sizing: border-box;
+	}
 }

@@ -4,11 +4,16 @@
 	left: 5%;
 	width: 90%;
 	background: $white;
+	@include mq(large){
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+	}
 	&__title {
 		margin: 0;
 		padding: 10px 15px;
 		color: $white;
-		background: $primary-color;
+		background: $accent-color;
 		font-size: em(14px);
 		i {
 			margin-top: 3px;
@@ -22,7 +27,7 @@
 			}
 			&--current {
 				color: $white;
-				background: $accent-color;
+				background: $primary-color;
 			}
 			a {
 				display: block;

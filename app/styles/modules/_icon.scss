@@ -37,3 +37,27 @@
 .caret-white-icon {
 	@include img-replace("icon/caret-white.svg", 18px, 13px, inline-block);
 }
+
+.income-icon {
+	@include img-replace("icon/income.svg", 22px, 25px, inline-block);
+}
+
+.expense-icon {
+	@include img-replace("icon/expense.svg", 22px, 25px, inline-block);
+}
+
+.dashboard-icon {
+	@include img-replace("icon/dashboard.svg", 22px, 20px, inline-block);
+}
+
+.contact-icon {
+	@include img-replace("icon/contact.svg", 22px, 24px, inline-block);
+}
+
+.sign-out-icon {
+	@include img-replace("icon/sign-out.svg", 22px, 22px, inline-block);
+}
+
+.add-circle-icon {
+	@include img-replace("icon/add-circle.svg", 26px, 26px, inline-block);
+}

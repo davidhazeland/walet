@@ -8,21 +8,22 @@ define(['app', 'chartjs', 'jquery'], function(app, Chart, $) {
 	function drawExpenseChart() {
 		var expense = document.getElementById('expense'),
 			ctx = expense.getContext('2d');
-		var data = [{
-			value: 300,
-			color: "#F7464A",
-			highlight: "#FF5A5E",
-			label: "Red"
-		}, {
-			value: 50,
-			color: "#46BFBD",
-			highlight: "#5AD3D1",
-			label: "Green"
-		}, {
-			value: 100,
+		var data = [
+		{
+			value: 200,
 			color: "#FDB45C",
 			highlight: "#FFC870",
 			label: "Yellow"
+		},{
+			value: 80,
+			color: "#967adc",
+			highlight: "#FF5A5E",
+			label: "Violet"
+		}, {
+			value: 70,
+			color: "#46BFBD",
+			highlight: "#5AD3D1",
+			label: "Green"
 		}];
 
 		var expenseChart = new Chartjs(ctx).Doughnut(data, {
@@ -40,28 +41,30 @@ define(['app', 'chartjs', 'jquery'], function(app, Chart, $) {
 		var data = {
 			labels: ["", "February", "March", "April", "May", "June", "July"],
 			datasets: [{
-				label: "My First dataset",
-				fillColor: "rgba(220,220,220,0.2)",
-				strokeColor: "rgba(220,220,220,1)",
-				pointColor: "rgba(220,220,220,1)",
+				label: "Income",
+				fillColor: "rgba(160,212,104,0.2)",
+				strokeColor: "rgba(160,212,104,1)",
+				pointColor: "rgba(160,212,104,1)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(220,220,220,1)",
+				pointHighlightStroke: "rgba(160,212,104,1)",
 				data: [65, 59, 80, 81, 56, 55, 40]
 			}, {
-				label: "My Second dataset",
-				fillColor: "rgba(151,187,205,0.2)",
-				strokeColor: "rgba(151,187,205,1)",
-				pointColor: "rgba(151,187,205,1)",
+				label: "Expense",
+				fillColor: "rgba(237, 85 , 101, 0.2)",
+				strokeColor: "rgba(237, 85 , 101, 0.8)",
+				pointColor: "rgba(237, 85 , 101, 1)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(151,187,205,1)",
+				pointHighlightStroke: "rgba(237, 85 , 101, 1)",
 				data: [28, 48, 40, 19, 86, 27, 90]
 			}]
 		};
 
 		var compareChart = new Chartjs(ctx).Line(data, {
-			animation: false
+			animation: false,
+			bezierCurve : false,
+			pointDot : false
 		});
 	}
 

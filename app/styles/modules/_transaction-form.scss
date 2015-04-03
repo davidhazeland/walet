@@ -38,8 +38,60 @@
 		margin: 20px 5%;
 		width: 90%;
 		border: none;
-		padding: 10px 5% 10px 5%;
+		padding: 10px 0;
 		color: white;
 		background: $accent-color;
+		outline: none;
+		&:active {
+			background: darken($accent-color, 3%) !important;
+		}	
+	}
+
+	@include mq(large) {
+		padding-bottom: 5px;
+		&__description,
+		&__tag,
+		&__date {
+			padding-left: 15px;
+		}
+		&__tag,
+		&__date,
+		&__amount {
+			padding-right: 15px;
+		}
+		&__save {
+			width: 165px;
+			float: right;
+			margin: 15px;
+			&:hover {
+				background: lighten($accent-color, 3%);
+			}	
+		}
+		&__repeat {
+			margin-top: 25px;
+			margin-left: 15px;
+			float: left;
+			input {
+				display: none;
+			}
+			label {
+				span {
+					padding-left: 24px;
+					font-size: em(14px);
+					position: absolute;
+					top: -3px;
+				}
+			}
+		}
+		&__type {
+			margin-top: 25px;
+			margin-left: 15px;
+			float: left;
+			label {
+				input {
+					vertical-align: middle;
+				}
+			}
+		}
 	}
 }

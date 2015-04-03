@@ -6,9 +6,10 @@
 		vertical-align: sub;
 	}
 	&__selection {
-		color: $dark-gray--tint;
+		color: $primary-color;
 	}
 	&__caret {
 		margin-left: 3px;
 	}
+	cursor: pointer;
 }
