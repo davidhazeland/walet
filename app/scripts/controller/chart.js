@@ -1,3 +1,9 @@
+/* 
+* @Author: ThanhCong
+* @Date:   2015-03-31 16:38:50
+* @Last Modified by:   ThanhCong
+* @Last Modified time: 2015-04-04 17:39:28
+*/
 'use strict';
 
 /* global define */

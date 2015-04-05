@@ -2,8 +2,14 @@
 
 /* global require, jasmine */
 
-require(['spec/test'], 
-function() {
+require([
+	'jquery',
+	'spec/core/index',
+	'spec/behavior/index'
+	], 
+function($) {
     // Run all the loaded test specs.
-    jasmine.getEnv().execute();
+    $(document).ready(function(){
+    	jasmine.getEnv().execute();
+    });
 });

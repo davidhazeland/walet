@@ -155,7 +155,9 @@ gulp.task('test', function() {
 
   // watch for changes
   gulp.watch([
+    'app/**/*.html',
     'test/**/*.html',
+    'app/**/*.js',
     'test/spec/**/*.js'
   ]).on('change', reload);
 
