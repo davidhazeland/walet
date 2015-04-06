@@ -7,5 +7,8 @@ define(['core/observer'], function(observer) {
 		it('subscribe() should be defined', function() {
 			expect(observer.subscribe).toBeDefined();
 		});
+		it('publish() should be defined', function() {
+			expect(observer.publish).toBeDefined();
+		});
 	});
 });

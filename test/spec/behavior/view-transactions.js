@@ -2,37 +2,103 @@
 
 /* global define, describe, it, expect */
 
-define(['angularMock', 'controller/transaction-list'], function() {
-	describe('View Transaction', function() {
-		var scope,
-			controller;
+define([
+		'angularMock',
+		'commandBus',
+		'core/observer',
+		'controller/transaction-list',
+		'controller/transaction-detail',
+		'handler/view-transaction',
+		'service/transactions',
+		'service/transaction-RESTful'
+	],
+	function(
+		angularMock,
+		CommandBus,
+		Observer,
+		TransactionListCtrl,
+		TransactionDetailCtrl,
+		ViewTransactionHandler,
+		Transactions,
+		TransactionRESTful) {
+		describe('In Transaction List View', function() {
+			var transListScope,
+				transDetailScope,
+				transListCtrl,
+				transDetailCtrl;
 
-		beforeEach(module('portfolio'));
+			beforeEach(module('portfolio'));
 
-		beforeEach(inject(function(_$controller_) {
-			scope = {};
-			controller = _$controller_('TransactionListCtrl', {
-				$scope: scope
-			});
-		}));
+			//////////////////////////////////
+			// Inject angular controller //
+			//////////////////////////////////
+			beforeEach(inject(function(_$controller_) {
+				transListScope = {};
+				transDetailScope = {};
+				transListCtrl = _$controller_('TransactionListCtrl', {
+					$scope: transListScope
+				});
+				transDetailCtrl = _$controller_('TransactionDetailCtrl', {
+					$scope: transDetailScope
+				});
+			}));
 
-		describe('Initialize TransactionListCtrl', function() {
-			it('scope should be defined', function() {
-				expect(scope).toBeDefined();
-			});
-			it('handleItemClick() should be defined', function() {
-				expect(scope.handleItemClick).toBeDefined();
-			});
-		});
+			describe('When a transaction item clicked', function() {
+				/**
+				 * Transaction model sample
+				 * @type {Object}
+				 */
+				var data = {
+					name: 'Lorem Ipsum',
+					amount: 100,
+					tag: 'lr',
+					date: '13/7/2015'
+				}
 
-		describe('When item clicked', function() {
-			beforeEach(function() {
-				spyOn(scope, 'handleItemClick');
-				scope.handleItemClick();
-			});
-			it('handleItemClick() should be called', function() {
-				expect(scope.handleItemClick).toHaveBeenCalled();
+				//////////////////////
+				// spy function //
+				//////////////////////
+				beforeEach(function() {
+					spyOn(transListScope, 'handleItemClick').and.callThrough();
+					spyOn(CommandBus, 'execute').and.callThrough();
+					spyOn(ViewTransactionHandler, 'handle').and.callThrough();
+
+					spyOn(Transactions, 'getById').and.callThrough();
+					spyOn(TransactionRESTful, 'get').and.callFake(function() {
+						return data;
+					});
+					spyOn(Observer, 'publish').and.callThrough();
+					spyOn(transDetailCtrl, 'render').and.callThrough();
+				});
+
+				beforeEach(function() {
+					transListScope.handleItemClick();
+				});
+
+				it('handleItemClick() should be called', function() {
+					expect(transListScope.handleItemClick).toHaveBeenCalled();
+				});
+				it('then execute() in CommandBus should be called with ViewTransaction command', function() {
+					expect(CommandBus.execute).toHaveBeenCalled();
+					expect(CommandBus.execute).toHaveBeenCalledWith('ViewTransaction', jasmine.any(Object));
+				});
+				it('and ViewTransactionHandler should be handled command', function() {
+					expect(ViewTransactionHandler.handle).toHaveBeenCalled();
+					expect(ViewTransactionHandler.handle).toHaveBeenCalledWith(jasmine.any(Object));
+				});
+				it('then should be called getById() in Transactions service', function() {
+					expect(Transactions.getById).toHaveBeenCalled();
+				});
+				it('and TransactionRESTful get() should be called', function() {
+					expect(TransactionRESTful.get).toHaveBeenCalled();
+				});
+				it('then Observer should be publish RenderTransactionDetail message', function() {
+					expect(Observer.publish).toHaveBeenCalled();
+					expect(Observer.publish).toHaveBeenCalledWith('RenderTransactionDetail', data);
+				});
+				it('and TransactionDetail should be called render()', function() {
+					expect(transDetailCtrl.render).toHaveBeenCalled();
+				});
 			});
 		});
 	});
-});
