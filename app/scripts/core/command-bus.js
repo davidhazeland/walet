@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 09:52:48
+* @Last Modified time: 2015-04-08 13:43:42
 */
 
 'use strict';
@@ -11,10 +11,14 @@
 
 define([
 	'handler/fetch-transaction',
-	'handler/view-transaction'
+	'handler/view-transaction',
+	'handler/edit-transaction',
+	'handler/save-transaction'
 	], function(
 		FetchTransactionHandler,
-		ViewTransactionHandler
+		ViewTransactionHandler,
+		EditTransactionHandler,
+		SaveTransactionHandler
 		){
 		var ComandBus = function(){
 
@@ -23,7 +27,9 @@ define([
 		ComandBus.prototype = {
 			maps: {
 				'FetchTransaction': FetchTransactionHandler,
-				'ViewTransaction': ViewTransactionHandler
+				'ViewTransaction': ViewTransactionHandler,
+				'EditTransaction': EditTransactionHandler,
+				'SaveTransaction': SaveTransactionHandler
 			},
 
 			execute: function(command, data){
@@ -32,11 +38,11 @@ define([
 
 			resolveHander : function (command) {
 				var handler = this.maps[command];
-				if (!handler) return this.ErrorHandler(command);
+				if (!handler) return this.handleError(command);
 				return handler;
 			},
 
-			ErrorHandler : function(command){
+			handleError : function(command){
 				return {
 					handle: function(data){
 						console.log('Not found handler for ' + command + ' command');

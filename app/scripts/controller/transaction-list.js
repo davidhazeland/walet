@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-04 17:33:45
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 11:24:39
+* @Last Modified time: 2015-04-08 13:48:34
 */
 
 'use strict';
@@ -16,6 +16,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 		Observer.subscribe('RenderTransactions', function(data) {
 			this.render(data);
 		}, this);
+		Observer.subscribe('TransactionSaved', function(data) {
+			this.refresh(data);
+		}, this);
 	};
 
 	Controller.prototype = {
@@ -26,6 +29,10 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 		},
 
 		render : function(data) {
+
+		},
+
+		refresh : function() {
 
 		},
 

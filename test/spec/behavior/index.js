@@ -4,6 +4,8 @@
 
 define([
 	'./fetch-transaction',
-	'./view-transaction'
+	'./view-transaction',
+	'./edit-transaction',
+	'./save-transaction'
 	], function() {
 });

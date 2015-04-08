@@ -19,7 +19,7 @@ define([
 		TransactionDetailCtrl,
 		ViewTransactionHandler,
 		Transactions) {
-		describe('In Transaction List View', function() {
+		describe('Give a Transaction list view', function() {
 			var transListScope,
 				transDetailScope,
 				transListCtrl,
