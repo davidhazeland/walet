@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 21:02:18
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 21:17:50
+* @Last Modified time: 2015-04-08 21:20:57
 */
 
 'use strict';
@@ -27,7 +27,7 @@ define([
 	TransactionFilter
 ) {
 	describe('Give a Filter picker and Transaction list', function() {
-		var filterPickerctrl,
+		var filterPickerCtrl,
 			filterPickerscope,
 			transListScope,
 			transListCtrl;
@@ -40,7 +40,7 @@ define([
 		beforeEach(inject(function(_$controller_) {
 			filterPickerscope = {};
 			transListScope = {};
-			filterPickerctrl = _$controller_('FilterPickerCtrl', {
+			filterPickerCtrl = _$controller_('FilterPickerCtrl', {
 				$scope: filterPickerscope
 			});
 			transListCtrl = _$controller_('TransactionListCtrl', {
@@ -59,6 +59,7 @@ define([
 				spyOn(FilterTransactionHandler, 'handle').and.callThrough();
 				spyOn(TransactionFilter, 'update').and.callThrough();
 				spyOn(Observer, 'publish').and.callThrough();
+				spyOn(filterPickerCtrl, 'collapse').and.callThrough();
 				spyOn(transListCtrl, 'load').and.callThrough();
 			});
 
@@ -85,6 +86,10 @@ define([
 			it('then Observer should be published LoadTransaction message', function() {
 				expect(Observer.publish).toHaveBeenCalled();
 				expect(Observer.publish).toHaveBeenCalledWith('LoadTransactions');
+			});
+
+			it('then FilterPickerCtrl collapse() should be called', function() {
+				expect(filterPickerCtrl.collapse).toHaveBeenCalled();
 			});
 
 			it('then TransactionListCtrl load() should be called', function() {
