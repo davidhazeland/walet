@@ -4,7 +4,6 @@
 
 require([
 	'jquery',
-	'spec/core/index',
 	'spec/behavior/index'
 	], 
 function($) {

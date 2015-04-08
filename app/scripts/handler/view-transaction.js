@@ -2,14 +2,14 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:59:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-06 13:57:51
+* @Last Modified time: 2015-04-08 09:27:42
 */
 
 'use strict';
 
 /* global define */
 
-define(['core/observer', 'service/transactions'], function(observer, Transactions){
+define(['observer', 'service/transactions'], function(observer, Transactions){
 	var handler = function(){
 
 	}

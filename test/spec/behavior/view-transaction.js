@@ -5,7 +5,7 @@
 define([
 		'angularMock',
 		'commandBus',
-		'core/observer',
+		'observer',
 		'controller/transaction-list',
 		'controller/transaction-detail',
 		'handler/view-transaction',

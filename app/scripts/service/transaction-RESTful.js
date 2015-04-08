@@ -2,13 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 10:32:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-06 13:25:39
-*/
-/* 
-* @Author: ThanhCong
-* @Date:   2015-04-06 10:32:15
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-06 10:32:15
+* @Last Modified time: 2015-04-08 08:55:30
 */
 
 'use strict';
