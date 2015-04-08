@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 09:19:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-08 15:30:06
+ * @Last Modified time: 2015-04-08 16:18:38
  */
 
 'use strict';
@@ -24,7 +24,7 @@ define([
 	FetchTransactionHandler,
 	Transactions
 ) {
-	describe('Bootstrap a transaction list', function() {
+	describe('Give a Transaction list', function() {
 		var transListScope,
 			transListCtrl;
 
@@ -40,52 +40,41 @@ define([
 			});
 		}));
 
-		var data = [{
-			name: 'lr'
-		}, {
-			name: 'ip'
-		}]
 
-		beforeEach(function() {
-			spyOn(transListCtrl, 'initialize').and.callThrough();
-			spyOn(CommandBus, 'execute').and.callThrough();
-			spyOn(FetchTransactionHandler, 'handle').and.callThrough();
-			spyOn(Transactions, 'getIncome').and.callFake(function(callback) {
-				callback(data);
-			});
-			spyOn(Transactions, 'getExpense').and.callFake(function(callback) {
-				callback(data);
-			});
-			spyOn(Observer, 'publish').and.callThrough();
-			spyOn(transListCtrl, 'render');
-		});
 
-		describe('If it was Income', function() {
+		describe('When load() called', function() {
+			var data = [{
+				name: 'lr'
+			}, {
+				name: 'ip'
+			}]
+
 			beforeEach(function() {
-				transListCtrl.initialize('Income');
+				spyOn(transListCtrl, 'load').and.callThrough();
+				spyOn(CommandBus, 'execute').and.callThrough();
+				spyOn(FetchTransactionHandler, 'handle').and.callThrough();
+				spyOn(Transactions, 'fetch').and.callFake(function(callback) {
+					callback(data);
+				});
+				spyOn(Observer, 'publish').and.callThrough();
+				spyOn(transListCtrl, 'render');
 			});
 
-			it('constructor() should be called with Income param', function() {
-				expect(transListCtrl.initialize).toHaveBeenCalled();
-				expect(transListCtrl.initialize).toHaveBeenCalledWith('Income');
+			beforeEach(function() {
+				transListCtrl.load();
 			});
 
 			it('then execute() in CommandBus should beforeEach called with FetchTransaction command and Income type', function() {
 				expect(CommandBus.execute).toHaveBeenCalled();
-				expect(CommandBus.execute).toHaveBeenCalledWith('FetchTransaction', jasmine.objectContaining({
-					type: 'Income'
-				}));
+				expect(CommandBus.execute).toHaveBeenCalledWith('FetchTransaction', jasmine.any(Object));
 			});
 
-			it('then FetchTransactionHandler should be handled command with "Income" type', function() {
+			it('then FetchTransactionHandler should be handled command', function() {
 				expect(FetchTransactionHandler.handle).toHaveBeenCalled();
-				expect(FetchTransactionHandler.handle).toHaveBeenCalledWith(jasmine.objectContaining({
-					type: 'Income'
-				}));
 			});
 
-			it('then getIncome() in Transactions service should be called', function() {
-				expect(Transactions.getIncome).toHaveBeenCalled();
+			it('then fetch() in Transactions service should be called', function() {
+				expect(Transactions.fetch).toHaveBeenCalled();
 			});
 
 			it('then Observer should be pushlish RenderTransactions message', function() {
@@ -97,45 +86,7 @@ define([
 				expect(transListCtrl.render).toHaveBeenCalled();
 				expect(transListCtrl.render).toHaveBeenCalledWith(data);
 			});
+			
 		});
-
-describe('Else if it was Expense', function() {
-	beforeEach(function() {
-				transListCtrl.initialize('Expense');
-			});
-
-			it('constructor() should be called with Expense param', function() {
-				expect(transListCtrl.initialize).toHaveBeenCalled();
-				expect(transListCtrl.initialize).toHaveBeenCalledWith('Expense');
-			});
-
-			it('then execute() in CommandBus should beforeEach called with FetchTransaction command and Expense type', function() {
-				expect(CommandBus.execute).toHaveBeenCalled();
-				expect(CommandBus.execute).toHaveBeenCalledWith('FetchTransaction', jasmine.objectContaining({
-					type: 'Expense'
-				}));
-			});
-
-			it('then FetchTransactionHandler should be handled command with "Expense" type', function() {
-				expect(FetchTransactionHandler.handle).toHaveBeenCalled();
-				expect(FetchTransactionHandler.handle).toHaveBeenCalledWith(jasmine.objectContaining({
-					type: 'Expense'
-				}));
-			});
-
-			it('then getExpense() in Transactions service should be called', function() {
-				expect(Transactions.getExpense).toHaveBeenCalled();
-			});
-
-			it('then Observer should be pushlish RenderTransactions message', function() {
-				expect(Observer.publish).toHaveBeenCalled();
-				expect(Observer.publish).toHaveBeenCalledWith('RenderTransactions', data);
-			});
-
-			it('then TransactionListCtrl should be rendered list', function() {
-				expect(transListCtrl.render).toHaveBeenCalled();
-				expect(transListCtrl.render).toHaveBeenCalledWith(data);
-			});
-});
 	});
 });

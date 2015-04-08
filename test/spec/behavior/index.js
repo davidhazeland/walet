@@ -3,6 +3,6 @@
 /* global define */
 
 define([
-	'./fetch-transaction'
+	'./search-transaction'
 	], function() {
 });

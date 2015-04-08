@@ -2,14 +2,14 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:59:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 09:27:42
+* @Last Modified time: 2015-04-08 16:40:28
 */
 
 'use strict';
 
 /* global define */
 
-define(['observer', 'service/transactions'], function(observer, Transactions){
+define(['observer', 'service/transactions'], function(Observer, Transactions){
 	var handler = function(){
 
 	}
@@ -17,7 +17,7 @@ define(['observer', 'service/transactions'], function(observer, Transactions){
 	handler.prototype = {
 		handle : function(data){
 			var transaction = Transactions.getById(data.id);
-			observer.publish('RenderTransactionDetail', transaction);
+			Observer.publish('RenderTransactionDetail', transaction);
 		}
 	};
 

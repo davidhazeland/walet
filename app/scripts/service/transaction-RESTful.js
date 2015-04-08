@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 10:32:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 08:55:30
+* @Last Modified time: 2015-04-08 16:06:26
 */
 
 'use strict';
@@ -15,8 +15,8 @@ define([], function(){
 	}
 
 	Service.prototype = {
-		get: function(id){
-			return id;
+		get: function(query, callback){
+			callback();
 		}
 	};
 

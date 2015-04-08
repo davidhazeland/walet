@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 13:43:42
+* @Last Modified time: 2015-04-08 16:37:41
 */
 
 'use strict';
@@ -13,12 +13,14 @@ define([
 	'handler/fetch-transaction',
 	'handler/view-transaction',
 	'handler/edit-transaction',
-	'handler/save-transaction'
+	'handler/save-transaction',
+	'handler/search-transaction'
 	], function(
 		FetchTransactionHandler,
 		ViewTransactionHandler,
 		EditTransactionHandler,
-		SaveTransactionHandler
+		SaveTransactionHandler,
+		SearchTransactionHandler
 		){
 		var ComandBus = function(){
 
@@ -29,7 +31,8 @@ define([
 				'FetchTransaction': FetchTransactionHandler,
 				'ViewTransaction': ViewTransactionHandler,
 				'EditTransaction': EditTransactionHandler,
-				'SaveTransaction': SaveTransactionHandler
+				'SaveTransaction': SaveTransactionHandler,
+				'SearchTransaction': SearchTransactionHandler
 			},
 
 			execute: function(command, data){

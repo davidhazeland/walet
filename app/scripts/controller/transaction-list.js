@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-04 17:33:45
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 13:48:34
+* @Last Modified time: 2015-04-08 16:41:03
 */
 
 'use strict';
@@ -13,6 +13,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 	var Controller = function($scope) {
 		$scope.handleItemClick = this.handleItemClick;
 
+		Observer.subscribe('LoadTransactions', function(data) {
+			this.load();
+		}, this);
 		Observer.subscribe('RenderTransactions', function(data) {
 			this.render(data);
 		}, this);
@@ -22,10 +25,8 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 	};
 
 	Controller.prototype = {
-		initialize : function (type){
-			CommandBus.execute('FetchTransaction', {
-				type: type
-			});
+		load : function (){
+			CommandBus.execute('FetchTransaction', {});
 		},
 
 		render : function(data) {
