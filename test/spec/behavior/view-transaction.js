@@ -9,8 +9,7 @@ define([
 		'controller/transaction-list',
 		'controller/transaction-detail',
 		'handler/view-transaction',
-		'service/transactions',
-		'service/transaction-RESTful'
+		'service/transactions'
 	],
 	function(
 		angularMock,
@@ -19,8 +18,7 @@ define([
 		TransactionListCtrl,
 		TransactionDetailCtrl,
 		ViewTransactionHandler,
-		Transactions,
-		TransactionRESTful) {
+		Transactions) {
 		describe('In Transaction List View', function() {
 			var transListScope,
 				transDetailScope,
@@ -62,9 +60,7 @@ define([
 					spyOn(transListScope, 'handleItemClick').and.callThrough();
 					spyOn(CommandBus, 'execute').and.callThrough();
 					spyOn(ViewTransactionHandler, 'handle').and.callThrough();
-
-					spyOn(Transactions, 'getById').and.callThrough();
-					spyOn(TransactionRESTful, 'get').and.callFake(function() {
+					spyOn(Transactions, 'getById').and.callFake(function() {
 						return data;
 					});
 					spyOn(Observer, 'publish').and.callThrough();
@@ -82,21 +78,18 @@ define([
 					expect(CommandBus.execute).toHaveBeenCalled();
 					expect(CommandBus.execute).toHaveBeenCalledWith('ViewTransaction', jasmine.any(Object));
 				});
-				it('and ViewTransactionHandler should be handled command', function() {
+				it('then ViewTransactionHandler should be handled command', function() {
 					expect(ViewTransactionHandler.handle).toHaveBeenCalled();
 					expect(ViewTransactionHandler.handle).toHaveBeenCalledWith(jasmine.any(Object));
 				});
 				it('then should be called getById() in Transactions service', function() {
 					expect(Transactions.getById).toHaveBeenCalled();
 				});
-				it('and TransactionRESTful get() should be called', function() {
-					expect(TransactionRESTful.get).toHaveBeenCalled();
-				});
 				it('then Observer should be publish RenderTransactionDetail message', function() {
 					expect(Observer.publish).toHaveBeenCalled();
 					expect(Observer.publish).toHaveBeenCalledWith('RenderTransactionDetail', data);
 				});
-				it('and TransactionDetail should be called render()', function() {
+				it('then TransactionDetail should be called render()', function() {
 					expect(transDetailCtrl.render).toHaveBeenCalled();
 				});
 			});
