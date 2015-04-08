@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 13:42:08
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 13:44:49
+* @Last Modified time: 2015-04-08 15:23:29
 */
 
 'use strict';
@@ -15,7 +15,11 @@ define(['service/transaction-RESTful'], function(TransactionRESTful) {
 	};
 
 	Service.prototype = {
-		save: function(callback) {
+		add: function(data, callback) {
+			callback();
+		},
+
+		save: function(data, callback) {
 			callback();
 		}
 	};

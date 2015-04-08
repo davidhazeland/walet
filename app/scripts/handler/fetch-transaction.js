@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 09:51:08
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 11:31:57
+* @Last Modified time: 2015-04-08 15:30:23
 */
 
 'use strict';
@@ -17,11 +17,11 @@ define(['observer', 'service/transactions'], function(observer, Transactions){
 	handler.prototype = {
 		handle : function(data){
 			switch (data.type) {
-				case 'expense' : {
+				case 'Expense' : {
 					Transactions.getExpense(this.getTransactionsCallback);
 					break;
 				}
-				case 'income' : {
+				case 'Income' : {
 					Transactions.getIncome(this.getTransactionsCallback);
 					break;
 				}
