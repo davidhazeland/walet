@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 11:03:27
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 11:04:48
+* @Last Modified time: 2015-04-09 20:09:28
 */
 
 'use strict';
@@ -49,9 +49,11 @@ define([
 					spyOn(Dashboard, 'getCompareData').and.callFake(function(callback) {
 						callback();
 					});
-					spyOn(Chart, 'drawCompareChart').and.callThrough();
+					spyOn(Chart, 'drawCompareChart').and.callFake(function(){
+						
+					});
 					spyOn(Observer, 'publish').and.callThrough();
-					spyOn(compareDashboardCtrl, 'render').and.callThrough();
+					spyOn(compareDashboardScopeardCtrl, 'render').and.callThrough();
 				});
 
 				beforeEach(function() {

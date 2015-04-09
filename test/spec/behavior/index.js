@@ -3,6 +3,6 @@
 /* global define */
 
 define([
-	'./compare-dashboard'
+	'./tag-dashboard'
 	], function() {
 });

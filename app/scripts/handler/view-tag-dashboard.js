@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 10:53:12
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 11:01:38
+* @Last Modified time: 2015-04-09 20:12:03
 */
 
 'use strict';
@@ -19,8 +19,8 @@ define(['observer', 'service/dashboard', 'service/chart'], function(Observer, Da
 			Dashboard.getTagData(this.getTagDataCallback);
 		},
 
-		getTagDataCallback: function(){
-			Chart.drawTagChart();
+		getTagDataCallback: function(data){
+			Chart.drawTagChart(data);
 			Observer.publish('TagDashboardDrew', {});
 		}
 	};

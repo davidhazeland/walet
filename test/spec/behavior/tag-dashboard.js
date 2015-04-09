@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-09 10:33:40
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-09 11:02:06
+ * @Last Modified time: 2015-04-09 18:24:02
  */
 
 'use strict';
@@ -49,7 +49,9 @@ define([
 					spyOn(Dashboard, 'getTagData').and.callFake(function(callback) {
 						callback();
 					});
-					spyOn(Chart, 'drawTagChart').and.callThrough();
+					spyOn(Chart, 'drawTagChart').and.callThrough().and.callFake(function(){
+						
+					});
 					spyOn(Observer, 'publish').and.callThrough();
 					spyOn(tagDashboardCtrl, 'render').and.callThrough();
 				});

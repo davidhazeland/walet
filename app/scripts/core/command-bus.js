@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 10:57:24
+* @Last Modified time: 2015-04-09 13:07:02
 */
 
 'use strict';
@@ -31,11 +31,7 @@ define([
 		ViewCompareDashboardHandler
 		){
 		var ComandBus = function(){
-
-		};
-
-		ComandBus.prototype = {
-			maps: {
+			this.maps = {
 				'FetchTransaction': FetchTransactionHandler,
 				'ViewTransaction': ViewTransactionHandler,
 				'EditTransaction': EditTransactionHandler,
@@ -45,13 +41,15 @@ define([
 				'DeleteTransaction': DeleteTransactionHandler,
 				'ViewTagDashboard': ViewTagDashboardHandler,
 				'ViewCompareDashboard': ViewCompareDashboardHandler
-			},
+			}
+		};
 
+		ComandBus.prototype = {
 			execute: function(command, data){
-				this.resolveHander(command).handle(data);
+				this.resolveHandler(command).handle(data);
 			},
 
-			resolveHander : function (command) {
+			resolveHandler : function (command) {
 				var handler = this.maps[command];
 				if (!handler) return this.handleError(command);
 				return handler;

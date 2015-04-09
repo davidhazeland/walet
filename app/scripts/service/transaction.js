@@ -2,14 +2,14 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 13:42:08
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 10:21:00
+* @Last Modified time: 2015-04-09 16:55:23
 */
 
 'use strict';
 
 /* global define */
 
-define(['service/transaction-RESTful'], function(TransactionRESTful) {
+define(['./transaction-RESTful'], function(TransactionRESTful) {
 	var Service = function() {
 
 	};

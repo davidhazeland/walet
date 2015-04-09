@@ -1,26 +1,44 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-09 10:54:01
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 11:05:56
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-09 10:54:01
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-09 18:20:55
+ */
 
 'use strict';
 
 /* global define */
 
-define(['service/transaction-RESTful'], function(TransactionRESTful) {
+define(['chartjs'], function(Chart) {
 	var Service = function() {
-
+		
 	};
 
 	Service.prototype = {
-		drawTagChart: function(data) {
+		drawTagChart: function(data, canvas) {
+			var ctx = canvas.getContext('2d');
 
+			var expenseChart = new Chart(ctx).Doughnut(data, {
+				animation: false
+			});
+
+			var legend = expenseChart.generateLegend();
+
+			return legend;
 		},
 
-		drawCompareChart: function(data) {
-		
+		drawCompareChart: function(data, canvas) {
+			var ctx = canvas.getContext('2d');
+
+			var compareChart = new Chart(ctx).Line(data, {
+				animation: false,
+				bezierCurve: false,
+				pointDot: false
+			});
+
+			var legend = compareChart.generateLegend();
+
+			return legend;
 		}
 	};
 
