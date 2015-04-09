@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 10:17:56
+* @Last Modified time: 2015-04-09 10:57:24
 */
 
 'use strict';
@@ -16,7 +16,9 @@ define([
 	'handler/save-transaction',
 	'handler/search-transaction',
 	'handler/filter-transaction',
-	'handler/delete-transaction'
+	'handler/delete-transaction',
+	'handler/view-tag-dashboard',
+	'handler/view-compare-dashboard'
 	], function(
 		FetchTransactionHandler,
 		ViewTransactionHandler,
@@ -24,7 +26,9 @@ define([
 		SaveTransactionHandler,
 		SearchTransactionHandler,
 		FilterTransactionHandler,
-		DeleteTransactionHandler
+		DeleteTransactionHandler,
+		ViewTagDashboardHandler,
+		ViewCompareDashboardHandler
 		){
 		var ComandBus = function(){
 
@@ -38,7 +42,9 @@ define([
 				'SaveTransaction': SaveTransactionHandler,
 				'SearchTransaction': SearchTransactionHandler,
 				'FilterTransaction': FilterTransactionHandler,
-				'DeleteTransaction': DeleteTransactionHandler
+				'DeleteTransaction': DeleteTransactionHandler,
+				'ViewTagDashboard': ViewTagDashboardHandler,
+				'ViewCompareDashboard': ViewCompareDashboardHandler
 			},
 
 			execute: function(command, data){

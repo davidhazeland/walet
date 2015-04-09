@@ -3,6 +3,6 @@
 /* global define */
 
 define([
-	'./delete-transaction'
+	'./compare-dashboard'
 	], function() {
 });
