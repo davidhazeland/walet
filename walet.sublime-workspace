@@ -500,10 +500,10 @@
 	],
 	"file_history":
 	[
+		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
+		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
 		"/E/GitHub/walet/app/scripts/core/command-bus.js",
-		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/index.js",
 		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
@@ -645,6 +645,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"filterPickerctrl",
 			"SearchTransaction",
 			"Search",
 			"SearchTransactionHandler",
@@ -771,8 +772,7 @@
 			"location",
 			"cd-content",
 			".cd-timeline-content",
-			"#cd-timeline",
-			"footer"
+			"#cd-timeline"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -780,6 +780,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"filterPickerCtrl",
 			"FilterTransactionHandler",
 			"Picker",
 			"filterPickerScope",

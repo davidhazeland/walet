@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-04 17:33:45
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 16:41:03
+* @Last Modified time: 2015-04-09 10:22:41
 */
 
 'use strict';
@@ -20,6 +20,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 			this.render(data);
 		}, this);
 		Observer.subscribe('TransactionSaved', function(data) {
+			this.refresh(data);
+		}, this);
+		Observer.subscribe('TransactionDeleted', function(data) {
 			this.refresh(data);
 		}, this);
 	};
