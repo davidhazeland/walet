@@ -1,0 +1,97 @@
+.transaction-form {
+	input {
+		background: $light-gray--tint;
+		box-sizing: border-box;
+	}
+
+	&__description {
+		width: 70%;
+		padding: 12px 12px 12px 5%;
+		border: none;
+		border-right: 1px solid $medium-gray--tint;
+		border-bottom: 1px solid $medium-gray--tint;
+	}
+
+	&__amount {
+		width: 30%;
+		border: none;
+		border-bottom: 1px solid $medium-gray--tint;
+		padding: 12px 5% 12px 12px;
+		text-align: right;
+	}
+
+	&__tag {
+		width: 100%;
+		border: none;
+		padding: 10px 5% 10px 5%;
+		border-bottom: 1px solid $medium-gray--tint;
+	}
+
+	&__date {
+		width: 100%;
+		border: none;
+		padding: 10px 5% 10px 5%;
+		border-bottom: 1px solid $medium-gray--tint;
+	}
+
+	&__save {
+		margin: 20px 5%;
+		width: 90%;
+		border: none;
+		padding: 10px 0;
+		color: white;
+		background: $accent-color;
+		outline: none;
+		&:active {
+			background: darken($accent-color, 3%) !important;
+		}	
+	}
+
+	@include mq(large) {
+		padding-bottom: 5px;
+		&__description,
+		&__tag,
+		&__date {
+			padding-left: 15px;
+		}
+		&__tag,
+		&__date,
+		&__amount {
+			padding-right: 15px;
+		}
+		&__save {
+			width: 165px;
+			float: right;
+			margin: 15px;
+			&:hover {
+				background: lighten($accent-color, 3%);
+			}	
+		}
+		&__repeat {
+			margin-top: 25px;
+			margin-left: 15px;
+			float: left;
+			input {
+				display: none;
+			}
+			label {
+				span {
+					padding-left: 24px;
+					font-size: em(14px);
+					position: absolute;
+					top: -3px;
+				}
+			}
+		}
+		&__type {
+			margin-top: 25px;
+			margin-left: 15px;
+			float: left;
+			label {
+				input {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

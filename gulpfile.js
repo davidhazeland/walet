@@ -120,6 +120,7 @@ gulp.task('serve', ['styles', 'fonts', 'templates'], function() {
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {
+        '/data': 'data',
         '/bower_components': 'bower_components'
       }
     }
@@ -147,6 +148,7 @@ gulp.task('test', function() {
     server: {
       baseDir: ['.tmp_test', 'test'],
       routes: {
+        '/data': 'data',
         '/bower_components': 'bower_components',
         '/scripts': 'app/scripts'
       }
@@ -155,7 +157,9 @@ gulp.task('test', function() {
 
   // watch for changes
   gulp.watch([
+    'app/**/*.html',
     'test/**/*.html',
+    'app/**/*.js',
     'test/spec/**/*.js'
   ]).on('change', reload);
 

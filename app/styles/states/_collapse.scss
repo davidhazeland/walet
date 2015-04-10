@@ -1,0 +1,33 @@
+#feature {
+	&.collapsed {
+		transform: translate(250px, 0);
+	}
+}
+
+#menu {
+	&.collapsed {
+		visibility: collapse;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.is-expanded-desktop {
+	@include mq(small) {
+		display: none;
+	}
+	@include mq(medium) {
+		display: none;
+	}
+	@include mq(large) {
+		display: initial;
+	}
+}
+
+.is-collapsed-desktop {
+	@include mq(large) {
+		display: none;
+	}
+}

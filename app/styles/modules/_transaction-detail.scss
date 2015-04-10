@@ -1,0 +1,58 @@
+.transaction-detail {
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	width: 90%;
+	background: $white;
+	@include mq(large){
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+	}
+	&__title {
+		margin: 0;
+		padding: 10px 15px;
+		color: $white;
+		background: $primary-color;
+		font-size: em(14px);
+		i {
+			margin-top: 3px;
+		}
+	}
+	.transaction-detail-content {
+		&__item {
+			padding: 10px 15px;
+			border-bottom: 1px solid $light-gray--shade;
+			&:last-child {
+				border-bottom: none;
+			}
+			.title {
+				width: 60px;
+				display: inline-block;
+				text-align: right;
+				margin-right: 10px;
+				color: $medium-gray--shade;
+				font-size: em(14px);
+				font-style: italic;
+			}
+			.value {
+				
+			}
+		}
+
+	}
+	button {
+		width: 50%;
+		border: none;
+		padding: 8px 0;
+		color: $white;
+	}
+
+	&__edit {
+		background: $accent-color;
+	}
+
+	&__delete {
+		background: $bittersweet--shade;
+	}
+}

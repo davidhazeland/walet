@@ -1,0 +1,139 @@
+.transaction {
+	width: 100%;
+	margin-top: 15px;
+	thead {
+		display: none;
+		tr {
+			border-bottom: 2px solid $medium-gray--tint;
+			th {
+				font-size: em(14px);
+				text-transform: uppercase;
+				border-bottom: 1px solid $medium-gray--tint;
+				padding: 10px 0;
+				&.name {
+					text-align: left;
+					padding-left: 5px;
+				}
+				&.amount,
+				&.tag {
+					text-align: center;
+				}
+				&.date {
+					text-align: right;
+					padding-right: 5px;
+				}
+			}
+		}
+		@include mq(large) {
+			display: table-header-group !important;
+		}
+	}
+
+	tbody {
+		tr{
+			border-bottom: 1px solid $medium-gray--tint;
+			&:last-child {
+				border-bottom: none;
+			}
+			td.amount {
+				color: $grass--shade;
+			}
+
+			td {
+				&.name,
+				&.amount {
+					padding-top: 7px;
+					padding-bottom: 3px;
+				}
+				&.tag,
+				&.date {
+					padding-top: 3px;
+					padding-bottom: 7px;
+					color: $medium-gray--shade;
+					font-size: em(14px);
+				}
+				&.name {
+					width: 70%;
+					float: left;
+				}
+				&.tag {
+					width: 70%;
+					float: left;
+				}
+				&.date {
+					width: 30%;
+					float: right;
+					text-align: right;
+				}
+				&.amount {
+					width: 30%;
+					float: right;
+					text-align: right;
+				}
+			}
+
+			@include mq(large) {
+				td {
+					&.name,
+					&.amount,
+					&.tag,
+					&.date {
+						float: none;
+						width: auto;
+						padding: 10px 0;
+					}
+					&.tag,
+					&.date {
+						font-size: em(16px);
+					}
+					&.name {
+						text-align: left;
+						padding-left: 5px;
+					}
+					&.amount,
+					&.tag {
+						text-align: center;
+					}
+					&.date {
+						text-align: right;
+						padding-right: 5px;
+					}
+				}
+				&:hover {
+					cursor: pointer;
+					background: $light-gray--tint;
+				}
+
+			}
+		}
+	}
+
+	tfoot {
+		td {
+			text-align: center;
+			a {
+				color: $white;
+				background: $dark-gray--tint;
+				font-size: em(14px);
+				font-weight: $font-weight--bold;
+				text-align: center;
+				display: block;
+				margin-top: 10px;
+				padding: 7px 0;
+				&:hover {
+					//color: $white;
+					background: lighten($dark-gray--tint, 5%);
+				}
+				&:active {
+					background: darken($dark-gray--tint, 5%);
+				}
+				@include mq(large) {
+					padding: 5px 13px;
+					display: inline-block;	
+					font-size: em(13px);
+				}
+			}
+		}
+	}
+
+}

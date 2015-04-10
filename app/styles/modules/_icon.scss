@@ -1,0 +1,63 @@
+.logo {
+	@include img-replace("walet.svg", 84px, 28px, inline-block);
+}
+
+.close-icon {
+	@include img-replace("icon/close.svg", 18px, 18px, inline-block);
+}
+
+.cancel-icon {
+	@include img-replace("icon/cancel.svg", 16px, 16px, inline-block);
+}
+
+.tick-icon {
+	@include img-replace("icon/tick.svg", 22px, 16px, inline-block);
+}
+
+.menu-icon {
+	@include img-replace("icon/menu.svg", 32px, 20px, inline-block);	
+}
+
+.search-icon {
+	@include img-replace("icon/search.svg", 16px, 16px, inline-block);
+}
+
+.add-icon {
+	@include img-replace("icon/add.svg", 25px, 25px, inline-block);
+}
+
+.calendar-icon {
+	@include img-replace("icon/calendar.svg", 23px, 22px, inline-block);
+}
+
+.caret-icon {
+	@include img-replace("icon/caret.svg", 18px, 13px, inline-block);
+}
+
+.caret-white-icon {
+	@include img-replace("icon/caret-white.svg", 18px, 13px, inline-block);
+}
+
+.income-icon {
+	@include img-replace("icon/income.svg", 22px, 25px, inline-block);
+}
+
+.expense-icon {
+	@include img-replace("icon/expense.svg", 22px, 25px, inline-block);
+}
+
+.dashboard-icon {
+	@include img-replace("icon/dashboard.svg", 22px, 20px, inline-block);
+}
+
+.contact-icon {
+	@include img-replace("icon/contact.svg", 22px, 24px, inline-block);
+}
+
+.sign-out-icon {
+	@include img-replace("icon/sign-out.svg", 22px, 22px, inline-block);
+}
+
+.add-circle-icon {
+	@include img-replace("icon/add-circle.svg", 26px, 26px, inline-block);
+}

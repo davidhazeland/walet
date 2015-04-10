@@ -1,0 +1,32 @@
+.navigation {
+	&__item {
+		font-family: $font-family--secondary;
+		//font-weight: $font-weight--bold;
+		line-height: em(40px, 16px);
+		opacity: 0.7;
+		color: $white;
+		&:hover {
+			opacity: 1;
+			background: darken($dark-gray--shade, 4%);
+		}
+		&:active {
+			opacity: 1;
+			background: darken($dark-gray--shade, 6%);
+		}
+		&--current {
+			opacity: 1;
+			background: $primary-color !important;
+		}
+		a {
+			display: block;
+			padding: 5px 5%;
+			i {
+				margin-right: 10px;
+				vertical-align: sub;
+			}
+			@include mq(large) {
+				padding: 5px 15px;
+			}
+		}
+	}
+}

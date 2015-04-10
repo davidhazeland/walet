@@ -1,4 +1,17 @@
 // ===================================
+// Image replace
+// ===================================
+
+@mixin img-replace($url, $w, $h, $d : block) {
+  background-image: url(#{$path--rel}/#{$url});
+  width: $w;
+  height: $h;
+  display: $d;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// ===================================
 // Media query
 // ===================================
 
@@ -9,7 +22,7 @@
     }
   }
   @else if $break == "medium" {
-    @media (min-width: $brkpoint--md + 1) and (max-width: $brkpoint--lg) {
+    @media (min-width: $brkpoint--md + 1){
       @content;
     }
   }

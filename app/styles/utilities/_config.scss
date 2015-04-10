@@ -4,10 +4,10 @@
 
 // Font Stacks
 
-$font-url--google			: "http://fonts.googleapis.com/css?family=Open+Sans:700,400|Oswald:400,700";
+$font-url--google			: "http://fonts.googleapis.com/css?family=Open+Sans:700,400|Quicksand:400,700";
 
 $font-family--primary		: 'Open Sans', sans-serif;
-$font-family--secondary		: 'Oswald', sans-serif;
+$font-family--secondary		: 'Quicksand', sans-serif;
 // Font Weights
 
 $font-weight--normal		: 400;
@@ -16,6 +16,7 @@ $font-weight--bold 			: 700;
 // Descriptive Base Colors
 
 $white 					: #fff;
+$black 					: #333;
 
 $grapefruit--tint		: #ed5565;
 $grapefruit--shade		: #da4453;
@@ -53,6 +54,12 @@ $medium-gray--shade		: #aab2bd;
 $dark-gray--tint		: #656d78;
 $dark-gray--shade		: #434a54;
 
+// Color useage
+
+$primary-color			: $blue-jeans--shade;
+$accent-color			: $dark-gray--tint;
+$income-color			: $grass--shade;
+$expense-color			: $grapefruit--shade;
 
 // Text
 

@@ -1,0 +1,15 @@
+.date-filter {
+	margin-top: 15px;
+	display: inline-block;
+	&__icon {
+		margin-right: 5px;
+		vertical-align: sub;
+	}
+	&__selection {
+		color: $primary-color;
+	}
+	&__caret {
+		margin-left: 3px;
+	}
+	cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.picker {
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	width: 90%;
+	background: $white;
+	@include mq(large){
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+	}
+	&__title {
+		margin: 0;
+		padding: 10px 15px;
+		color: $white;
+		background: $accent-color;
+		font-size: em(14px);
+		i {
+			margin-top: 3px;
+		}
+	}
+	.picker-selection {
+		&__item {
+			border-bottom: 1px solid #ccc;
+			&:last-child {
+				border-bottom: none;
+			}
+			&--current {
+				color: $white;
+				background: $primary-color;
+			}
+			a {
+				display: block;
+				padding: 10px 15px;
+				i {
+				margin-top: 3px;
+				}
+			}
+		}
+	}
+}

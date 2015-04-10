@@ -1,0 +1,27 @@
+.save-transaction {
+	background: $white;
+	&__header {
+		height: 56px;
+		text-align: center;
+		&.income {
+			background: $grass--shade;
+		}
+		&.expense {
+			background: $grapefruit--shade;
+		}
+		.close-icon,
+		.tick-icon {
+			margin-top: 18px;
+		}
+		p {
+			color: $white;
+			margin-top: 16px;
+			display: inline-block;
+			//font-size: em(18px);
+			text-transform: uppercase;
+			i {
+				margin-left: 8px;
+			}
+		}
+	}
+}

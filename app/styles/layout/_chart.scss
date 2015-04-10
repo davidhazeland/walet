@@ -1,0 +1,60 @@
+.chart {
+	padding-bottom: 20px;
+	&__expense {
+		margin: 35px 0;
+	}
+	canvas {
+		width: 100%;
+		height: 200px;
+		@include mq(large) {
+			&#expense {
+				width: 50%;
+				height: 250px;
+				float: left;
+				
+			}
+			&#compare {
+				height: 300px;
+			}
+		}
+	}
+	&__compare {
+		margin-top: 40px;
+	}
+	h4 {
+		font-size: em(16px);
+		.compare {
+			font-size: em(14px);
+			margin-right: 5px;
+		}
+		.expense {
+			color: $expense-color;
+			font-weight: $font-weight--normal;
+		}
+		.income {
+			color: $income-color;
+			font-weight: $font-weight--normal;
+		}
+		.vs {
+			font-size: em(14px);
+			font-weight: $font-weight--normal;
+			color: $medium-gray--shade;
+		}
+	}
+	ul {
+		li {
+			margin-top: 10px;
+			font-size: em(14px);
+			span {
+				width: 24px;
+				height: 24px;
+				display: inline-block;
+				margin-right: 10px;
+				float: left;
+				@include mq(large) {
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
