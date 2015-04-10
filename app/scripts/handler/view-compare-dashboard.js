@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 10:56:32
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 11:05:29
+* @Last Modified time: 2015-04-10 11:30:21
 */
 
 'use strict';
@@ -16,7 +16,12 @@ define(['observer', 'service/dashboard', 'service/chart'], function(Observer, Da
 
 	handler.prototype = {
 		handle : function(data){
-			Dashboard.getCompareData(this.getCompareDataCallback);
+			Dashboard.getCompareData(function(response) {
+				var legend = Chart.drawCompareChart(response, data.canvas);
+				Observer.publish('CompareDashboardDrew', {
+					legend: legend
+				});
+			});
 		},
 
 		getCompareDataCallback: function(){

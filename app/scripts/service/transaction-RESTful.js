@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 10:32:15
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-09 16:55:16
+ * @Last Modified time: 2015-04-10 11:25:33
  */
 
 'use strict';
@@ -11,11 +11,28 @@
 
 define(['./RESTful'], function(RESTful) {
 	var Service = function() {
-		this.RESTful = new RESTful('/data/transactions.json');
+		
 	}
 
 	Service.prototype = {
 		get : function(query) {
+			var url;
+			switch(query.type) {
+				case 'tagDashboard' : {
+					url = '/data/tag-dashboard.json';
+					break;
+				}
+
+				case 'compareDashboard' : {
+					url = '/data/compare-dashboard.json';
+					break;
+				}
+
+				default: {
+					url = '/data/transactions.json';
+				}
+			}
+			this.RESTful = new RESTful(url);
 			return this.RESTful.get(query);
 		}
 	};

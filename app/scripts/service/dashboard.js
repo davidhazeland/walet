@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 10:53:17
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 20:15:08
+* @Last Modified time: 2015-04-10 11:24:34
 */
 
 'use strict';
@@ -17,13 +17,17 @@ define(['./transaction-RESTful'], function(TransactionRESTful) {
 	Service.prototype = {
 		getTagData: function(callback) {
 			TransactionRESTful
-				.get()
+				.get({
+					type: 'tagDashboard'
+				})
 				.success(callback);
 		},
 
 		getCompareData: function(callback) {
 			TransactionRESTful
-				.get()
+				.get({
+					type: 'compareDashboard'
+				})
 				.success(callback);
 		}
 	};
