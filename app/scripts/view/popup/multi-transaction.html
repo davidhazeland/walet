@@ -1,0 +1,25 @@
+<section class="multi-transaction hidden">
+		<h3 class="multi-transaction__header income">
+			<span>ADD TRANSACTION</span>
+			<i class="close-icon fr"></i>	
+		</h3>
+		<div clas="multi-transaction__content">
+			<form class="transaction-form group">
+				<input placeholder="Name" type="text" class="transaction-form__description fl"/>
+				<input placeholder="Amount" type="number" class="transaction-form__amount fr" />
+				<input placeholder="Tag" type="text" class="transaction-form__tag" />
+				<input placeholder="Date" type="date" class="transaction-form__date" />
+				<div class="transaction-form__type is-expanded-desktop radio">
+					<input type="radio" value="expense" id="transaction-type--expense" name="type" checked />
+					<label for="transaction-type--expense">
+						<span>Expense</span>
+					</label>
+					<input type="radio" value="income" id="transaction-type--income" name="type"/>
+					<label for="transaction-type--income">
+						<span>Income</span>
+					</label>
+				</div>
+				<button class="transaction-form__save">Save Transaction</button>
+			</form>
+		</div>
+	</section>
