@@ -4,12 +4,92 @@
 		"selected_items":
 		[
 			[
-				"Trans",
+				"re",
+				"RESTful"
+			],
+			[
+				"Res",
+				"RESTful"
+			],
+			[
+				"s",
+				"successCallback"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"err",
+				"errorCallback"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"cl",
+				"cl	console.log"
+			],
+			[
+				"R",
+				"TransactionRESTful"
+			],
+			[
+				"TRansa",
+				"transaction-RESTful"
+			],
+			[
+				"V",
+				"ViewTagDashboardHandler"
+			],
+			[
+				"tag",
+				"tagDashboardCtrl"
+			],
+			[
+				"Tran",
 				"TransactionListCtrl"
 			],
 			[
+				"trans",
+				"transListCtrl"
+			],
+			[
+				"ob",
+				"Object"
+			],
+			[
+				"Tr",
+				"TransactionDeleted"
+			],
+			[
+				"o",
+				"Observer"
+			],
+			[
 				"ex",
-				"execute"
+				"expect"
+			],
+			[
+				"Dele",
+				"DeleteTransactionHandler"
+			],
+			[
+				"tra",
+				"transListCtrl"
+			],
+			[
+				"handle",
+				"handleDeleteBtnClick"
+			],
+			[
+				"tran",
+				"transDetailScope"
+			],
+			[
+				"Trans",
+				"TransactionListCtrl"
 			],
 			[
 				"exe",
@@ -26,14 +106,6 @@
 			[
 				"sear",
 				"searchTransScope"
-			],
-			[
-				"tran",
-				"transListCtrl"
-			],
-			[
-				"Tran",
-				"TransactionSearch"
 			],
 			[
 				"SearchTransaction",
@@ -60,10 +132,6 @@
 				"TransactionDetailCtrl"
 			],
 			[
-				"e",
-				"editor"
-			],
-			[
 				"T",
 				"Transaction"
 			],
@@ -72,28 +140,12 @@
 				"SaveTransactionHandler"
 			],
 			[
-				"handle",
-				"handleSaveBtnClick"
-			],
-			[
 				"Ob",
 				"Observer"
 			],
 			[
-				"co",
-				"commandBus"
-			],
-			[
 				"f",
 				"function"
-			],
-			[
-				"tra",
-				"transDetailCtrl"
-			],
-			[
-				"trans",
-				"transDetailScope"
 			],
 			[
 				"call",
@@ -126,10 +178,6 @@
 			[
 				"han",
 				"handler"
-			],
-			[
-				"V",
-				"ViewTransactionHandler"
 			],
 			[
 				"view",
@@ -260,10 +308,6 @@
 				"scripts"
 			],
 			[
-				"re",
-				"return"
-			],
-			[
 				"mi",
 				"middle"
 			],
@@ -298,10 +342,6 @@
 			[
 				"ac",
 				"action	Attr"
-			],
-			[
-				"s",
-				"SkillChart"
 			],
 			[
 				"pro",
@@ -489,10 +529,10 @@
 		"/E/GitHub/walet/app",
 		"/E/GitHub/walet/app/scripts",
 		"/E/GitHub/walet/app/scripts/controller",
-		"/E/GitHub/walet/app/scripts/core",
 		"/E/GitHub/walet/app/scripts/handler",
 		"/E/GitHub/walet/app/scripts/service",
 		"/E/GitHub/walet/app/scripts/view",
+		"/E/GitHub/walet/data",
 		"/E/GitHub/walet/test",
 		"/E/GitHub/walet/test/spec",
 		"/E/GitHub/walet/test/spec/behavior",
@@ -500,30 +540,52 @@
 	],
 	"file_history":
 	[
+		"/E/GitHub/walet/app/scripts/handler/view-tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/service/dashboard.js",
+		"/E/GitHub/walet/app/scripts/service/chart.js",
+		"/E/GitHub/walet/test/spec/behavior/index.js",
+		"/E/GitHub/walet/test/spec/behavior/tag-dashboard.js",
+		"/E/GitHub/walet/test/spec/behavior/compare-dashboard.js",
+		"/E/GitHub/walet/data/tag-dashboard.json",
+		"/E/GitHub/walet/data/compare-dashboard.json",
+		"/E/GitHub/walet/app/scripts/controller/chart.js",
+		"/E/GitHub/walet/app/scripts/view/base.html",
+		"/E/GitHub/walet/app/index.html",
+		"/E/GitHub/walet/app/styles/utilities/_config.scss",
+		"/E/GitHub/walet/test/spec/behavior/transaction-RESTful.js",
+		"/E/GitHub/walet/app/scripts/service/RESTful.js",
+		"/E/GitHub/walet/app/scripts/service/transactions.js",
+		"/E/GitHub/walet/app/scripts/service/transaction.js",
+		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
+		"/E/GitHub/walet/gulpfile.js",
+		"/E/GitHub/walet/app/scripts/controller/http.js",
+		"/E/GitHub/walet/data/transactions.json",
+		"/E/GitHub/walet/app/scripts/core/command-bus.js",
+		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/view-compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/delete-transaction.js",
+		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
+		"/E/GitHub/walet/test/spec/behavior/delete-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
 		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
-		"/E/GitHub/walet/app/scripts/core/command-bus.js",
 		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/index.js",
 		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
 		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
-		"/E/GitHub/walet/app/scripts/service/transactions.js",
 		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-search.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-filter.js",
 		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
 		"/E/GitHub/walet/app/scripts/handler/save-transaction.js",
-		"/E/GitHub/walet/app/scripts/service/transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/save-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
 		"/E/GitHub/walet/test/spec/behavior/view-transaction.js",
 		"/E/GitHub/walet/app/scripts/core/observer.js",
 		"/E/GitHub/walet/test/spec/main.js",
@@ -538,14 +600,10 @@
 		"/D/Movie/The.Hobbit.The.Battle.of.the.Five.Armies.2014.720p.BluRay.x264.YIFY.srt",
 		"/E/GitHub/walet/app/styles/modules/_navigation.scss",
 		"/E/GitHub/walet/dist/styles/main.css",
-		"/E/GitHub/walet/app/styles/utilities/_config.scss",
-		"/E/GitHub/walet/app/index.html",
-		"/E/GitHub/walet/gulpfile.js",
 		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/FileHeader/template/body/JavaScript.tmpl",
 		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/FileHeader/template/header/JavaScript.tmpl",
 		"/E/GitHub/walet/app/scripts/controller/index.js",
 		"/E/GitHub/walet/app/scripts/controller/header.js",
-		"/E/GitHub/walet/app/scripts/controller/chart.js",
 		"/E/GitHub/walet/app/scripts/templates.js",
 		"/E/GitHub/walet/app/scripts/main.js",
 		"/E/GitHub/walet/app/scripts/controller/sdf",
@@ -553,7 +611,6 @@
 		"/E/GitHub/walet/app/scripts/directive/base.js",
 		"/E/GitHub/walet/app/scripts/directive/index.js",
 		"/E/GitHub/walet/app/scripts/filter/index.js",
-		"/E/GitHub/walet/app/scripts/view/base.html",
 		"/E/GitHub/walet/app/scripts/controller/sdfd.js",
 		"/E/GitHub/dh/test/spec/header.js",
 		"/E/GitHub/walet/test/spec/test.js",
@@ -610,28 +667,11 @@
 		"/E/GitHub/html-seed/test/index.html",
 		"/E/GitHub/html-seed/test/spec/main.js",
 		"/E/GitHub/html-seed/app/scripts/main.js",
-		"/E/GitHub/html-seed/app/scripts/config.js",
-		"/E/GitHub/html-seed/app/scripts/app.js",
-		"/E/GitHub/html-seed/app/contact.html",
-		"/E/GitHub/dh/bower.json",
-		"/E/GitHub/html-seed/app/index.html",
-		"/E/GitHub/html-seed/bower.json",
-		"/E/GitHub/html-seed/app/scripts/controller/index.js",
-		"/E/GitHub/html-seed/app/scripts/directive/index.js",
-		"/E/GitHub/html-seed/app/scripts/filter/index.js",
-		"/E/GitHub/html-seed/app/styles/utilities/_config.scss",
-		"/E/GitHub/html-seed/app/styles/utilities/_functions.scss",
-		"/E/GitHub/html-seed/app/styles/utilities/_mixins.scss",
-		"/E/GitHub/html-seed/app/styles/states/_index.scss",
-		"/E/GitHub/html-seed/app/styles/modules/_index.scss",
-		"/E/GitHub/html-seed/app/styles/layout/_index.scss",
-		"/E/GitHub/html-seed/app/styles/states/_loading.scss",
-		"/E/GitHub/html-seed/app/styles/base/_base.scss",
-		"/E/GitHub/html-seed/test/spec/gallery.js"
+		"/E/GitHub/html-seed/app/scripts/config.js"
 	],
 	"find":
 	{
-		"height": 60.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -645,6 +685,21 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"data",
+			": ",
+			"label",
+			": ",
+			"Tag",
+			"tag",
+			"tagDashboardCtrl",
+			"tagDashboardScope",
+			"Tag",
+			"Compare",
+			"DeleteTr",
+			"TransactionDashboard",
+			"SearchTransactionHandler",
+			"Filter",
+			"Editor",
 			"filterPickerctrl",
 			"SearchTransaction",
 			"Search",
@@ -757,22 +812,7 @@
 			"portf",
 			"/bower_co",
 			"$timeline_block",
-			"html",
-			"js",
-			"angularMock",
-			":",
-			"profile",
-			"about",
-			"Contact",
-			"ctrl\\+shift\\+r",
-			"#AC92EC",
-			"#48CFAD",
-			"birthday",
-			"home",
-			"location",
-			"cd-content",
-			".cd-timeline-content",
-			"#cd-timeline"
+			"html"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -859,6 +899,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"config",
+				"app\\styles\\utilities\\_config.scss"
+			],
 			[
 				"com",
 				"app\\scripts\\core\\command-bus.js"
@@ -982,10 +1026,6 @@
 			[
 				"pick",
 				"app\\styles\\modules\\_picker.scss"
-			],
-			[
-				"config",
-				"app\\styles\\utilities\\_config.scss"
 			],
 			[
 				"charjs",
