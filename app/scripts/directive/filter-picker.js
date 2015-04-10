@@ -1,8 +1,8 @@
 /* 
 * @Author: ThanhCong
-* @Date:   2015-04-10 10:03:26
+* @Date:   2015-04-10 13:43:46
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 20:19:02
+* @Last Modified time: 2015-04-10 20:19:20
 */
 
 'use strict';
@@ -12,12 +12,12 @@
 define(['app'], function(app){
 	var directive = function(){
 		return {
-			templateUrl: 'scripts/view/transaction-list.html',
+			templateUrl: 'scripts/view/filter-picker.html',
 			restrict: 'E'
 		};
 	};
 
-	app.directive('transactionList', directive);
+	app.directive('filterPicker', directive);
 
 	return directive;
 });

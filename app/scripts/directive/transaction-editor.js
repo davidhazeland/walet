@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 09:39:11
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 09:39:33
+* @Last Modified time: 2015-04-10 20:19:05
 */
 
 'use strict';
@@ -12,13 +12,12 @@
 define(['app'], function(app){
 	var directive = function(){
 		return {
-			templateUrl: 'scripts/view/popup/save-transaction.html',
-			restrict: 'E',
-			replace: true
+			templateUrl: 'scripts/view/transaction-editor.html',
+			restrict: 'E'
 		};
 	};
 
-	app.directive('saveTransaction', directive);
+	app.directive('transactionEditor', directive);
 
 	return directive;
 });

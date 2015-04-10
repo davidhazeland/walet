@@ -2,13 +2,13 @@
 	<div class="container is-collapsed-desktop">
 		<span class="title">Dashboard</span>
 		<i class="menu-icon" ng-click="toggleMenu()"></i>
-		<i class="add-icon"></i>
+		<i class="add-icon" ng-click="handleAddBtnClick()"></i>
 	</div>	
 	<div class="container">
 		<section class="search is-expanded-desktop">
 			<input type="search" class="search__input"/>
 			<i class="search-icon search__icon"></i>
 		</section>
-		<a class="add-button fr is-expanded-desktop" href="#"><i class="add-circle-icon"></i>ADD</a>
+		<span class="add-button fr is-expanded-desktop" ng-click="handleAddBtnClick()"><i class="add-circle-icon"></i>ADD</span>
 	</div>
 </header>

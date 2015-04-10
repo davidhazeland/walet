@@ -2,18 +2,22 @@
 * @Author: ThanhCong
 * @Date:   2015-03-30 21:35:01
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-04 17:39:29
+* @Last Modified time: 2015-04-10 16:43:39
 */
 'use strict';
 
 /* global define */
 
-define(['app', 'jquery'], function(app, $){
+define(['app', 'observer', 'jquery'], function(app, Observer, $){
 	var controller = ['$scope', function($scope) {
 		$scope.toggleMenu = function() {
 			// $('#menu').toggleClass('collapsed');
 			$('#feature').toggleClass('collapsed');
 		};
+
+		$scope.handleAddBtnClick = function(){
+			Observer.publish('OpenTransactionEditor');
+		}
 	}];
 
 	app.controller('HeaderCtrl', controller);
