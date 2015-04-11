@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-11 23:25:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-12 00:00:25
+ * @Last Modified time: 2015-04-12 00:16:07
  */
 
 'use strict';
@@ -133,7 +133,7 @@ define([
 				});
 
 				it('then Overview should be called render()', function() {
-					expect(overviewScope.data).toEqual({
+					expect(overviewScope.overview).toEqual({
 						name: 'overview'
 					});
 				});
