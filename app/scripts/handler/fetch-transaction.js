@@ -2,14 +2,15 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 09:51:08
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 16:12:17
+* @Last Modified time: 2015-04-11 20:21:53
 */
 
 'use strict';
 
 /* global define */
 
-define(['observer', 'service/transactions'], function(observer, Transactions){
+define(['observer', 'service/transactions', 'model/transactions'], 
+	function(observer, Transactions, TransactionsModel){
 	var handler = function(){
 
 	}
@@ -20,7 +21,8 @@ define(['observer', 'service/transactions'], function(observer, Transactions){
 		},
 
 		fetchTransactionsCallback : function(transactions){
-			observer.publish('RenderTransactions', transactions);
+			TransactionsModel.load(transactions);
+			observer.publish('TransactionsLoaded', transactions);
 		}
 	};
 

@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 16:01:17
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 16:04:21
+* @Last Modified time: 2015-04-11 11:57:02
 */
 
 'use strict';
@@ -11,16 +11,18 @@
 
 define([], function() {
 	var Service = function() {
-
+		this._filter = '';
 	};
 
 	Service.prototype = {
 		decorate: function(query) {
-			return query;
+			var decorated = query;
+			decorated.filter = this._filter;
+			return decorated;
 		},
 
-		update: function(data) {
-			
+		update: function(filter) {
+			this._filter = filter || '';
 		}
 	};
 

@@ -3,14 +3,14 @@
 		<section class="multi-transaction">
 			<h3 class="multi-transaction__header income">
 				<span>ADD TRANSACTION</span>
-				<i class="close-icon fr" ng-click="handleCloseBtnClick()"></i>	
+				<i class="close-icon fr" ng-click="visibility = false"></i>	
 			</h3>
 			<div clas="multi-transaction__content">
 				<form class="transaction-form group">
-					<input placeholder="Name" type="text" class="transaction-form__description fl"/>
-					<input placeholder="Amount" type="number" class="transaction-form__amount fr" />
-					<input placeholder="Tag" type="text" class="transaction-form__tag" />
-					<input placeholder="Date" type="date" class="transaction-form__date" />
+					<input placeholder="Name" type="text" class="transaction-form__description fl" ng-model="item.name"/>
+					<input placeholder="Amount" type="number" class="transaction-form__amount fr"  ng-model="item.amount"/>
+					<input placeholder="Tag" type="text" class="transaction-form__tag"  ng-model="item.tag"/>
+					<input placeholder="Date" type="date" class="transaction-form__date"  ng-model="item.date"/>
 					<div class="transaction-form__type is-expanded-desktop radio">
 						<input type="radio" value="expense" id="transaction-type--expense" name="type" checked />
 						<label for="transaction-type--expense">

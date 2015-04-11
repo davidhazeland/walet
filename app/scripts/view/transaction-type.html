@@ -1,6 +1,9 @@
 <div class="popup" ng-controller="TransactionTypeCtrl" ng-show="visibility">
 	<section id="popup__transaction-type" class="picker" >
-		<h3 class="group picker__title">SELECT TRANSACTION<i class="close-icon fr"></i></h3>	
+		<h3 class="group picker__title">
+		SELECT TRANSACTION
+		<i class="close-icon fr"  ng-click="visibility = false"></i>
+		</h3>	
 		<ul class="picker-selection">
 			<li class="picker-selection__item">
 				<a href="#">INCOME<i class="tick-icon fr"></i></a>

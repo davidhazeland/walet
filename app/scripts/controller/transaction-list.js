@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-04 17:33:45
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 20:24:27
+* @Last Modified time: 2015-04-11 21:04:42
 */
 
 'use strict';
@@ -12,12 +12,10 @@
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 	var Controller = function($scope) {
 		$scope.handleItemClick = this.handleItemClick;
-
-		Observer.subscribe('LoadTransactions', function(data) {
-			this.load();
-		}, this);
-		Observer.subscribe('RenderTransactions', function(data) {
-			this.render(data);
+		
+		Observer.subscribe('TransactionsLoaded', function(data) {
+			$scope.data = data;
+			$scope.$apply();
 		}, this);
 		Observer.subscribe('TransactionSaved', function(data) {
 			this.refresh(data);
@@ -29,7 +27,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 
 	Controller.prototype = {
 		load : function (){
-			CommandBus.execute('FetchTransaction', {});
+			
 		},
 
 		render : function(data) {
@@ -40,10 +38,8 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
 
 		},
 
-		handleItemClick: function () {
-			CommandBus.execute('ViewTransaction', {
-				id: 13
-			});
+		handleItemClick: function (item) {
+			Observer.publish('RenderTransactionDetail', item);
 		}
 	};
 

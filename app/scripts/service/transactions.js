@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 10:29:41
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-09 16:55:32
+ * @Last Modified time: 2015-04-11 20:21:09
  */
 
 'use strict';
@@ -30,8 +30,10 @@ define([
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);
 			query = TransactionSearch.decorate(query);
-
-			TransactionRESTful.get(query, callback);
+			
+			TransactionRESTful
+				.get(query)
+				.success(callback);
 		},
 
 		getById: function(id) {

@@ -5,8 +5,8 @@
 		<i class="add-icon" ng-click="handleAddBtnClick()"></i>
 	</div>	
 	<div class="container">
-		<section class="search is-expanded-desktop">
-			<input type="search" class="search__input"/>
+		<section class="search is-expanded-desktop" ng-controller="SearchTransactionCtrl">
+			<input type="search" class="search__input" ng-keyup="handleSearchBoxKeyUp($event)"/>
 			<i class="search-icon search__icon"></i>
 		</section>
 		<span class="add-button fr is-expanded-desktop" ng-click="handleAddBtnClick()"><i class="add-circle-icon"></i>ADD</span>

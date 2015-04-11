@@ -3,6 +3,6 @@
 /* global define */
 
 define([
-	'./tag-dashboard'
+	'./fetch-transaction'
 	], function() {
 });
