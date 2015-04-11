@@ -2,24 +2,28 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 10:04:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 11:26:25
+* @Last Modified time: 2015-04-12 00:11:00
 */
 
 'use strict';
 
 /* global define */
 
-define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
+define(['app', 'commandBus', 'observer', 'service/chart'], function(app, CommandBus, Observer, Chart){
 	var directive = function(){
 		var linkFn = function(scope, el) {
-			Observer.subscribe('CompareDashboardDrew', function(data){
+			// Observer.subscribe('CompareDashboardDrew', function(data){
 				
-			}, this);
+			// }, this);
 			
 			var canvas = el.find('canvas')[0];
-			CommandBus.execute('ViewCompareDashboard', {
-				canvas: canvas
-			});
+
+			Observer.subscribe('DashboardLoaded', function(data){
+				Chart.drawCompareChart(canvas, data.compare);
+			}, this);
+			// CommandBus.execute('ViewCompareDashboard', {
+			// 	canvas: canvas
+			// });
 		};
 
 		return {

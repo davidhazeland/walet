@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 11:04:39
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 11:05:09
+* @Last Modified time: 2015-04-11 23:50:33
 */
 
 'use strict';
@@ -13,6 +13,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
 		Observer.subscribe('CompareDashboardDrew', function(){
 			this.render();
+		}, this);
+		Observer.subscribe('DashboardLoaded', function(data){
+			$scope.data = data.compare;
 		}, this);
 	};
 

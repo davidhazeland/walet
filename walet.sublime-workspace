@@ -4,8 +4,68 @@
 		"selected_items":
 		[
 			[
+				"o",
+				"overview"
+			],
+			[
+				"Das",
+				"DashboardModel"
+			],
+			[
+				"app",
+				"apply	method.apply()"
+			],
+			[
+				"tra",
+				"TransactionsModel"
+			],
+			[
+				"Trans",
+				"Transactions"
+			],
+			[
+				"transac",
+				"transactions"
+			],
+			[
+				"tr",
+				"transScope"
+			],
+			[
+				"tran",
+				"transCtrl"
+			],
+			[
+				"de",
+				"decoration"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"e",
+				"element"
+			],
+			[
 				"re",
-				"RESTful"
+				"response"
+			],
+			[
+				"L",
+				"linkFn"
+			],
+			[
+				"link",
+				"linkFn"
+			],
+			[
+				"r",
+				"routeParams"
+			],
+			[
+				"date",
+				"date-filter"
 			],
 			[
 				"Res",
@@ -14,10 +74,6 @@
 			[
 				"s",
 				"successCallback"
-			],
-			[
-				"e",
-				"error"
 			],
 			[
 				"err",
@@ -64,10 +120,6 @@
 				"TransactionDeleted"
 			],
 			[
-				"o",
-				"Observer"
-			],
-			[
 				"ex",
 				"expect"
 			],
@@ -76,20 +128,8 @@
 				"DeleteTransactionHandler"
 			],
 			[
-				"tra",
-				"transListCtrl"
-			],
-			[
 				"handle",
 				"handleDeleteBtnClick"
-			],
-			[
-				"tran",
-				"transDetailScope"
-			],
-			[
-				"Trans",
-				"TransactionListCtrl"
 			],
 			[
 				"exe",
@@ -156,10 +196,6 @@
 				"getTransactionsCallback"
 			],
 			[
-				"transac",
-				"Transactions"
-			],
-			[
 				"Co",
 				"CommandBus"
 			],
@@ -188,20 +224,12 @@
 				"TransactionListCtrl"
 			],
 			[
-				"tr",
-				"transaction"
-			],
-			[
 				"be",
 				"beforeEach"
 			],
 			[
 				"fun",
 				"function"
-			],
-			[
-				"de",
-				"describe"
 			],
 			[
 				"font-",
@@ -529,145 +557,147 @@
 		"/E/GitHub/walet/app",
 		"/E/GitHub/walet/app/scripts",
 		"/E/GitHub/walet/app/scripts/controller",
+		"/E/GitHub/walet/app/scripts/core",
+		"/E/GitHub/walet/app/scripts/directive",
 		"/E/GitHub/walet/app/scripts/handler",
+		"/E/GitHub/walet/app/scripts/model",
 		"/E/GitHub/walet/app/scripts/service",
 		"/E/GitHub/walet/app/scripts/view",
 		"/E/GitHub/walet/data",
 		"/E/GitHub/walet/test",
 		"/E/GitHub/walet/test/spec",
-		"/E/GitHub/walet/test/spec/behavior",
-		"/E/GitHub/walet/test/spec/service"
+		"/E/GitHub/walet/test/spec/behavior"
 	],
 	"file_history":
 	[
-		"/E/GitHub/walet/app/scripts/handler/view-tag-dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/dashboard.js",
+		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
 		"/E/GitHub/walet/app/scripts/service/chart.js",
+		"/E/GitHub/walet/app/scripts/view/overview.html",
+		"/E/GitHub/walet/app/scripts/directive/compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/controller/overview.js",
+		"/E/GitHub/walet/data/dashboard.json",
+		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
 		"/E/GitHub/walet/test/spec/behavior/index.js",
+		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
+		"/E/GitHub/walet/app/scripts/service/dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/view-dashboard.js",
+		"/E/GitHub/walet/app/scripts/core/command-bus.js",
+		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/model/dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
+		"/E/GitHub/walet/app/scripts/controller/add-single-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/total.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
+		"/E/GitHub/walet/app/scripts/controller/add-multi-transaction.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
+		"/E/GitHub/walet/app/styles/layout/_content.scss",
+		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
+		"/E/GitHub/walet/data/transactions.json",
+		"/E/GitHub/walet/app/scripts/controller/transactions.js",
+		"/E/GitHub/walet/app/styles/layout/_feature.scss",
+		"/E/GitHub/walet/app/scripts/service/transactions.js",
+		"/E/GitHub/walet/app/scripts/view/total.html",
+		"/E/GitHub/walet/app/scripts/directive/total.js",
+		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/model/transactions.js",
+		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
+		"/E/GitHub/walet/app/styles/modules/_picker.scss",
+		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
+		"/E/GitHub/walet/app/scripts/service/transaction-search.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-type.html",
+		"/E/GitHub/walet/app/scripts/view/header-app.html",
+		"/E/GitHub/walet/app/scripts/service/transaction-filter.js",
+		"/E/GitHub/walet/app/login.html",
+		"/E/GitHub/walet/app/scripts/login.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
+		"/E/GitHub/walet/app/scripts/view/base.html",
+		"/E/GitHub/walet/app/scripts/controller/base.js",
+		"/E/GitHub/walet/app/scripts/directive/base.js",
+		"/E/GitHub/walet/app/scripts/directive/transaction-detail.js",
+		"/E/GitHub/walet/app/styles/modules/_transaction-detail.scss",
+		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
+		"/E/GitHub/walet/.gitignore",
+		"/E/GitHub/walet/app/styles/modules/_date-filter.scss",
+		"/E/GitHub/walet/app/scripts/directive/filter-picker.js",
+		"/E/GitHub/walet/app/scripts/controller/index.js",
+		"/E/GitHub/walet/app/scripts/directive/transaction-type.js",
+		"/E/GitHub/walet/app/scripts/directive/transaction-list.js",
+		"/E/GitHub/walet/app/scripts/directive/transaction-editor.js",
+		"/E/GitHub/walet/app/scripts/controller/date-filter.js",
+		"/E/GitHub/walet/app/scripts/view/date-filter.html",
+		"/E/GitHub/walet/app/styles/layout/_header.scss",
+		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
+		"/E/GitHub/walet/app/styles/modules/_multi-transaction.scss",
+		"/E/GitHub/walet/app/scripts/controller/header.js",
+		"/E/GitHub/walet/app/styles/layout/_popup.scss",
+		"/E/GitHub/walet/app/scripts/view/multi-transaction.html",
+		"/E/GitHub/walet/app/scripts/directive/index.js",
+		"/E/GitHub/walet/app/styles/layout/_overlay.scss",
+		"/E/GitHub/walet/app/scripts/controller/transaction-type.js",
+		"/E/GitHub/walet/app/scripts/controller/search.js",
+		"/E/GitHub/walet/app/scripts/controller/date-filter-picker.js",
+		"/E/GitHub/walet/app/scripts/controller/menu.js",
+		"/E/GitHub/walet/app/scripts/controller/multi-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/save-transaction.js",
+		"/E/GitHub/walet/app/scripts/directive/date-filter-picker.js",
+		"/E/GitHub/walet/app/scripts/directive/multi-transaction.js",
+		"/E/GitHub/walet/app/scripts/directive/save-transaction.js",
+		"/E/GitHub/walet/app/scripts/view/popup/transaction-type.html",
+		"/E/GitHub/walet/app/scripts/view/popup/transaction-detail.html",
+		"/E/GitHub/walet/app/scripts/view/popup/save-transaction.html",
+		"/E/GitHub/walet/app/scripts/view/popup/multi-transaction.html",
+		"/E/GitHub/walet/app/scripts/view/popup/date-filter-picker.html",
+		"/E/GitHub/walet/app/scripts/view/tag-dashboard.html",
+		"/E/GitHub/walet/app/scripts/app.js",
+		"/E/GitHub/walet/app/scripts/handler/view-compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/view/compare-dashboard.html",
+		"/E/GitHub/walet/app/scripts/view/menu.html",
+		"/E/GitHub/walet/app/styles/layout/_chart.scss",
+		"/E/GitHub/walet/app/scripts/handler/view-tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/config.js",
+		"/E/GitHub/walet/app/scripts/view/dashboard.html",
+		"/E/GitHub/walet/app/scripts/view/transactions.html",
+		"/E/GitHub/walet/app/scripts/directive/date-filter.js",
+		"/E/GitHub/walet/app/scripts/directive/overview.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/date-filter-picker.js",
+		"/E/GitHub/walet/app/scripts/directive/header-app.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/date-filter.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/transaction-type.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/transaction-detail.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/save-transaction.js",
+		"/E/GitHub/walet/app/scripts/directive/popup/multi-transaction.js",
+		"/E/GitHub/walet/app/scripts/directive/menu.js",
+		"/E/GitHub/walet/app/scripts/view/save-transaction.html",
+		"/E/GitHub/walet/app/scripts/view/header.html",
 		"/E/GitHub/walet/test/spec/behavior/tag-dashboard.js",
 		"/E/GitHub/walet/test/spec/behavior/compare-dashboard.js",
 		"/E/GitHub/walet/data/tag-dashboard.json",
 		"/E/GitHub/walet/data/compare-dashboard.json",
 		"/E/GitHub/walet/app/scripts/controller/chart.js",
-		"/E/GitHub/walet/app/scripts/view/base.html",
 		"/E/GitHub/walet/app/index.html",
 		"/E/GitHub/walet/app/styles/utilities/_config.scss",
 		"/E/GitHub/walet/test/spec/behavior/transaction-RESTful.js",
 		"/E/GitHub/walet/app/scripts/service/RESTful.js",
-		"/E/GitHub/walet/app/scripts/service/transactions.js",
 		"/E/GitHub/walet/app/scripts/service/transaction.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
 		"/E/GitHub/walet/gulpfile.js",
 		"/E/GitHub/walet/app/scripts/controller/http.js",
-		"/E/GitHub/walet/data/transactions.json",
-		"/E/GitHub/walet/app/scripts/core/command-bus.js",
-		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/handler/view-compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/delete-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
 		"/E/GitHub/walet/test/spec/behavior/delete-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
 		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
 		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-search.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-type.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-filter.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
 		"/E/GitHub/walet/app/scripts/handler/save-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/save-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/view-transaction.js",
-		"/E/GitHub/walet/app/scripts/core/observer.js",
-		"/E/GitHub/walet/test/spec/main.js",
-		"/E/GitHub/walet/test/spec/core/index.js",
-		"/E/GitHub/walet/app/scripts/config.js",
-		"/E/GitHub/myapp/bin/www",
-		"/E/GitHub/walet/test/spec/behavior/view-transactions.js",
-		"/E/GitHub/walet/test/spec/core/observer.js",
-		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/README.md",
-		"/C/Windows/System32/drivers/etc/hosts",
-		"/E/GitHub/walet/app/styles/modules/_index.scss",
-		"/D/Movie/The.Hobbit.The.Battle.of.the.Five.Armies.2014.720p.BluRay.x264.YIFY.srt",
-		"/E/GitHub/walet/app/styles/modules/_navigation.scss",
-		"/E/GitHub/walet/dist/styles/main.css",
-		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/FileHeader/template/body/JavaScript.tmpl",
-		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/FileHeader/template/header/JavaScript.tmpl",
-		"/E/GitHub/walet/app/scripts/controller/index.js",
-		"/E/GitHub/walet/app/scripts/controller/header.js",
-		"/E/GitHub/walet/app/scripts/templates.js",
-		"/E/GitHub/walet/app/scripts/main.js",
-		"/E/GitHub/walet/app/scripts/controller/sdf",
-		"/E/GitHub/walet/app/scripts/app.js",
-		"/E/GitHub/walet/app/scripts/directive/base.js",
-		"/E/GitHub/walet/app/scripts/directive/index.js",
-		"/E/GitHub/walet/app/scripts/filter/index.js",
-		"/E/GitHub/walet/app/scripts/controller/sdfd.js",
-		"/E/GitHub/dh/test/spec/header.js",
-		"/E/GitHub/walet/test/spec/test.js",
-		"/E/GitHub/walet/test/spec/service/index.js",
-		"/E/GitHub/walet/app/scripts/core/mediator.js",
-		"/E/GitHub/walet/app/scripts/core/permission.js",
-		"/E/GitHub/walet/app/scripts/core/facade.js",
-		"/E/GitHub/walet/test/spec/domain/index.js",
-		"/E/GitHub/walet/app/styles/layout/_feature.scss",
-		"/E/GitHub/walet/app/styles/layout/_content.scss",
-		"/E/GitHub/walet/app/styles/states/_collapse.scss",
-		"/E/GitHub/walet/app/styles/layout/_brand.scss",
-		"/E/GitHub/walet/app/styles/modules/_search.scss",
-		"/E/GitHub/walet/app/styles/layout/_menu.scss",
-		"/E/GitHub/walet/app/styles/layout/_account.scss",
-		"/E/GitHub/walet/app/styles/modules/_transaction.scss",
-		"/E/GitHub/walet/app/styles/layout/_header.scss",
-		"/E/GitHub/walet/app/styles/utilities/_mixins.scss",
-		"/E/GitHub/walet/app/styles/modules/_transaction-form.scss",
-		"/E/GitHub/walet/app/styles/modules/_checkbox.scss",
-		"/E/GitHub/walet/app/styles/modules/_ellipsis.scss",
-		"/E/GitHub/walet/app/styles/modules/_image.scss",
-		"/E/GitHub/walet/app/styles/layout/_overlay.scss",
-		"/E/GitHub/walet/app/styles/modules/_icon.scss",
-		"/E/GitHub/walet/app/styles/modules/_multi-transaction.scss",
-		"/E/GitHub/walet/app/styles/modules/_picker.scss",
-		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
-		"/E/GitHub/walet/app/styles/modules/_transaction-detail.scss",
-		"/E/GitHub/walet/app/styles/layout/_chart.scss",
-		"/E/GitHub/walet/bower_components/chartjs/Chart.js",
-		"/E/GitHub/walet/app/styles/modules/_overview.scss",
-		"/E/GitHub/walet/app/styles/modules/_date-filter.scss",
-		"/E/GitHub/walet/node_modules/wiredep/node_modules/bower-config/node_modules/mout/random/choice.js",
-		"/E/GitHub/walet/app/styles/layout/_index.scss",
-		"/E/GitHub/walet/app/styles/layout/_container.scss",
-		"/E/GitHub/walet/app/styles/base/_base.scss",
-		"/E/GitHub/walet/app/styles/modules/transaction-form.scss",
-		"/E/GitHub/walet/app/styles/layout/_popup.scss",
-		"/E/GitHub/dh/app/styles/base/_base.scss",
-		"/E/GitHub/walet/node_modules/gulp-jshint/node_modules/lodash/internal/baseSlice.js",
-		"/E/GitHub/walet/app/styles/states/_index.scss",
-		"/E/GitHub/walet/app/styles/layout/_nav.scss",
-		"/E/GitHub/walet/app/images/icon/menu.svg",
-		"/E/GitHub/walet/app/styles/layout/_float.scss",
-		"/E/GitHub/walet/app/styles/modules/_search-filter.scss",
-		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
-		"/E/GitHub/dh/app/styles/utilities/_mixins.scss",
-		"/E/GitHub/dh/app/scripts/directive/about.js",
-		"/E/GitHub/html-seed/test/spec/test.js",
-		"/E/GitHub/walet/test/bower_components/jasmine/lib/jasmine-core/boot.js",
-		"/E/GitHub/html-seed/app/scripts/view/base.html",
-		"/E/GitHub/dh/package.json",
-		"/E/GitHub/walet/package.json",
-		"/E/GitHub/html-seed/test/index.html",
-		"/E/GitHub/html-seed/test/spec/main.js",
-		"/E/GitHub/html-seed/app/scripts/main.js",
-		"/E/GitHub/html-seed/app/scripts/config.js"
+		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js"
 	],
 	"find":
 	{
@@ -685,6 +715,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"ViewCompare",
+			"compareDashboard",
+			"HaveBeenCalled",
+			"called render()",
+			"Ctrl",
+			"compare",
+			"compareD",
+			"compare",
+			"controller",
+			"</span>",
+			"span",
+			"contect",
+			"</td>",
+			"1993",
+			"</td>",
+			"trans",
+			"controller",
+			"Transactions",
+			"controller",
+			"model",
+			"this",
+			"/popup/",
+			"base",
 			"data",
 			": ",
 			"label",
@@ -789,30 +842,7 @@
 			"10",
 			"referenceNode",
 			"expense",
-			"net-worth",
-			"span",
-			"section",
-			"walet",
-			"scripts",
-			"until",
-			".gif",
-			".png",
-			"in.svg",
-			"fb.svg",
-			"bower_components",
-			"uglify",
-			"owlCarousel",
-			"return owlCarousel",
-			"../bowe",
-			"angularMock",
-			":",
-			"img",
-			"angularjs'",
-			"angularjs",
-			"portf",
-			"/bower_co",
-			"$timeline_block",
-			"html"
+			"net-worth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -900,6 +930,162 @@
 		"selected_items":
 		[
 			[
+				"serchart",
+				"app\\scripts\\service\\chart.js"
+			],
+			[
+				"overvj",
+				"app\\scripts\\controller\\overview.js"
+			],
+			[
+				"dash",
+				"data\\dashboard.json"
+			],
+			[
+				"command",
+				"app\\scripts\\core\\command-bus.js"
+			],
+			[
+				"tagds",
+				"app\\scripts\\controller\\tag-dashboard.js"
+			],
+			[
+				"total",
+				"app\\scripts\\controller\\total.js"
+			],
+			[
+				"transace",
+				"app\\scripts\\view\\transaction-editor.html"
+			],
+			[
+				"transadeh",
+				"app\\scripts\\view\\transaction-detail.html"
+			],
+			[
+				"transad",
+				"app\\scripts\\controller\\transaction-detail.js"
+			],
+			[
+				"multr",
+				"app\\scripts\\controller\\add-multi-transaction.js"
+			],
+			[
+				"addtra",
+				"app\\scripts\\controller\\add-single-transaction.js"
+			],
+			[
+				"transacd",
+				"app\\scripts\\view\\transaction-detail.html"
+			],
+			[
+				"viewtra",
+				"app\\scripts\\handler\\view-transaction.js"
+			],
+			[
+				"trasacd",
+				"app\\scripts\\controller\\transaction-detail.js"
+			],
+			[
+				"content",
+				"app\\styles\\layout\\_content.scss"
+			],
+			[
+				"feature",
+				"app\\styles\\layout\\_feature.scss"
+			],
+			[
+				"trans",
+				"data\\transactions.json"
+			],
+			[
+				"transja",
+				"data\\transactions.json"
+			],
+			[
+				"picker",
+				"app\\styles\\modules\\_picker.scss"
+			],
+			[
+				"transdes",
+				"app\\styles\\modules\\_transaction-detail.scss"
+			],
+			[
+				"transactionjs",
+				"app\\scripts\\controller\\transactions.js"
+			],
+			[
+				"base",
+				"app\\scripts\\controller\\base.js"
+			],
+			[
+				"",
+				".gitignore"
+			],
+			[
+				"filter",
+				"app\\scripts\\view\\filter-picker.html"
+			],
+			[
+				"date-fil",
+				"app\\styles\\modules\\_date-filter.scss"
+			],
+			[
+				"date",
+				"app\\scripts\\controller\\date-filter.js"
+			],
+			[
+				"datefi",
+				"app\\scripts\\view\\date-filter.html"
+			],
+			[
+				"saver",
+				"app\\styles\\modules\\_save-transaction.scss"
+			],
+			[
+				"headers",
+				"app\\styles\\layout\\_header.scss"
+			],
+			[
+				"header",
+				"app\\scripts\\controller\\header.js"
+			],
+			[
+				"overlay",
+				"app\\styles\\layout\\_overlay.scss"
+			],
+			[
+				"popup",
+				"app\\styles\\layout\\_popup.scss"
+			],
+			[
+				"diretag-",
+				"app\\scripts\\directive\\tag-dashboard.js"
+			],
+			[
+				"charts",
+				"app\\styles\\layout\\_chart.scss"
+			],
+			[
+				"transacjs",
+				"app\\scripts\\controller\\transactions.js"
+			],
+			[
+				"app",
+				"app\\scripts\\app.js"
+			],
+			[
+				"configjs",
+				"app\\scripts\\config.js"
+			],
+			[
+				"directive",
+				"app\\scripts\\directive\\base.js"
+			],
+			[
+				"base.",
+				"app\\scripts\\directive\\base.js"
+			],
+			[
 				"config",
 				"app\\styles\\utilities\\_config.scss"
 			],
@@ -918,10 +1104,6 @@
 			[
 				"trasac",
 				"app\\scripts\\controller\\transaction-list.js"
-			],
-			[
-				"command",
-				"app\\scripts\\core\\command-bus.js"
 			],
 			[
 				"navi",
@@ -960,10 +1142,6 @@
 				"app\\styles\\states\\_collapse.scss"
 			],
 			[
-				"feature",
-				"app\\styles\\layout\\_feature.scss"
-			],
-			[
 				"bra",
 				"app\\styles\\layout\\_brand.scss"
 			],
@@ -978,10 +1156,6 @@
 			[
 				"conten",
 				"app\\styles\\layout\\_content.scss"
-			],
-			[
-				"header",
-				"app\\styles\\layout\\_header.scss"
 			],
 			[
 				"mixin",
@@ -1064,24 +1238,12 @@
 				"app\\styles\\modules\\_search.scss"
 			],
 			[
-				"base",
-				"app\\scripts\\view\\base.html"
-			],
-			[
-				"content",
-				"app\\styles\\layout\\_content.scss"
-			],
-			[
 				"datefil",
 				"app\\styles\\modules\\_date-filter.scss"
 			],
 			[
 				"menus",
 				"app\\styles\\layout\\_menu.scss"
-			],
-			[
-				"",
-				"app\\styles\\modules\\_navigation.scss"
 			],
 			[
 				"branch",
@@ -1134,10 +1296,6 @@
 			[
 				"mescss",
 				"app\\styles\\layout\\_menu.scss"
-			],
-			[
-				"picker",
-				"app\\styles\\modules\\_picker.scss"
 			],
 			[
 				"transa",
@@ -1282,134 +1440,6 @@
 			[
 				"infoh",
 				"app\\scripts\\view\\info.html"
-			],
-			[
-				"profi",
-				"app\\styles\\modules\\_profile.scss"
-			],
-			[
-				"abouts",
-				"app\\styles\\layout\\_about.scss"
-			],
-			[
-				"text",
-				"app\\styles\\modules\\_text.scss"
-			],
-			[
-				"navis",
-				"app\\styles\\modules\\_navigation.scss"
-			],
-			[
-				"time",
-				"app\\scripts\\view\\timeline.html"
-			],
-			[
-				"navs",
-				"app\\styles\\modules\\_navigation.scss"
-			],
-			[
-				"abou",
-				"app\\scripts\\view\\about.html"
-			],
-			[
-				"tim",
-				"app\\data\\timeline.json"
-			],
-			[
-				"social",
-				"app\\styles\\modules\\_social.scss"
-			],
-			[
-				"work",
-				"app\\scripts\\view\\workspace.html"
-			],
-			[
-				"workspace",
-				"app\\styles\\layout\\_workspace.scss"
-			],
-			[
-				"showc",
-				"app\\styles\\modules\\_showcase.scss"
-			],
-			[
-				"skill",
-				"app\\styles\\layout\\_skill.scss"
-			],
-			[
-				"conta",
-				"app\\styles\\modules\\_contact-form.scss"
-			],
-			[
-				"w",
-				"app\\scripts\\directives\\workspace.js"
-			],
-			[
-				"wor",
-				"app\\scripts\\views\\workspace.html"
-			],
-			[
-				"charts",
-				"app\\styles\\modules\\_chart.scss"
-			],
-			[
-				"contact",
-				"app\\styles\\modules\\_contact-form.scss"
-			],
-			[
-				"images",
-				"app\\styles\\modules\\_image.scss"
-			],
-			[
-				"cover",
-				"app\\styles\\layout\\_cover.scss"
-			],
-			[
-				"proj",
-				"app\\data\\projects.json"
-			],
-			[
-				"show",
-				"app\\styles\\modules\\_showcase.scss"
-			],
-			[
-				"workjs",
-				"app\\scripts\\directives\\workspace.js"
-			],
-			[
-				"works",
-				"app\\data\\workspace.json"
-			],
-			[
-				"workht",
-				"app\\scripts\\views\\workspace.html"
-			],
-			[
-				"owl",
-				"app\\styles\\modules\\_owl-carousel.scss"
-			],
-			[
-				"workscss",
-				"app\\styles\\layout\\_workspace.scss"
-			],
-			[
-				"owlca",
-				"app\\styles\\modules\\_owl-carousel.scss"
-			],
-			[
-				"workspaces",
-				"app\\styles\\layout\\_workspace.scss"
-			],
-			[
-				"wojs",
-				"app\\data\\workspace.json"
-			],
-			[
-				"workspa",
-				"app\\scripts\\directives\\workspace.js"
-			],
-			[
-				"mixins",
-				"app\\styles\\utilities\\_mixins.scss"
 			]
 		],
 		"width": 0.0
@@ -1435,15 +1465,6 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"last_automatic_layout":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			]
-		]
 	},
 	"show_minimap": true,
 	"show_open_files": false,

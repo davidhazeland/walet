@@ -1,14 +1,14 @@
 <div class="overview" ng-controller="OverviewCtrl">
 	<p class="overview__item group">
 		<span class="net-worth fl">Net Worth</span>
-		<span class="net-worth-value fr">$1369</span>
+		<span class="net-worth-value fr" ng-bind="overview.networth"></span>
 	</p>
 	<p class="overview__item overview__item--current group">
 		<span class="expense fl">Expense</span>
-		<span class="expense-value fr">$700</span>
+		<span class="expense-value fr" ng-bind="overview.expense"></span>
 	</p>
 	<p class="overview__item group">
 		<span class="income fl">Income</span>
-		<span class="income-value fr">$2144</span>
+		<span class="income-value fr" ng-bind="overview.income"></span>
 	</p>
 </div>

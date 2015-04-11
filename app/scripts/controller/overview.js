@@ -2,16 +2,19 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 10:31:47
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-11 20:18:52
+* @Last Modified time: 2015-04-12 00:06:11
 */
 
 'use strict';
 
 /* global define */
 
-define(['app'], function(app){
-	var Controller = function($scope,  $element) {
-		this._element = $element;
+define(['app', 'observer'], function(app, Observer){
+	var Controller = function($scope) {
+		Observer.subscribe('DashboardLoaded', function(data){
+			$scope.overview = data.overview;
+			$scope.$apply();
+		}, this);
 	};
 
 	Controller.prototype = {
@@ -20,7 +23,7 @@ define(['app'], function(app){
 		}
 	}
 
-	app.controller('OverviewCtrl', ['$scope', '$element', Controller]);
+	app.controller('OverviewCtrl', ['$scope', Controller]);
 
 	return app;
 });

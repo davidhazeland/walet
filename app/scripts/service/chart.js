@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-09 10:54:01
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-10 11:29:39
+ * @Last Modified time: 2015-04-12 00:09:11
  */
 
 'use strict';
@@ -15,7 +15,7 @@ define(['chartjs'], function(Chart) {
 	};
 
 	Service.prototype = {
-		drawTagChart: function(data, canvas) {
+		drawTagChart: function(canvas, data) {
 			var ctx = canvas.getContext('2d');
 
 			var expenseChart = new Chart(ctx).Doughnut(data, {
@@ -27,7 +27,7 @@ define(['chartjs'], function(Chart) {
 			return legend;
 		},
 
-		drawCompareChart: function(data, canvas) {
+		drawCompareChart: function(canvas, data) {
 			var ctx = canvas.getContext('2d');
 
 			var compareChart = new Chart(ctx).Line(data, {

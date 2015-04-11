@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 13:07:02
+* @Last Modified time: 2015-04-11 23:56:21
 */
 
 'use strict';
@@ -18,7 +18,8 @@ define([
 	'handler/filter-transaction',
 	'handler/delete-transaction',
 	'handler/view-tag-dashboard',
-	'handler/view-compare-dashboard'
+	'handler/view-compare-dashboard',
+	'handler/view-dashboard'
 	], function(
 		FetchTransactionHandler,
 		ViewTransactionHandler,
@@ -28,7 +29,8 @@ define([
 		FilterTransactionHandler,
 		DeleteTransactionHandler,
 		ViewTagDashboardHandler,
-		ViewCompareDashboardHandler
+		ViewCompareDashboardHandler,
+		ViewDashboardHandler
 		){
 		var ComandBus = function(){
 			this.maps = {
@@ -40,7 +42,8 @@ define([
 				'FilterTransaction': FilterTransactionHandler,
 				'DeleteTransaction': DeleteTransactionHandler,
 				'ViewTagDashboard': ViewTagDashboardHandler,
-				'ViewCompareDashboard': ViewCompareDashboardHandler
+				'ViewCompareDashboard': ViewCompareDashboardHandler,
+				'ViewDashboard': ViewDashboardHandler
 			}
 		};
 

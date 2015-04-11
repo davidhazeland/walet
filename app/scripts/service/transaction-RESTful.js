@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 10:32:15
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-10 11:25:33
+ * @Last Modified time: 2015-04-11 23:57:37
  */
 
 'use strict';
@@ -18,6 +18,11 @@ define(['./RESTful'], function(RESTful) {
 		get : function(query) {
 			var url;
 			switch(query.type) {
+				case 'dashboard' : {
+					url = '/data/dashboard.json';
+					break;
+				}
+
 				case 'tagDashboard' : {
 					url = '/data/tag-dashboard.json';
 					break;
