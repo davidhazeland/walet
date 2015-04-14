@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-03-29 23:41:01
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 20:03:21
+* @Last Modified time: 2015-04-14 17:01:59
 */
 'use strict';
 
@@ -24,9 +24,7 @@ define([
 	'./filter-picker',
 	'./transaction-detail',
 	'./transaction-editor',
-	'./transaction-type',
-	'./add-single-transaction',
-	'./add-multi-transaction'
+	'./transaction-type'
 	], 
 function(){
 	

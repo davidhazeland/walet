@@ -1,9 +1,9 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-08 21:11:01
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 20:22:39
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-08 21:11:01
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-13 10:36:28
+ */
 
 'use strict';
 
@@ -12,17 +12,19 @@
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
 		Observer.subscribe('LoadTransactions', function(data) {
-			this.collapse();
+			$scope.visibility = false;
 		}, this);
 		Observer.subscribe('OpenFilterPicker', function(data) {
 			$scope.visibility = true;
 		});
 
 		$scope.visibility = false;
-		$scope.handleCloseBtnClick = function(){
+		$scope.handleCloseBtnClick = function() {
 			$scope.visibility = false;
 		};
-		$scope.handleSelectionClick = this.handleSelectionClick;
+		$scope.handleSelectionClick = function(e) {
+			CommandBus.execute('FilterTransaction', {});
+		};
 	};
 
 	Controller.prototype = {
@@ -35,7 +37,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 		},
 
 		handleSelectionClick: function() {
-			CommandBus.execute('FilterTransaction', {});
+
 		}
 	};
 

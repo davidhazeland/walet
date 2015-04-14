@@ -18,7 +18,7 @@
 			</li>
 			<li class="transaction-detail-content__item">
 				<span class="title">Date</span>
-				<span class="content" ng-bind="item.date"></span>
+				<span class="content" ng-bind="item.date | date"></span>
 			</li>
 		</ul>
 		<button class="transaction-detail__edit fl" ng-click="handleEditBtnClick()">Edit</button>

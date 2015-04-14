@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"search",
+				"searchTransCtrl"
+			],
+			[
+				"R",
+				"routeParams"
+			],
+			[
 				"o",
 				"overview"
 			],
@@ -86,10 +94,6 @@
 			[
 				"cl",
 				"cl	console.log"
-			],
-			[
-				"R",
-				"TransactionRESTful"
 			],
 			[
 				"TRansa",
@@ -391,6 +395,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "test/spec/behavior/index.js",
+			"settings":
+			{
+				"buffer_size": 193,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/controller/filter-picker.js",
+			"settings":
+			{
+				"buffer_size": 924,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test/spec/behavior/fetch-transaction.js",
+			"settings":
+			{
+				"buffer_size": 3087,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/view/filter-picker.html",
+			"settings":
+			{
+				"buffer_size": 971,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -570,44 +606,51 @@
 	],
 	"file_history":
 	[
-		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
-		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/chart.js",
-		"/E/GitHub/walet/app/scripts/view/overview.html",
-		"/E/GitHub/walet/app/scripts/directive/compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/controller/overview.js",
-		"/E/GitHub/walet/data/dashboard.json",
 		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
+		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
+		"/E/GitHub/walet/app/scripts/controller/transactions.js",
+		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
+		"/E/GitHub/walet/app/scripts/controller/menu.js",
+		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
+		"/E/GitHub/walet/app/scripts/view/menu.html",
+		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/index.js",
+		"/E/GitHub/walet/app/scripts/controller/total.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
+		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/overview.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
+		"/E/GitHub/walet/app/scripts/core/observer.js",
+		"/E/GitHub/walet/app/scripts/model/dashboard.js",
+		"/E/GitHub/walet/app/scripts/service/chart.js",
+		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/directive/compare-dashboard.js",
+		"/E/GitHub/walet/app/scripts/view/overview.html",
+		"/E/GitHub/walet/data/dashboard.json",
 		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
 		"/E/GitHub/walet/app/scripts/service/dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/view-dashboard.js",
 		"/E/GitHub/walet/app/scripts/core/command-bus.js",
-		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
-		"/E/GitHub/walet/app/scripts/model/dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
 		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
 		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
 		"/E/GitHub/walet/app/scripts/controller/add-single-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/total.js",
 		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
 		"/E/GitHub/walet/app/scripts/controller/add-multi-transaction.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
 		"/E/GitHub/walet/app/styles/layout/_content.scss",
-		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
 		"/E/GitHub/walet/data/transactions.json",
-		"/E/GitHub/walet/app/scripts/controller/transactions.js",
 		"/E/GitHub/walet/app/styles/layout/_feature.scss",
 		"/E/GitHub/walet/app/scripts/service/transactions.js",
 		"/E/GitHub/walet/app/scripts/view/total.html",
 		"/E/GitHub/walet/app/scripts/directive/total.js",
-		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
 		"/E/GitHub/walet/app/scripts/model/transactions.js",
 		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
 		"/E/GitHub/walet/app/styles/modules/_picker.scss",
-		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
 		"/E/GitHub/walet/app/scripts/service/transaction-search.js",
 		"/E/GitHub/walet/app/scripts/view/transaction-type.html",
 		"/E/GitHub/walet/app/scripts/view/header-app.html",
@@ -620,7 +663,6 @@
 		"/E/GitHub/walet/app/scripts/directive/base.js",
 		"/E/GitHub/walet/app/scripts/directive/transaction-detail.js",
 		"/E/GitHub/walet/app/styles/modules/_transaction-detail.scss",
-		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
 		"/E/GitHub/walet/.gitignore",
 		"/E/GitHub/walet/app/styles/modules/_date-filter.scss",
 		"/E/GitHub/walet/app/scripts/directive/filter-picker.js",
@@ -641,7 +683,6 @@
 		"/E/GitHub/walet/app/scripts/controller/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/controller/search.js",
 		"/E/GitHub/walet/app/scripts/controller/date-filter-picker.js",
-		"/E/GitHub/walet/app/scripts/controller/menu.js",
 		"/E/GitHub/walet/app/scripts/controller/multi-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/save-transaction.js",
 		"/E/GitHub/walet/app/scripts/directive/date-filter-picker.js",
@@ -656,7 +697,6 @@
 		"/E/GitHub/walet/app/scripts/app.js",
 		"/E/GitHub/walet/app/scripts/handler/view-compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/compare-dashboard.html",
-		"/E/GitHub/walet/app/scripts/view/menu.html",
 		"/E/GitHub/walet/app/styles/layout/_chart.scss",
 		"/E/GitHub/walet/app/scripts/handler/view-tag-dashboard.js",
 		"/E/GitHub/walet/app/scripts/config.js",
@@ -690,14 +730,10 @@
 		"/E/GitHub/walet/app/scripts/handler/delete-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/delete-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/handler/save-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/save-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js"
+		"/E/GitHub/walet/test/spec/behavior/save-transaction.js"
 	],
 	"find":
 	{
@@ -715,6 +751,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"transList",
+			"List",
+			"filterPickerscope",
+			"filterPicker",
+			"dashboard",
+			"sub",
+			"s",
 			"ViewCompare",
 			"compareDashboard",
 			"HaveBeenCalled",
@@ -835,14 +878,7 @@
 			"	&",
 			"form__descriptiond",
 			"k-icon",
-			"icon",
-			"16",
-			"13",
-			"15",
-			"10",
-			"referenceNode",
-			"expense",
-			"net-worth"
+			"icon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -872,8 +908,548 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "test/spec/behavior/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								223,
+								4,
+								10,
+								9,
+								10,
+								36,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/controller/filter-picker.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								694,
+								694
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								223,
+								4,
+								11,
+								10,
+								38,
+								11,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test/spec/behavior/fetch-transaction.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2238,
+								2238
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								223,
+								4,
+								10,
+								9,
+								10,
+								36,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1848.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/scripts/view/filter-picker.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								888,
+								888
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								223,
+								4,
+								11,
+								10,
+								38,
+								12,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -930,6 +1506,30 @@
 		"selected_items":
 		[
 			[
+				"filter",
+				"app\\scripts\\view\\filter-picker.html"
+			],
+			[
+				"searchtran",
+				"test\\spec\\behavior\\search-transaction.js"
+			],
+			[
+				"total",
+				"app\\scripts\\controller\\total.js"
+			],
+			[
+				"transaclis",
+				"app\\scripts\\controller\\transaction-list.js"
+			],
+			[
+				"overv",
+				"app\\scripts\\controller\\overview.js"
+			],
+			[
+				"menu",
+				"app\\scripts\\controller\\menu.js"
+			],
+			[
 				"serchart",
 				"app\\scripts\\service\\chart.js"
 			],
@@ -948,10 +1548,6 @@
 			[
 				"tagds",
 				"app\\scripts\\controller\\tag-dashboard.js"
-			],
-			[
-				"total",
-				"app\\scripts\\controller\\total.js"
 			],
 			[
 				"transace",
@@ -1020,10 +1616,6 @@
 			[
 				"",
 				".gitignore"
-			],
-			[
-				"filter",
-				"app\\scripts\\view\\filter-picker.html"
 			],
 			[
 				"date-fil",
@@ -1128,10 +1720,6 @@
 			[
 				"transac",
 				"app\\styles\\modules\\_transaction.scss"
-			],
-			[
-				"menu",
-				"app\\styles\\layout\\_menu.scss"
 			],
 			[
 				"accou",
@@ -1428,18 +2016,6 @@
 			[
 				"infos",
 				"app\\styles\\layout\\_info.scss"
-			],
-			[
-				"about",
-				"app\\styles\\layout\\_about.scss"
-			],
-			[
-				"info",
-				"app\\data\\info.json"
-			],
-			[
-				"infoh",
-				"app\\scripts\\view\\info.html"
 			]
 		],
 		"width": 0.0

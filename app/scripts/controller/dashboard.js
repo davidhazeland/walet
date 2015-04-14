@@ -2,16 +2,19 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 10:31:47
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-12 00:05:47
+* @Last Modified time: 2015-04-13 10:07:35
 */
 
 'use strict';
 
 /* global define */
 
-define(['app', 'commandBus'], function(app, CommandBus){
-	var Controller = function($scope) {
+define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
+	var Controller = function($scope, $routeParams) {
 		this.load();
+		Observer.publish('Navigate', {
+			page: 'dashboard'
+		});
 	};
 
 	Controller.prototype = {
@@ -20,7 +23,7 @@ define(['app', 'commandBus'], function(app, CommandBus){
 		}
 	};
 
-	app.controller('DashboardCtrl', ['$scope', Controller]);
+	app.controller('DashboardCtrl', ['$scope', '$routeParams', Controller]);
 
 	return app;
 });

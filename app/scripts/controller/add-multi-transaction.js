@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 10:31:47
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 16:49:48
+* @Last Modified time: 2015-04-14 16:11:28
 */
 
 'use strict';
@@ -17,7 +17,7 @@ define(['app', 'observer'], function(app, Observer){
 		};
 
 		Observer.subscribe('OpenTransactionEditor', function(){
-			//$scope.visibility = true;
+			$scope.visibility = true;
 		});
 	}];
 

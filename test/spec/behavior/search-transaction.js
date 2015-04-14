@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 16:19:27
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-08 16:41:26
+ * @Last Modified time: 2015-04-13 10:27:12
  */
 
 'use strict';
@@ -13,7 +13,7 @@ define([
 	'angularMock',
 	'commandBus',
 	'observer',
-	'controller/transaction-list',
+	'controller/transactions',
 	'controller/search-transaction',
 	'handler/search-transaction',
 	'service/transaction-search'
@@ -21,7 +21,7 @@ define([
 	angularMock,
 	CommandBus,
 	Observer,
-	TransactionListCtrl,
+	TransactionsCtrl,
 	SearchTransactionCtrl,
 	SearchTransactionHandler,
 	TransactionSearch
@@ -29,8 +29,9 @@ define([
 	describe('Give a Search box and Transaction list', function() {
 		var searchTransCtrl,
 			searchTransScope,
-			transListScope,
-			transListCtrl;
+			transScope,
+			transCtrl,
+			searchTransElement;
 
 		beforeEach(module('portfolio'));
 
@@ -39,12 +40,14 @@ define([
 		//////////////////////////////////
 		beforeEach(inject(function(_$controller_) {
 			searchTransScope = {};
-			transListScope = {};
+			searchTransElement = {};
+			transScope = {};
 			searchTransCtrl = _$controller_('SearchTransactionCtrl', {
-				$scope: searchTransScope
+				$scope: searchTransScope,
+				$element: searchTransElement
 			});
-			transListCtrl = _$controller_('TransactionListCtrl', {
-				$scope: transListScope
+			transCtrl = _$controller_('TransactionsCtrl', {
+				$scope: transScope
 			});
 		}));
 
@@ -59,7 +62,7 @@ define([
 				spyOn(SearchTransactionHandler, 'handle').and.callThrough();
 				spyOn(TransactionSearch, 'update').and.callThrough();
 				spyOn(Observer, 'publish').and.callThrough();
-				spyOn(transListCtrl, 'load').and.callThrough();
+				spyOn(transCtrl, 'load').and.callThrough();
 			});
 
 			beforeEach(function() {
@@ -88,7 +91,7 @@ define([
 			});
 
 			it('then TransactionListCtrl load() should be called', function() {
-				expect(transListCtrl.load).toHaveBeenCalled();
+				expect(transCtrl.load).toHaveBeenCalled();
 			});
 		});
 

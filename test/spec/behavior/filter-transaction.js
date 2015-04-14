@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 21:02:18
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 21:20:57
+* @Last Modified time: 2015-04-13 10:33:29
 */
 
 'use strict';
@@ -13,6 +13,7 @@ define([
 	'angularMock',
 	'commandBus',
 	'observer',
+	'controller/transactions',
 	'controller/transaction-list',
 	'controller/filter-picker',
 	'handler/filter-transaction',
@@ -21,6 +22,7 @@ define([
 	angularMock,
 	CommandBus,
 	Observer,
+	TransactionsCtrl,
 	TransactionListCtrl,
 	FilterPickerCtrl,
 	FilterTransactionHandler,
@@ -28,7 +30,9 @@ define([
 ) {
 	describe('Give a Filter picker and Transaction list', function() {
 		var filterPickerCtrl,
-			filterPickerscope,
+			filterPickerScope,
+			transCtrl,
+			transScope,
 			transListScope,
 			transListCtrl;
 
@@ -38,19 +42,23 @@ define([
 		// Inject angular controller //
 		//////////////////////////////////
 		beforeEach(inject(function(_$controller_) {
-			filterPickerscope = {};
+			filterPickerScope = {};
 			transListScope = {};
+			transScope = {};
 			filterPickerCtrl = _$controller_('FilterPickerCtrl', {
-				$scope: filterPickerscope
+				$scope: filterPickerScope
 			});
 			transListCtrl = _$controller_('TransactionListCtrl', {
 				$scope: transListScope
+			});
+			transCtrl = _$controller_('TransactionsCtrl', {
+				$scope: transScope
 			});
 		}));
 
 		describe('When a selection click', function() {
 			beforeEach(function() {
-				spyOn(filterPickerscope, 'handleSelectionClick').and.callFake(function() {
+				spyOn(filterPickerScope, 'handleSelectionClick').and.callFake(function() {
 					CommandBus.execute('FilterTransaction', {
 						date: 'this-month'
 					});
@@ -60,11 +68,11 @@ define([
 				spyOn(TransactionFilter, 'update').and.callThrough();
 				spyOn(Observer, 'publish').and.callThrough();
 				spyOn(filterPickerCtrl, 'collapse').and.callThrough();
-				spyOn(transListCtrl, 'load').and.callThrough();
+				spyOn(transCtrl, 'load').and.callThrough();
 			});
 
 			beforeEach(function() {
-				filterPickerscope.handleSelectionClick();
+				filterPickerScope.handleSelectionClick();
 			});
 
 			it('then execute() in CommandBus should be called with FilterTransaction command', function() {
@@ -88,12 +96,12 @@ define([
 				expect(Observer.publish).toHaveBeenCalledWith('LoadTransactions');
 			});
 
-			it('then FilterPickerCtrl collapse() should be called', function() {
-				expect(filterPickerCtrl.collapse).toHaveBeenCalled();
-			});
+			// it('then FilterPickerCtrl collapse() should be called', function() {
+			// 	expect(filterPickerCtrl.collapse).toHaveBeenCalled();
+			// });
 
 			it('then TransactionListCtrl load() should be called', function() {
-				expect(transListCtrl.load).toHaveBeenCalled();
+				expect(transCtrl.load).toHaveBeenCalled();
 			});
 		});
 

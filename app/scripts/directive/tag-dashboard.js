@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-10 10:04:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-12 00:08:09
+* @Last Modified time: 2015-04-13 09:52:19
 */
 
 'use strict';
@@ -14,11 +14,15 @@ define(['app', 'commandBus', 'observer', 'service/chart'], function(app, Command
 		var linkFn = function(scope, el) {
 			var canvas = el.find('canvas')[0];
 
-			Observer.subscribe('DashboardLoaded', function(data){
+			var handleDashboardLoaded = function(data){
 				var legend = Chart.drawTagChart(canvas, data.tag);
 				el.append(legend);
-			}, this);
-			
+			};
+
+			Observer.subscribe('DashboardLoaded', handleDashboardLoaded , this);
+			scope.$on('$destroy', function(){
+				Observer.unsubscribe('DashboardLoaded', handleDashboardLoaded , this);
+			});
 			// CommandBus.execute('ViewTagDashboard', {
 			// 	canvas: canvas
 			// });

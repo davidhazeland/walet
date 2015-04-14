@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-09 10:54:01
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-12 00:09:11
+ * @Last Modified time: 2015-04-13 09:31:36
  */
 
 'use strict';
@@ -11,7 +11,7 @@
 
 define(['chartjs'], function(Chart) {
 	var Service = function() {
-		
+
 	};
 
 	Service.prototype = {

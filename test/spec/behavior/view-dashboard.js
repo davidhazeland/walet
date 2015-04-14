@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-11 23:25:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-12 00:16:07
+ * @Last Modified time: 2015-04-13 10:37:34
  */
 
 'use strict';
@@ -34,7 +34,7 @@ define([
 		Dashboard,
 		DashboardModel,
 		Chart) {
-		describe('Give a Compare dashboard', function() {
+		describe('Give a Dashboard', function() {
 			var dashboardScope,
 				dashboardCtrl,
 				tagDashboardScope,
@@ -53,7 +53,11 @@ define([
 				dashboardScope = {};
 				tagDashboardScope = {};
 				compareDashboardScope = {};
-				overviewScope = {};
+				overviewScope = {
+					$apply: function() {
+
+					}
+				};
 				dashboardCtrl = _$controller_('DashboardCtrl', {
 					$scope: dashboardScope
 				});
@@ -94,7 +98,7 @@ define([
 					spyOn(Observer, 'publish').and.callThrough();
 				});
 
-				beforeEach(function(){
+				beforeEach(function() {
 					dashboardCtrl.load();
 				});
 

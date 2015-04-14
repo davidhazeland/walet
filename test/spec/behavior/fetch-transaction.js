@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 09:19:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-11 20:54:01
+ * @Last Modified time: 2015-04-14 14:10:49
  */
 
 'use strict';
@@ -44,9 +44,17 @@ define([
 		// Inject angular controller //
 		//////////////////////////////////
 		beforeEach(inject(function(_$controller_) {
-			transListScope = {};
+			transListScope = {
+				on: function(){
+					
+				}				
+			};
 			transScope = {};
-			totalScope = {};
+			totalScope = {
+				$apply: function(){
+					
+				}
+			};
 			transListCtrl = _$controller_('TransactionListCtrl', {
 				$scope: transListScope
 			});
@@ -74,7 +82,7 @@ define([
 				});
 				spyOn(TransactionsModel, 'load').and.callThrough();
 				spyOn(Observer, 'publish').and.callThrough();
-				spyOn(transListCtrl, 'render');
+				// spyOn(transListCtrl, 'render');
 			});
 
 			beforeEach(function() {

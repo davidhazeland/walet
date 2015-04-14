@@ -2,57 +2,48 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 13:48:39
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-11 21:13:46
+ * @Last Modified time: 2015-04-14 17:06:01
  */
 
- 'use strict';
+'use strict';
 
- /* global define */
+/* global define */
 
- define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
- 	var Controller = function($scope) {
- 		Observer.subscribe('RenderTransactionDetail', function(item) {
- 			$scope.item = item;
- 			$scope.visibility = true;
- 			//$scope.$apply();
- 		}, this);
- 		Observer.subscribe('TransactionDeleted', function(data) {
- 			this.collapse();
- 		}, this);
+define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
+	var Controller = function($scope) {
+		// Observer register
+		var handleRenderTransactionDetail = function(item) {
+				$scope.item = item;
+				$scope.visibility = true;
+			},
+			handleTransactionDeleted = function() {
+				$scope.visibility = false;
+			};
 
- 		$scope.visibility = false;
- 		$scope.handleCloseBtnClick = function(){
- 			$scope.visibility = false;
- 		};
- 		$scope.handleEditBtnClick = function(){
- 			$scope.visibility = false;
- 			Observer.publish('OpenTransactionEditor', $scope.item);
- 			//CommandBus.execute('EditTransaction', $scope.item);
- 		};
- 		$scope.handleDeleteBtnClick = function(){
- 			CommandBus.execute('DeleteTransaction', {});
- 		};
- 	};
+		Observer.subscribe('RenderTransactionDetail', handleRenderTransactionDetail, this);
+		Observer.subscribe('TransactionDeleted', handleTransactionDeleted, this);
 
- 	Controller.prototype = {
- 		render: function(data) {
+		// Destroy Observer
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('RenderTransactionDetail', handleRenderTransactionDetail, this);
+			Observer.unsubscribe('TransactionDeleted', handleTransactionDeleted, this);
+		});
 
- 		},
+		// Scope property
+		$scope.visibility = false;
+		$scope.handleCloseBtnClick = function() {
+			$scope.visibility = false;
+		};
+		$scope.handleEditBtnClick = function() {
+			$scope.visibility = false;
+			Observer.publish('OpenTransactionEditor', $scope.item);
+		};
+		$scope.handleDeleteBtnClick = function() {
+			CommandBus.execute('DeleteTransaction', {});
+		};
+	};
 
- 		collapse : function () {
+	app.controller('TransactionDetailCtrl', ['$scope', Controller]);
 
- 		},
-
- 		handleEditBtnClick: function() {
- 			
- 		},
-
- 		handleDeleteBtnClick: function() {
- 			
- 		}
- 	};
-
- 	app.controller('TransactionDetailCtrl', ['$scope', Controller]);
-
- 	return Controller;
- });
+	return Controller;
+});
