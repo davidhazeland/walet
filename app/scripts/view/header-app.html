@@ -7,7 +7,8 @@
 	<div class="container">
 		<section class="search is-expanded-desktop" ng-controller="SearchTransactionCtrl">
 			<input type="search" class="search__input" ng-keyup="handleSearchBoxKeyUp($event)"/>
-			<i class="search-icon search__icon"></i>
+			<i class="search-icon search__icon" ng-show="!isTyping"></i>
+			<i class="cancel-icon search__cancel" ng-show="isTyping" ng-click="handleCancelBtnClick()"></i>
 		</section>
 		<span class="add-button fr is-expanded-desktop" ng-click="handleAddBtnClick()"><i class="add-circle-icon"></i>ADD</span>
 	</div>
