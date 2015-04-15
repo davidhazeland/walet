@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 21:02:18
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-13 10:33:29
+* @Last Modified time: 2015-04-15 10:09:40
 */
 
 'use strict';
@@ -43,7 +43,11 @@ define([
 		//////////////////////////////////
 		beforeEach(inject(function(_$controller_) {
 			filterPickerScope = {};
-			transListScope = {};
+			transListScope = {
+				$on: function(){
+					
+				}
+			};
 			transScope = {};
 			filterPickerCtrl = _$controller_('FilterPickerCtrl', {
 				$scope: filterPickerScope

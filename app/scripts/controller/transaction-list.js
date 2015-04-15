@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-04 17:33:45
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-14 17:39:25
+ * @Last Modified time: 2015-04-15 10:07:32
  */
 
 'use strict';
@@ -29,14 +29,14 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			};
 
 		Observer.subscribe('TransactionsLoaded', handleTransactionLoaded, this);
-		Observer.subscribe('TransactionSaved', handleTransactionLoaded, this);
-		Observer.subscribe('TransactionDeleted', handleTransactionLoaded, this);
+		Observer.subscribe('TransactionSaved', handleTransactionSaved, this);
+		Observer.subscribe('TransactionDeleted', handleTransactionDeleted, this);
 
 		// Destroy observer
 		$scope.$on('$destroy', function() {
 			Observer.unsubscribe('TransactionsLoaded', handleTransactionLoaded, this);
-			Observer.unsubscribe('TransactionSaved', handleTransactionLoaded, this);
-			Observer.unsubscribe('TransactionDeleted', handleTransactionLoaded, this);
+			Observer.unsubscribe('TransactionSaved', handleTransactionSaved, this);
+			Observer.unsubscribe('TransactionDeleted', handleTransactionDeleted, this);
 		});
 
 		// Scope handler

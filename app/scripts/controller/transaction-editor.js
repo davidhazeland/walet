@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 13:14:14
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-14 17:48:42
+ * @Last Modified time: 2015-04-15 09:52:58
  */
 
 'use strict';
@@ -33,7 +33,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 		// Scope property
 		$scope.visibility = false;
 		$scope.handleSaveBtnClick = function() {
-			CommandBus.execute('EditTransaction', {});
+			CommandBus.execute('EditTransaction', $scope.model);
 		};
 		$scope.handleCloseBtnClick = function(){
 			$scope.visibility = false;

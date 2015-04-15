@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"han",
+				"handleTransactionSaved"
+			],
+			[
+				"hand",
+				"handleOpenTransactionEditor"
+			],
+			[
+				"tra",
+				"transEditorScope"
+			],
+			[
+				"Tran",
+				"TransactionEditorCtrl"
+			],
+			[
+				"handle",
+				"handleTransactionDeleted"
+			],
+			[
 				"search",
 				"searchTransCtrl"
 			],
@@ -22,10 +42,6 @@
 			[
 				"app",
 				"apply	method.apply()"
-			],
-			[
-				"tra",
-				"TransactionsModel"
 			],
 			[
 				"Trans",
@@ -108,10 +124,6 @@
 				"tagDashboardCtrl"
 			],
 			[
-				"Tran",
-				"TransactionListCtrl"
-			],
-			[
 				"trans",
 				"transListCtrl"
 			],
@@ -130,10 +142,6 @@
 			[
 				"Dele",
 				"DeleteTransactionHandler"
-			],
-			[
-				"handle",
-				"handleDeleteBtnClick"
 			],
 			[
 				"exe",
@@ -214,10 +222,6 @@
 			[
 				"View",
 				"ViewTransactionHandler"
-			],
-			[
-				"han",
-				"handler"
 			],
 			[
 				"view",
@@ -396,34 +400,10 @@
 	"buffers":
 	[
 		{
-			"file": "test/spec/behavior/index.js",
+			"file": "/E/GitHub/coffee/main.coffee",
 			"settings":
 			{
-				"buffer_size": 193,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/controller/filter-picker.js",
-			"settings":
-			{
-				"buffer_size": 924,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "test/spec/behavior/fetch-transaction.js",
-			"settings":
-			{
-				"buffer_size": 3087,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/view/filter-picker.html",
-			"settings":
-			{
-				"buffer_size": 971,
+				"buffer_size": 53,
 				"line_ending": "Windows"
 			}
 		}
@@ -435,10 +415,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 173.0,
-		"last_filter": "javas",
+		"height": 196.0,
+		"last_filter": "sysco",
 		"selected_items":
 		[
+			[
+				"sysco",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"syn sa",
+				"Set Syntax: Sass"
+			],
+			[
+				"syscs",
+				"Set Syntax: CSS"
+			],
 			[
 				"javas",
 				"Set Syntax: JavaScript"
@@ -494,10 +490,6 @@
 			[
 				"git ad",
 				"Git: Add..."
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"insta",
@@ -595,6 +587,7 @@
 		"/E/GitHub/walet/app/scripts/controller",
 		"/E/GitHub/walet/app/scripts/core",
 		"/E/GitHub/walet/app/scripts/directive",
+		"/E/GitHub/walet/app/scripts/filter",
 		"/E/GitHub/walet/app/scripts/handler",
 		"/E/GitHub/walet/app/scripts/model",
 		"/E/GitHub/walet/app/scripts/service",
@@ -606,46 +599,57 @@
 	],
 	"file_history":
 	[
-		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
+		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/E/GitHub/walet/test/spec/behavior/index.js",
+		"/E/GitHub/walet/app/scripts/filter/date-picker.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
+		"/E/GitHub/walet/app/scripts/filter/index.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
+		"/E/GitHub/walet/app/styles/states/_collapse.scss",
+		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
+		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
+		"/E/GitHub/walet/data/transactions.json",
 		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/service/transactions.js",
+		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
+		"/E/GitHub/walet/app/scripts/controller/index.js",
+		"/E/GitHub/walet/app/scripts/controller/add-multi-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
+		"/E/GitHub/walet/app/styles/layout/_index.scss",
+		"/E/GitHub/walet/app/styles/layout/_transaction-editor.scss",
+		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
+		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/add-single-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/view-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
+		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
+		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
-		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
 		"/E/GitHub/walet/app/scripts/controller/transactions.js",
-		"/E/GitHub/walet/app/scripts/controller/filter-picker.js",
 		"/E/GitHub/walet/app/scripts/controller/menu.js",
 		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/menu.html",
 		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/index.js",
 		"/E/GitHub/walet/app/scripts/controller/total.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
-		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/overview.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
 		"/E/GitHub/walet/app/scripts/core/observer.js",
 		"/E/GitHub/walet/app/scripts/model/dashboard.js",
 		"/E/GitHub/walet/app/scripts/service/chart.js",
-		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
-		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
 		"/E/GitHub/walet/app/scripts/directive/compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/overview.html",
 		"/E/GitHub/walet/data/dashboard.json",
 		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
 		"/E/GitHub/walet/app/scripts/service/dashboard.js",
 		"/E/GitHub/walet/app/scripts/handler/view-dashboard.js",
 		"/E/GitHub/walet/app/scripts/core/command-bus.js",
 		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
-		"/E/GitHub/walet/app/scripts/controller/add-single-transaction.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
-		"/E/GitHub/walet/app/scripts/controller/add-multi-transaction.js",
 		"/E/GitHub/walet/app/styles/layout/_content.scss",
-		"/E/GitHub/walet/data/transactions.json",
 		"/E/GitHub/walet/app/styles/layout/_feature.scss",
-		"/E/GitHub/walet/app/scripts/service/transactions.js",
 		"/E/GitHub/walet/app/scripts/view/total.html",
 		"/E/GitHub/walet/app/scripts/directive/total.js",
 		"/E/GitHub/walet/app/scripts/model/transactions.js",
@@ -657,7 +661,6 @@
 		"/E/GitHub/walet/app/scripts/service/transaction-filter.js",
 		"/E/GitHub/walet/app/login.html",
 		"/E/GitHub/walet/app/scripts/login.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
 		"/E/GitHub/walet/app/scripts/view/base.html",
 		"/E/GitHub/walet/app/scripts/controller/base.js",
 		"/E/GitHub/walet/app/scripts/directive/base.js",
@@ -666,14 +669,12 @@
 		"/E/GitHub/walet/.gitignore",
 		"/E/GitHub/walet/app/styles/modules/_date-filter.scss",
 		"/E/GitHub/walet/app/scripts/directive/filter-picker.js",
-		"/E/GitHub/walet/app/scripts/controller/index.js",
 		"/E/GitHub/walet/app/scripts/directive/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/directive/transaction-list.js",
 		"/E/GitHub/walet/app/scripts/directive/transaction-editor.js",
 		"/E/GitHub/walet/app/scripts/controller/date-filter.js",
 		"/E/GitHub/walet/app/scripts/view/date-filter.html",
 		"/E/GitHub/walet/app/styles/layout/_header.scss",
-		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
 		"/E/GitHub/walet/app/styles/modules/_multi-transaction.scss",
 		"/E/GitHub/walet/app/scripts/controller/header.js",
 		"/E/GitHub/walet/app/styles/layout/_popup.scss",
@@ -725,15 +726,7 @@
 		"/E/GitHub/walet/app/scripts/service/RESTful.js",
 		"/E/GitHub/walet/app/scripts/service/transaction.js",
 		"/E/GitHub/walet/gulpfile.js",
-		"/E/GitHub/walet/app/scripts/controller/http.js",
-		"/E/GitHub/walet/app/scripts/handler/compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/handler/delete-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/delete-transaction.js",
-		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-type.js",
-		"/E/GitHub/walet/app/scripts/handler/save-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/save-transaction.js"
+		"/E/GitHub/walet/app/scripts/controller/http.js"
 	],
 	"find":
 	{
@@ -751,6 +744,18 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"13/7/2015",
+			"1288323623006",
+			"$scope.",
+			"\"13/7/2015\"",
+			"expense",
+			"2015\"",
+			"subscribe",
+			"item.",
+			"Render",
+			"handleDeleteBtnClick",
+			"subscribe",
+			"subscr",
 			"transList",
 			"List",
 			"filterPickerscope",
@@ -866,19 +871,7 @@
 			"#ccc",
 			"shade",
 			"medium",
-			"10px",
-			"dark",
-			"tint",
-			"dark",
-			"shade",
-			"medium",
-			"shade",
-			"tint",
-			"dark",
-			"	&",
-			"form__descriptiond",
-			"k-icon",
-			"icon"
+			"10px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -886,6 +879,12 @@
 		"regex": true,
 		"replace_history":
 		[
+			"2015/07/13",
+			"\"13/7/2015\"",
+			"1288323623006",
+			"income",
+			"2015\",\"type\":\"expense\"",
+			"model.",
 			"filterPickerCtrl",
 			"FilterTransactionHandler",
 			"Picker",
@@ -908,24 +907,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "test/spec/behavior/index.js",
+					"file": "/E/GitHub/coffee/main.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 193,
+						"buffer_size": 53,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								91,
-								91
+								53,
+								53
 							]
 						],
 						"settings":
@@ -933,46 +932,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -983,415 +942,51 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								223,
-								4,
-								10,
-								9,
-								10,
-								36,
-								0,
-								0,
-								0,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/scripts/controller/filter-picker.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 924,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								694,
-								694
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								223,
-								4,
-								11,
-								10,
-								38,
-								11,
-								0,
-								0,
-								0,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "test/spec/behavior/fetch-transaction.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3087,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2238,
-								2238
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								223,
-								4,
-								10,
-								9,
-								10,
-								36,
-								0,
-								0,
-								0,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1848.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/scripts/view/filter-picker.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 971,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								888,
-								888
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"c_time":
 							[
@@ -1423,10 +1018,10 @@
 								7,
 								223,
 								4,
-								11,
-								10,
-								38,
-								12,
+								14,
+								22,
+								18,
+								2,
 								0,
 								0,
 								0,
@@ -1440,14 +1035,13 @@
 								3,
 								46
 							],
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1505,6 +1099,146 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"tranedih",
+				"app\\scripts\\view\\transaction-editor.html"
+			],
+			[
+				"transacedjs",
+				"app\\scripts\\controller\\transaction-editor.js"
+			],
+			[
+				"transdeh",
+				"app\\scripts\\view\\transaction-detail.html"
+			],
+			[
+				"transj",
+				"data\\transactions.json"
+			],
+			[
+				"transacjso",
+				"data\\transactions.json"
+			],
+			[
+				"transaclish",
+				"app\\scripts\\view\\transaction-list.html"
+			],
+			[
+				"transacli",
+				"app\\scripts\\controller\\transaction-list.js"
+			],
+			[
+				"transacjo",
+				"data\\transactions.json"
+			],
+			[
+				"filter/",
+				"app\\scripts\\filter\\index.js"
+			],
+			[
+				"fetch",
+				"app\\scripts\\handler\\fetch-transaction.js"
+			],
+			[
+				"transactions",
+				"app\\scripts\\service\\transactions.js"
+			],
+			[
+				"transac",
+				"app\\scripts\\service\\transaction-RESTful.js"
+			],
+			[
+				"tranj",
+				"data\\transactions.json"
+			],
+			[
+				"transactjso",
+				"data\\transactions.json"
+			],
+			[
+				"trasane",
+				"app\\scripts\\view\\transaction-editor.html"
+			],
+			[
+				"transalis",
+				"app\\scripts\\controller\\transaction-list.js"
+			],
+			[
+				"tagdas",
+				"app\\scripts\\directive\\tag-dashboard.js"
+			],
+			[
+				"tag",
+				"app\\scripts\\controller\\tag-dashboard.js"
+			],
+			[
+				"controlleri",
+				"app\\scripts\\controller\\index.js"
+			],
+			[
+				"mul",
+				"app\\scripts\\controller\\add-multi-transaction.js"
+			],
+			[
+				"colla",
+				"app\\styles\\states\\_collapse.scss"
+			],
+			[
+				"transaced",
+				"app\\scripts\\view\\transaction-editor.html"
+			],
+			[
+				"layout",
+				"app\\styles\\layout\\_index.scss"
+			],
+			[
+				"savitscs",
+				"app\\styles\\modules\\_save-transaction.scss"
+			],
+			[
+				"transacedi",
+				"app\\scripts\\view\\transaction-editor.html"
+			],
+			[
+				"multitra",
+				"app\\scripts\\controller\\add-multi-transaction.js"
+			],
+			[
+				"sing",
+				"app\\scripts\\controller\\add-single-transaction.js"
+			],
+			[
+				"behavetr",
+				"test\\spec\\behavior\\edit-transaction.js"
+			],
+			[
+				"viewtr",
+				"test\\spec\\behavior\\view-transaction.js"
+			],
+			[
+				"transacde",
+				"app\\scripts\\controller\\transaction-detail.js"
+			],
+			[
+				"transactionlis",
+				"app\\scripts\\controller\\transaction-list.js"
+			],
+			[
+				"view-tr",
+				"test\\spec\\behavior\\view-transaction.js"
+			],
+			[
+				"behav",
+				"test\\spec\\behavior\\index.js"
+			],
+			[
+				"behavi",
+				"test\\spec\\behavior\\index.js"
+			],
+			[
+				"fetchtran",
+				"test\\spec\\behavior\\fetch-transaction.js"
+			],
 			[
 				"filter",
 				"app\\scripts\\view\\filter-picker.html"
@@ -1718,16 +1452,8 @@
 				"app\\styles\\layout\\_content.scss"
 			],
 			[
-				"transac",
-				"app\\styles\\modules\\_transaction.scss"
-			],
-			[
 				"accou",
 				"app\\styles\\layout\\_account.scss"
-			],
-			[
-				"colla",
-				"app\\styles\\states\\_collapse.scss"
 			],
 			[
 				"bra",
@@ -1884,150 +1610,18 @@
 			[
 				"mescss",
 				"app\\styles\\layout\\_menu.scss"
-			],
-			[
-				"transa",
-				"app\\styles\\modules\\_transaction-detail.scss"
-			],
-			[
-				"bas",
-				"app\\styles\\base\\_base.scss"
-			],
-			[
-				"confs",
-				"app\\styles\\utilities\\_config.scss"
-			],
-			[
-				"overl",
-				"app\\styles\\layout\\_overlay.scss"
-			],
-			[
-				"pop",
-				"app\\styles\\layout\\_popup.scss"
-			],
-			[
-				"tran",
-				"app\\styles\\modules\\transaction-form.scss"
-			],
-			[
-				"index",
-				"app\\index.html"
-			],
-			[
-				"main",
-				"app\\scripts\\main.js"
-			],
-			[
-				"popu",
-				"app\\styles\\layout\\_popup.scss"
-			],
-			[
-				"layoutin",
-				"app\\styles\\layout\\_index.scss"
-			],
-			[
-				"dates",
-				"app\\styles\\modules\\_date-filter.scss"
-			],
-			[
-				"layout/index",
-				"app\\styles\\layout\\_index.scss"
-			],
-			[
-				"bases",
-				"node_modules\\gulp-jshint\\node_modules\\lodash\\internal\\baseSlice.js"
-			],
-			[
-				"chartsc",
-				"app\\styles\\layout\\_chart.scss"
-			],
-			[
-				"bashtml",
-				"app\\scripts\\view\\base.html"
-			],
-			[
-				"contentscss",
-				"app\\styles\\layout\\_content.scss"
-			],
-			[
-				"configs",
-				"app\\styles\\utilities\\_config.scss"
-			],
-			[
-				"accout",
-				"app\\styles\\layout\\_account.scss"
-			],
-			[
-				"basscs",
-				"app\\styles\\base\\_base.scss"
-			],
-			[
-				"basescss",
-				"app\\styles\\base\\_base.scss"
-			],
-			[
-				"inde",
-				"app\\index.html"
-			],
-			[
-				"indexscs",
-				"app\\styles\\modules\\_index.scss"
-			],
-			[
-				"mix",
-				"app\\styles\\utilities\\_mixins.scss"
-			],
-			[
-				"moduscss",
-				"app\\styles\\modules\\_index.scss"
-			],
-			[
-				"image",
-				"app\\styles\\modules\\_image.scss"
-			],
-			[
-				"headersc",
-				"app\\styles\\layout\\_header.scss"
-			],
-			[
-				"avat",
-				"app\\styles\\layout\\_avatar.scss"
-			],
-			[
-				"avatar",
-				"app\\scripts\\view\\avatar.html"
-			],
-			[
-				"loading",
-				"app\\styles\\states\\_loading.scss"
-			],
-			[
-				"timescs",
-				"app\\styles\\modules\\_timeline.scss"
-			],
-			[
-				"prof",
-				"app\\styles\\modules\\_profile.scss"
-			],
-			[
-				"infoscs",
-				"app\\styles\\modules\\_info.scss"
-			],
-			[
-				"infos",
-				"app\\styles\\layout\\_info.scss"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{

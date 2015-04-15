@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 12:49:39
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-14 16:57:24
+ * @Last Modified time: 2015-04-15 10:00:19
  */
 
 'use strict';
@@ -48,12 +48,12 @@ define([
 			beforeEach(inject(function(_$controller_) {
 				transDetailScope = {
 					item: data,
-					on: function(){
+					$on: function(){
 
 					}
 				};
 				transEditorScope = {
-					on: function(){
+					$on: function(){
 						
 					}
 				};

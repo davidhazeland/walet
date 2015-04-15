@@ -32,12 +32,12 @@ define([
 			//////////////////////////////////
 			beforeEach(inject(function(_$controller_) {
 				transListScope = {
-					on: function(event, callback){
+					$on: function(event, callback){
 						callback();
 					}
 				};
 				transDetailScope = {
-					on: function(event, callback){
+					$on: function(event, callback){
 						callback();
 					}
 				};

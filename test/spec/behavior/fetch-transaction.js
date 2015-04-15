@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 09:19:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-14 14:10:49
+ * @Last Modified time: 2015-04-15 10:09:05
  */
 
 'use strict';
@@ -45,14 +45,14 @@ define([
 		//////////////////////////////////
 		beforeEach(inject(function(_$controller_) {
 			transListScope = {
-				on: function(){
-					
-				}				
+				$on: function() {
+
+				}
 			};
 			transScope = {};
 			totalScope = {
-				$apply: function(){
-					
+				$apply: function() {
+
 				}
 			};
 			transListCtrl = _$controller_('TransactionListCtrl', {
@@ -67,11 +67,13 @@ define([
 		}));
 
 		describe('When load() called', function() {
-			var data = [{
-				name: 'lr'
-			}, {
-				name: 'ip'
-			}]
+			var data = {
+				items: [{
+					name: 'lr'
+				}, {
+					name: 'ip'
+				}]
+			}
 
 			beforeEach(function() {
 				spyOn(transCtrl, 'load').and.callThrough();
@@ -102,7 +104,7 @@ define([
 				expect(Transactions.fetch).toHaveBeenCalled();
 			});
 
-			it('then shoud be loaded data into Transacions model', function(){
+			it('then shoud be loaded data into Transacions model', function() {
 				expect(TransactionsModel.load).toHaveBeenCalled();
 				expect(TransactionsModel.load).toHaveBeenCalledWith(data);
 			});
@@ -115,7 +117,7 @@ define([
 			it('then Total scope should be equal right value', function() {
 				expect(totalScope.data).toEqual(data);
 			});
-			
+
 			it('then TransactionList scope should be equal right value', function() {
 				expect(transListScope.data).toEqual(data);
 			});
