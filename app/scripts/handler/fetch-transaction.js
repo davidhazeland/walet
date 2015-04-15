@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-08 09:51:08
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-11 20:21:53
+* @Last Modified time: 2015-04-15 10:34:17
 */
 
 'use strict';
@@ -22,7 +22,7 @@ define(['observer', 'service/transactions', 'model/transactions'],
 
 		fetchTransactionsCallback : function(transactions){
 			TransactionsModel.load(transactions);
-			observer.publish('TransactionsLoaded', transactions);
+			observer.publish('TransactionsFetched', transactions);
 		}
 	};
 

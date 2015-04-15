@@ -5,7 +5,7 @@
 define([
 	// './view-dashboard',
 	// './fetch-transaction',
-	'./load-transaction',
+	// './load-transaction',
 	// './view-transaction',
 	// './edit-transaction'
 	// './save-transaction'

@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 09:19:57
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-15 10:09:05
+ * @Last Modified time: 2015-04-15 10:54:52
  */
 
 'use strict';
@@ -47,6 +47,9 @@ define([
 			transListScope = {
 				$on: function() {
 
+				},
+				$apply: function(){
+					
 				}
 			};
 			transScope = {};
@@ -69,10 +72,13 @@ define([
 		describe('When load() called', function() {
 			var data = {
 				items: [{
-					name: 'lr'
+					name: 'lr',
+					date: '2015/07/13'
 				}, {
-					name: 'ip'
-				}]
+					name: 'ip',
+					date: '2015/07/13'
+				}],
+				total: 1000
 			}
 
 			beforeEach(function() {
@@ -109,17 +115,23 @@ define([
 				expect(TransactionsModel.load).toHaveBeenCalledWith(data);
 			});
 
-			it('then Observer should be pushlish TransactionsLoaded message', function() {
+			it('then Observer should be pushlish TransactionsFetched message', function() {
 				expect(Observer.publish).toHaveBeenCalled();
-				expect(Observer.publish).toHaveBeenCalledWith('TransactionsLoaded', data);
+				expect(Observer.publish).toHaveBeenCalledWith('TransactionsFetched', data);
 			});
 
 			it('then Total scope should be equal right value', function() {
-				expect(totalScope.data).toEqual(data);
+				expect(totalScope.total).toEqual(1000);
 			});
 
 			it('then TransactionList scope should be equal right value', function() {
-				expect(transListScope.data).toEqual(data);
+				expect(transListScope.model).toEqual([{
+					name: 'lr',
+					date: new Date('2015/07/13')
+				}, {
+					name: 'ip',
+					date: new Date('2015/07/13')
+				}]);
 			});
 		});
 	});

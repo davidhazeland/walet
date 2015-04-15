@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:45:37
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-11 23:56:21
+* @Last Modified time: 2015-04-15 10:30:50
 */
 
 'use strict';
@@ -11,6 +11,7 @@
 
 define([
 	'handler/fetch-transaction',
+	'handler/load-transaction',
 	'handler/view-transaction',
 	'handler/edit-transaction',
 	'handler/save-transaction',
@@ -22,6 +23,7 @@ define([
 	'handler/view-dashboard'
 	], function(
 		FetchTransactionHandler,
+		LoadTransactionHandler,
 		ViewTransactionHandler,
 		EditTransactionHandler,
 		SaveTransactionHandler,
@@ -35,6 +37,7 @@ define([
 		var ComandBus = function(){
 			this.maps = {
 				'FetchTransaction': FetchTransactionHandler,
+				'LoadTransaction': LoadTransactionHandler,
 				'ViewTransaction': ViewTransactionHandler,
 				'EditTransaction': EditTransactionHandler,
 				'SaveTransaction': SaveTransactionHandler,

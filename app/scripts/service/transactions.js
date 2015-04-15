@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 10:29:41
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-11 20:21:09
+ * @Last Modified time: 2015-04-15 10:31:23
  */
 
 'use strict';
@@ -26,6 +26,17 @@ define([
 
 	Service.prototype = {
 		fetch: function(callback){
+			var query = {};
+			query = TransactionType.decorate(query);
+			query = TransactionFilter.decorate(query);
+			query = TransactionSearch.decorate(query);
+			
+			TransactionRESTful
+				.get(query)
+				.success(callback);
+		},
+
+		load: function(callback) {
 			var query = {};
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);

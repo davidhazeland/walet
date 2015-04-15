@@ -4,7 +4,7 @@
 
 require([
 	'jquery',
-	'spec/behavior/index'
+	'spec/core/index'
 	], 
 function($) {
     // Run all the loaded test specs.
