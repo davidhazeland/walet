@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-03-30 21:35:01
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-15 13:19:18
+* @Last Modified time: 2015-04-15 17:06:17
 */
 'use strict';
 
@@ -15,7 +15,10 @@ define(['app', 'observer', 'jquery'], function(app, Observer, $){
 		};
 
 		$scope.handleAddBtnClick = function(){
-			Observer.publish('OpenTransactionEditor');
+			Observer.publish('OpenTransactionEditor', {
+				date: new Date(),
+				type: 'expense'
+			});
 		}
 	}];
 
