@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-09 11:04:39
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-11 23:50:33
+* @Last Modified time: 2015-04-15 13:21:20
 */
 
 'use strict';
@@ -11,12 +11,19 @@
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
-		Observer.subscribe('CompareDashboardDrew', function(){
-			this.render();
-		}, this);
-		Observer.subscribe('DashboardLoaded', function(data){
-			$scope.data = data.compare;
-		}, this);
+		var handleCompareDashboardDrew = function() {
+
+			},
+			handleDashboardLoaded = function() {
+				$scope.data = data.compare;
+			};
+		Observer.subscribe('CompareDashboardDrew', handleCompareDashboardDrew);
+		Observer.subscribe('DashboardLoaded', handleDashboardLoaded);
+
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('CompareDashboardDrew', handleCompareDashboardDrew);
+			Observer.unsubscribe('DashboardLoaded', handleDashboardLoaded);
+		});
 	};
 
 	Controller.prototype = {

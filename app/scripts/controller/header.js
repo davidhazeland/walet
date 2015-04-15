@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-03-30 21:35:01
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-10 16:43:39
+* @Last Modified time: 2015-04-15 13:19:18
 */
 'use strict';
 
@@ -11,7 +11,6 @@
 define(['app', 'observer', 'jquery'], function(app, Observer, $){
 	var controller = ['$scope', function($scope) {
 		$scope.toggleMenu = function() {
-			// $('#menu').toggleClass('collapsed');
 			$('#feature').toggleClass('collapsed');
 		};
 

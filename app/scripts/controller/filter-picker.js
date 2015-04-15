@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 21:11:01
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-13 10:36:28
+ * @Last Modified time: 2015-04-15 13:22:45
  */
 
 'use strict';
@@ -11,13 +11,21 @@
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
-		Observer.subscribe('LoadTransactions', function(data) {
-			$scope.visibility = false;
-		}, this);
-		Observer.subscribe('OpenFilterPicker', function(data) {
-			$scope.visibility = true;
+		var handleLoadTransactions = function(data) {
+				$scope.visibility = false;
+			},
+			handleOpenFilterPicker = function(data) {
+				$scope.visibility = true;
+			};
+		Observer.subscribe('LoadTransactions', handleLoadTransactions);
+		Observer.subscribe('OpenFilterPicker', handleOpenFilterPicker);
+
+		$scope.$on('$destroy', function() {
+			Observer.subscribe('LoadTransactions', handleLoadTransactions);
+			Observer.subscribe('OpenFilterPicker', handleOpenFilterPicker);
 		});
 
+		// Scope property
 		$scope.visibility = false;
 		$scope.handleCloseBtnClick = function() {
 			$scope.visibility = false;

@@ -1,27 +1,27 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-10 10:31:47
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-13 10:24:45
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-10 10:31:47
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-15 13:17:43
+ */
 
 'use strict';
 
 /* global define */
 
-define(['app', 'observer'], function(app, Observer){
+define(['app', 'observer'], function(app, Observer) {
 	var Controller = function($scope) {
-		Observer.subscribe('DashboardLoaded', function(data){
+		var handleDashboardLoaded = function(data) {
 			$scope.overview = data.overview;
 			$scope.$apply();
-		}, this);
+		};
+
+		Observer.subscribe('DashboardLoaded', handleDashboardLoaded);
+
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('DashboardLoaded', handleDashboardLoaded);
+		});
 	};
-
-	Controller.prototype = {
-		render: function(){
-
-		}
-	}
 
 	app.controller('OverviewCtrl', ['$scope', Controller]);
 

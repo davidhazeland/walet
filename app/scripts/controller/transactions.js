@@ -1,31 +1,35 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-10 10:31:19
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-13 10:31:52
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-10 10:31:19
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-15 13:12:34
+ */
 
 'use strict';
 
 /* global define */
 
-define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
+define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope, $routeParams) {
-		Observer.subscribe('LoadTransactions', function(data) {
-			this.load();
-		}, this);
+		var handleLoadTransactions = function(data) {
+			CommandBus.execute('FetchTransaction', {});
+		};
+
+		Observer.subscribe('LoadTransactions', handleLoadTransactions);
+
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('LoadTransactions', handleLoadTransactions);
+		});
 
 		Observer.publish('Navigate', {
 			page: $routeParams.type
 		});
 
-		this.load();
+		CommandBus.execute('FetchTransaction', {});
 	};
 
 	Controller.prototype = {
-		load: function(){
-			CommandBus.execute('FetchTransaction', {});
-		}
+		
 	}
 
 	app.controller('TransactionsCtrl', ['$scope', '$routeParams', Controller]);
