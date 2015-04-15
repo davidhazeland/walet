@@ -5,10 +5,6 @@
 	.total {
 		float: right;
 		margin-top: 15px;
-		color: $grass--shade;
 		font-size: em(18px);
-		&:before {
-			content: '+';
-		}
 	}
 }

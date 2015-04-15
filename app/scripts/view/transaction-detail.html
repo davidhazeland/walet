@@ -10,7 +10,7 @@
 			</li>
 			<li class="transaction-detail-content__item">
 				<span class="title">Amount</span>
-				<span class="content" ng-bind="item.amount"></span>
+				<span class="content" ng-class="item.type" ng-bind="item.amount | amount:item.type"></span>
 			</li>
 			<li class="transaction-detail-content__item">
 				<span class="title">Tag</span>

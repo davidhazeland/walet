@@ -1,14 +1,14 @@
 <div class="overview" ng-controller="OverviewCtrl">
 	<p class="overview__item group" ng-class="current == 'networth' ? actived : ''">
-		<span class="net-worth fl" ng-click="handleTypeChange('networth')">Net Worth</span>
-		<span class="net-worth-value fr" ng-bind="overview.networth"></span>
+		<span class="fl" ng-click="handleTypeChange('networth')">Net Worth</span>
+		<span class="net-worth-value fr" ng-bind="overview.networth | amount" ng-click="handleTypeChange('networth')"></span>
 	</p>
 	<p class="overview__item group" ng-class="current == 'expense' ? actived : ''">
-		<span class="expense fl" ng-click="handleTypeChange('expense')">Expense</span>
-		<span class="expense-value fr" ng-bind="overview.expense"></span>
+		<span class="fl" ng-click="handleTypeChange('expense')">Expense</span>
+		<span class="expense-value fr" ng-bind="overview.expense | amount:'expense'" ng-click="handleTypeChange('expense')"></span>
 	</p>
 	<p class="overview__item group" ng-class="current == 'income' ? actived : ''">
-		<span class="income fl" ng-click="handleTypeChange('income')">Income</span>
-		<span class="income-value fr" ng-bind="overview.income"></span>
+		<span class="fl" ng-click="handleTypeChange('income')">Income</span>
+		<span class="income-value fr" ng-bind="overview.income | amount:'income'" ng-click="handleTypeChange('income')"></span>
 	</p>
 </div>

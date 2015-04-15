@@ -10,7 +10,7 @@
 				<tbody class="transaction__content">
 					<tr ng-repeat="item in model" class="group" ng-click="handleItemClick(item)">
 						<td class="name" ng-bind="item.name"></td>
-						<td class="amount" ng-bind="item.amount"></td>
+						<td class="amount" ng-class="item.type" ng-bind="item.amount | amount:item.type"></td>
 						<td class="tag" ng-bind="item.tag"></td>
 						<td class="date" ng-bind="item.date | date"></td>
 					</tr>

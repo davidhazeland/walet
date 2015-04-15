@@ -70,5 +70,8 @@
 		"date": "2015/07/13",
 		"type": "income"
 	}],
-	"total": 1000
+	"total": {
+		"type": "income",
+		"amount": 1000
+	}
 }

@@ -1,9 +1,7 @@
 .overview {
 	margin-top: 20px;
 	&__item {
-		.net-worth,
-		.expense,
-		.income {
+		span {
 			cursor: pointer;
 		}
 		.net-worth-value,

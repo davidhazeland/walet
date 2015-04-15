@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-04 17:33:45
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-15 11:17:17
+ * @Last Modified time: 2015-04-15 19:55:32
  */
 
 'use strict';
@@ -53,8 +53,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 
 		// Scope handler
 		$scope.handleItemClick = function(item) {
-			var data = item;
-			Observer.publish('RenderTransactionDetail', data);
+			Observer.publish('RenderTransactionDetail', angular.copy(item));
 		};
 		$scope.handleLoadMoreBtnClick = function(){
 			CommandBus.execute('LoadTransaction', {});
