@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-09 10:53:02
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-15 13:15:49
+ * @Last Modified time: 2015-04-15 14:37:14
  */
 
 'use strict';
@@ -14,8 +14,8 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 		var handleTagDashboardDrew = function() {
 
 			},
-			handleDashboardLoaded = function() {
-				$scope.data = data.tag;
+			handleDashboardLoaded = function(data) {
+				//$scope.data = data.tag;
 			};
 		Observer.subscribe('TagDashboardDrew', handleTagDashboardDrew);
 		Observer.subscribe('DashboardLoaded', handleDashboardLoaded);

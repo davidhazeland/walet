@@ -5,20 +5,13 @@
 			<i class="close-icon fr" ng-click="visibility = false"></i>
 		</h3>	
 		<ul class="picker-selection">
-			<li class="picker-selection__item" ng-click="handleSelectionClick($event)">
-				This Week<i class="tick-icon fr"></i>
-			</li>
-			<li class="picker-selection__item picker-selection__item--current" ng-click="handleSelectionClick($event)">
-				This Month<i class="tick-icon fr"></i>
-			</li>
-			<li class="picker-selection__item" ng-click="handleSelectionClick($event)">
-				Last Month<i class="tick-icon fr"></i>
-			</li>
-			<li class="picker-selection__item" ng-click="handleSelectionClick($event)">
-				This Year<i class="tick-icon fr"></i>
-			</li>
-			<li class="picker-selection__item" ng-click="handleSelectionClick($event)">
-				Last Year<i class="tick-icon fr"></i>
+			<li 
+			class="picker-selection__item" 
+			ng-repeat="item in filters" 
+			ng-click="handleSelectionClick(item)"
+			ng-class="current == item.filter ? actived : ''" 
+			>
+				<span>{{item.name}}</span><i class="tick-icon fr"></i>
 			</li>
 		</ul>
 	</section>

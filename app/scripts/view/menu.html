@@ -12,13 +12,13 @@
 	</section>
 	<nav>
 		<ul class="navigation">
-			<li class="navigation__item" ng-class="navDashboard">
+			<li class="navigation__item" ng-class="current == 'dashboard' ? actived : ''">
 				<a href="#/dashboard"><i class="dashboard-icon"></i>Dashboard</a>
 			</li>
-			<li class="navigation__item" ng-class="navExpense">
+			<li class="navigation__item" ng-class="current == 'expense' ? actived : ''">
 				<a href="#/transactions/expense"><i class="expense-icon"></i>Expense</a>
 			</li>
-			<li class="navigation__item" ng-class="navIncome">
+			<li class="navigation__item" ng-class="current == 'income' ? actived : ''">
 				<a href="#/transactions/income"><i class="income-icon"></i>Income</a>
 			</li>
 			<li class="navigation__item">

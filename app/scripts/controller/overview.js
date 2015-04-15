@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-10 10:31:47
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-15 13:17:43
+ * @Last Modified time: 2015-04-15 16:24:16
  */
 
 'use strict';
@@ -21,6 +21,16 @@ define(['app', 'observer'], function(app, Observer) {
 		$scope.$on('$destroy', function() {
 			Observer.unsubscribe('DashboardLoaded', handleDashboardLoaded);
 		});
+
+		$scope.actived = 'overview__item--current';
+		$scope.current = 'expense';
+		$scope.handleTypeChange = function(type) {
+			$scope.current = type;
+
+			Observer.publish('TransactionTypeChanged', {
+				type: type
+			});
+		};
 	};
 
 	app.controller('OverviewCtrl', ['$scope', Controller]);

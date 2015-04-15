@@ -11,5 +11,6 @@ define([
 	// './save-transaction'
 	// './filter-transaction',
 	// './search-transaction',
+	'./overview'
 	], function() {
 });
