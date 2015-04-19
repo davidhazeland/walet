@@ -10,26 +10,34 @@
 /* global define */
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
-	var Controller = function($scope, $element) {
-		var input = $element.find('input');
-		
-		$scope.isTyping = false;
-		$scope.handleSearchBoxKeyUp = function(e) {
-			var term = input.val();
-			if (e.keyCode == 13) {
-				CommandBus.execute('SearchTransaction', {
-					term: term
-				});
-			}
-			$scope.isTyping = (term == '') ? false : true;
-		}
-		$scope.handleCancelBtnClick = function(){
-			input.val('');
-			$scope.isTyping = false;
-		}
-	};
+    var Controller = function($scope, $element) {
+        var input = $element.find('input');
 
-	app.controller('SearchTransactionCtrl', ['$scope', '$element', Controller]);
+        $scope.isTyping = false;
+        $scope.term = '';
+        $scope.handleSearchBoxKeyUp = function(e) {
+            var term = input.val();
+            if (e.keyCode == 13) {
+                $scope.term = term;
+                CommandBus.execute('SearchTransaction', {
+                    term: term
+                });
+            }
+            $scope.isTyping = (term == '') ? false : true;
+        }
+        $scope.handleCancelBtnClick = function() {
+            input.val('');
+            if ($scope.term != '') {
+                CommandBus.execute('SearchTransaction', {
+                    term: ''
+                });
+                $scope.term = '';
+            }
+            $scope.isTyping = false;
+        }
+    };
 
-	return Controller;
+    app.controller('SearchTransactionCtrl', ['$scope', '$element', Controller]);
+
+    return Controller;
 });

@@ -12,15 +12,18 @@
 define(['app', 'commandBus', 'observer', 'service/chart'], function(app, CommandBus, Observer, Chart){
 	var directive = function(){
 		var linkFn = function(scope, el) {
-			var canvas = el.find('canvas')[0];
+			var canvas = el.find('canvas');
 
 			var handleDashboardLoaded = function(data){
 				scope.data = data.tag;
-				var legend = Chart.drawTagChart(canvas, scope.data['expense']);
+				var legend = Chart.drawTagChart(canvas[0], scope.data['expense']);
+				canvas.next().remove();
 				el.append(legend);
 			},
 			handleTransactionTypeChanged = function (data) {
-				var legend = Chart.drawTagChart(canvas, scope.data[data.type]);
+				var legend = Chart.drawTagChart(canvas[0], scope.data[data.type]);
+				canvas.next().remove();
+				el.append(legend);
 			};
 
 			Observer.subscribe('DashboardLoaded', handleDashboardLoaded);

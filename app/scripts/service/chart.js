@@ -25,17 +25,33 @@ define(['chartjs'], function(Chart) {
             'November',
             'December'
         ];
+
+        this.colors = [
+            '#a0d468',
+            '#4fc1e9',
+            '#ffce54',
+            '#48cfad',
+            '#ed5565',
+            '#5d9cec',
+            '#ec87c0',
+            '#ac92ec',
+            '#fc6e51'
+        ];
     };
 
     Service.prototype = {
         drawTagChart: function(canvas, data) {
             var ctx = canvas.getContext('2d');
 
-            var expenseChart = new Chart(ctx).Doughnut(this.buildTagData(data), {
+            if (typeof this.expenseChart !== 'undefined') {
+                this.expenseChart.destroy();
+            }
+
+            this.expenseChart = new Chart(ctx).Doughnut(this.buildTagData(data), {
                 animation: false
             });
 
-            var legend = expenseChart.generateLegend();
+            var legend = this.expenseChart.generateLegend();
 
             return legend;
         },
@@ -43,25 +59,30 @@ define(['chartjs'], function(Chart) {
         drawCompareChart: function(canvas, data) {
             var ctx = canvas.getContext('2d');
 
-            var compareChart = new Chart(ctx).Line(this.buildCompareData(data), {
+            if (typeof this.compareChart !== 'undefined') {
+                this.compareChart.destroy();
+            }
+
+            this.compareChart = new Chart(ctx).Line(this.buildCompareData(data), {
                 animation: false,
                 bezierCurve: false,
                 pointDot: false
             });
 
-            var legend = compareChart.generateLegend();
+            var legend = this.compareChart.generateLegend();
 
             return legend;
         },
 
         buildTagData: function(data) {
             var result = [];
+            var i = 0;
             for (var tag in data) {
-            	var item = {};
-            	item.label = tag;
-            	item.value = data[tag];
-            	item.color = this.getRandomColor();
-            	result.push(item);
+                var item = {};
+                item.label = tag;
+                item.value = data[tag];
+                item.color = this.getColor(i++);
+                result.push(item);
             }
             return result;
         },
@@ -100,13 +121,10 @@ define(['chartjs'], function(Chart) {
             return template;
         },
 
-        getRandomColor() {
-            var letters = '0123456789ABCDEF'.split('');
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
+        getColor(index) {
+            var length = this.colors.length - 1;
+            if (index == 0) return this.colors[length];
+            return this.colors[(index % length)];
         }
     };
 

@@ -108,8 +108,8 @@
 		td {
 			text-align: center;
 			button {
-				color: $white;
-				background: $dark-gray--tint;
+				color: $dark-gray--tint;
+				background: none;
 				border: none;
 				outline: none;
 				font-size: em(14px);
@@ -120,10 +120,11 @@
 				padding: 7px 0;
 				&:hover {
 					//color: $white;
-					background: lighten($dark-gray--tint, 5%);
+					// background: lighten($dark-gray--tint, 5%);
+					text-decoration: underline;
 				}
 				&:active {
-					background: darken($dark-gray--tint, 5%);
+					// background: darken($dark-gray--tint, 5%);
 				}
 				@include mq(large) {
 					padding: 5px 13px;

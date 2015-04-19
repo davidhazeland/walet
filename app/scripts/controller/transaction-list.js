@@ -18,15 +18,21 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
                     data.items[i].date = new Date(data.items[i].date);
                 };
                 $scope.model = data.items;
+                if ($scope.model.length >= data.count) {
+                    $scope.allLoaded = true;
+                }
                 $scope.$apply();
             },
 
             handleTransactionsLoaded = function(data) {
-                data = data.items;
-                for (var i = 0; i < data.length; i++) {
-                    data[i].date = new Date(data[i].date);
-                    $scope.model.push(data[i]);
+                var items = data.items;
+                for (var i = 0; i < items.length; i++) {
+                    items[i].date = new Date(items[i].date);
+                    $scope.model.push(items[i]);
                 };
+                if ($scope.model.length >= data.count) {
+                    $scope.allLoaded = true;
+                }
                 $scope.$apply();
             },
 
@@ -73,6 +79,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
         });
 
         // Scope handler
+        $scope.allLoaded = false;
         $scope.handleItemClick = function(item) {
             Observer.publish('RenderTransactionDetail', angular.copy(item));
         };
