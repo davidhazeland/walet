@@ -16,8 +16,12 @@ define(['observer', 'service/transactions'], function(Observer, Transactions) {
 
 	handler.prototype = {
 		handle: function(data) {
-			Transactions.load(function(data) {
-				Observer.publish('TransactionsLoaded', data);
+			var query = {
+				start: data.length,
+				end: data.length + 10
+			};
+			Transactions.load(query, function(response) {
+				Observer.publish('TransactionsLoaded', response.data);
 			});
 		}
 	};

@@ -25,7 +25,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			page: $routeParams.type
 		});
 
-		CommandBus.execute('FetchTransaction', {});
+		CommandBus.execute('FetchTransaction', {
+			type: $routeParams.type
+		});
 	};
 
 	Controller.prototype = {

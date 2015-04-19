@@ -1,17 +1,16 @@
 /* 
  * @Author: ThanhCong
- * @Date:   2015-04-06 10:32:15
+ * @Date:   2015-04-06 10:29:41
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-11 23:57:37
+ * @Last Modified time: 2015-04-15 10:31:23
  */
-
 'use strict';
 
 /* global define */
 
 define(['./RESTful'], function(RESTful) {
 	var Service = function() {
-		var url = "http://localhost:3000/transaction";
+		var url = "http://localhost:3000/transaction/dashboard";
 		this.RESTful = new RESTful(url);
 	}
 

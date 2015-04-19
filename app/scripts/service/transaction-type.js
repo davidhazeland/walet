@@ -16,11 +16,13 @@ define([], function() {
 
 	Service.prototype = {
 		decorate: function(query) {
-			return query;
+			var decorated = query;
+			decorated.type = this._type;
+			return decorated;
 		},
 
-		update: function(data) {
-			
+		update: function(type) {
+			this._type = type
 		}
 	};
 

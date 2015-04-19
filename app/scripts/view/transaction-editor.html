@@ -21,7 +21,7 @@
 							<span>Income</span>
 						</label>
 					</div>
-					<button class="transaction-form__save">Save Transaction</button>
+					<button class="transaction-form__save" ng-click="handleSaveBtnClick()">Save Transaction</button>
 				</form>
 			</div>
 		</section>
@@ -41,7 +41,7 @@
 					<input placeholder="Amount" type="number" class="transaction-form__amount fr" ng-model="model.amount"/>
 					<input placeholder="Tag" type="text" class="transaction-form__tag" ng-model="model.tag"/>
 					<input placeholder="Date" type="date" class="transaction-form__date" ng-model="model.date"/>
-					<button class="transaction-form__save">Save Transaction</button>
+					<button class="transaction-form__save" ng-click="handleSaveBtnClick()">Save Transaction</button>
 				</form>
 			</div>
 		</section>

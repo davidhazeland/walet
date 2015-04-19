@@ -12,7 +12,7 @@
 define(['app', 'observer'], function(app, Observer) {
 	var Controller = function($scope) {
 		var handleDashboardLoaded = function(data) {
-			$scope.overview = data.overview;
+			$scope.overview = data.tag.overview;
 			$scope.$apply();
 		};
 

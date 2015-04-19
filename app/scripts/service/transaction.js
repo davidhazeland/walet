@@ -16,15 +16,21 @@ define(['./transaction-RESTful'], function(TransactionRESTful) {
 
 	Service.prototype = {
 		add: function(data, callback) {
-			callback();
+			TransactionRESTful
+				.post(data)
+				.success(callback);
 		},
 
 		save: function(data, callback) {
-			callback();
+			TransactionRESTful
+				.put(data)
+				.success(callback);
 		},
 
 		remove: function(data, callback) {
-			callback(data);
+			TransactionRESTful
+				.del(data)
+				.success(callback);
 		}
 	};
 

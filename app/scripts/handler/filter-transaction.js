@@ -16,7 +16,7 @@ define(['observer', 'service/transaction-filter'], function(Observer, Transactio
 
 	handler.prototype = {
 		handle : function(data){
-			TransactionFilter.update(data.filter);
+			TransactionFilter.update(data);
 			Observer.publish('DateFilterChanged', data.name);
 			Observer.publish('LoadTransactions');
 		}

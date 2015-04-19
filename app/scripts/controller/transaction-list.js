@@ -56,7 +56,9 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			Observer.publish('RenderTransactionDetail', angular.copy(item));
 		};
 		$scope.handleLoadMoreBtnClick = function(){
-			CommandBus.execute('LoadTransaction', {});
+			CommandBus.execute('LoadTransaction', {
+				length: $scope.model.length
+			});
 		};
 	};
 

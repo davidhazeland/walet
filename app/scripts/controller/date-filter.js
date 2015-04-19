@@ -9,7 +9,7 @@
 
 /* global define */
 
-define(['app', 'observer'], function(app, Observer) {
+define(['app', 'observer', 'service/transaction-filter'], function(app, Observer, TransactionFilter) {
 	var Controller = function($scope) {
 		var handleDateFilterChanged = function(filter) {
 			$scope.filter = filter;
@@ -17,7 +17,7 @@ define(['app', 'observer'], function(app, Observer) {
 
 		Observer.subscribe('DateFilterChanged', handleDateFilterChanged);
 
-		$scope.filter = 'This Month';
+		$scope.filter = TransactionFilter._name;
 		$scope.$on('$destroy', function() {
 			Observer.unsubscribe('DateFilterChanged', handleDateFilterChanged);
 		});

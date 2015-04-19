@@ -11,18 +11,20 @@
 
 define([], function() {
 	var Service = function() {
-		this._filter = '';
+		this._filter = 'thismonth';
+		this._name = 'This Month';
 	};
 
 	Service.prototype = {
 		decorate: function(query) {
 			var decorated = query;
-			decorated.filter = this._filter;
+			decorated.date = this._filter;
 			return decorated;
 		},
 
-		update: function(filter) {
-			this._filter = filter || '';
+		update: function(data) {
+			this._filter = data.filter || '';
+			this._name = data.name || '';
 		}
 	};
 

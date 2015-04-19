@@ -17,7 +17,8 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 				$scope.visibility = true;
 			},
 			handleTransactionSaved = function() {
-
+				$scope.visibility = false;
+				$scope.$apply();
 			};
 
 		Observer.subscribe('OpenTransactionEditor', handleOpenTransactionEditor, this);
@@ -33,7 +34,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 		// Scope property
 		$scope.visibility = false;
 		$scope.handleSaveBtnClick = function() {
-			CommandBus.execute('EditTransaction', $scope.model);
+			CommandBus.execute('SaveTransaction', $scope.model);
 		};
 		$scope.handleCloseBtnClick = function(){
 			$scope.visibility = false;

@@ -26,7 +26,10 @@ define([
 
 	Service.prototype = {
 		fetch: function(callback){
-			var query = {};
+			var query = {
+				start: 0,
+				end: 1
+			};
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);
 			query = TransactionSearch.decorate(query);
@@ -36,8 +39,8 @@ define([
 				.success(callback);
 		},
 
-		load: function(callback) {
-			var query = {};
+		load: function(query, callback) {
+			var query = query || {};
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);
 			query = TransactionSearch.decorate(query);
@@ -45,11 +48,6 @@ define([
 			TransactionRESTful
 				.get(query)
 				.success(callback);
-		},
-
-		getById: function(id) {
-			var transaction = TransactionRESTful.get(id);
-			return transaction;
 		}
 	};
 

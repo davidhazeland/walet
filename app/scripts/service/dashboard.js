@@ -9,33 +9,24 @@
 
 /* global define */
 
-define(['./transaction-RESTful'], function(TransactionRESTful) {
+define([
+	'./dashboard-RESTful',
+	'./transaction-filter'
+	], function(
+		DashboardRESTful,
+		TransactionFilter
+		) {
 	var Service = function() {
 
 	};
 
 	Service.prototype = {
-		fetch: function(callback) {
-			TransactionRESTful
-				.get({
-					type: 'dashboard'
-				})
-				.success(callback);
-		},
-
-		getTagData: function(callback) {
-			TransactionRESTful
-				.get({
-					type: 'tagDashboard'
-				})
-				.success(callback);
-		},
-
-		getCompareData: function(callback) {
-			TransactionRESTful
-				.get({
-					type: 'compareDashboard'
-				})
+		fetch: function(callback){
+			var query = {};
+			query = TransactionFilter.decorate(query);
+			
+			DashboardRESTful
+				.get(query)
 				.success(callback);
 		}
 	};

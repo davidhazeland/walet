@@ -18,7 +18,7 @@ define(['app'], function(app){
 			} else {
 				signal = type == 'income' ? '+' : '-';
 			}
-			return signal + ' ' + input + '$';
+			return signal + ' ' + Math.abs(input) + '$';
 		}			
 	};
 
