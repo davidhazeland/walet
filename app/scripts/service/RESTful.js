@@ -28,7 +28,7 @@ define(['jquery'], function($) {
         },
 
         del: function(data) {
-            return this.request('DEL', data);
+            return this.request('DELETE', data);
         },
 
         request: function(method, data) {

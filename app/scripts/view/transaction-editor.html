@@ -12,11 +12,11 @@
 					<input placeholder="Tag" type="text" class="transaction-form__tag"  ng-model="model.tag"/>
 					<input placeholder="Date" type="date" class="transaction-form__date" ng-model="model.date"/>
 					<div class="transaction-form__type is-expanded-desktop radio">
-						<input type="radio" value="expense" id="transaction-type--expense" name="type" ng-checked="model.type == 'expense'" />
+						<input type="radio" value="expense" id="transaction-type--expense" ng-model="model.type"/>
 						<label for="transaction-type--expense">
 							<span>Expense</span>
 						</label>
-						<input type="radio" value="income" id="transaction-type--income" name="type" ng-checked="model.type == 'income'"/>
+						<input type="radio" value="income" id="transaction-type--income" ng-model="model.type"/>
 						<label for="transaction-type--income">
 							<span>Income</span>
 						</label>

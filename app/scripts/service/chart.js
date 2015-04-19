@@ -90,13 +90,13 @@ define(['chartjs'], function(Chart) {
                 }]
             };
             for (var month in data) {
-                template.labels.push(this.monthNames[month]);
+                template.labels.push(this.monthNames[month - 1]);
                 if (typeof data[month].income === 'undefined') data[month].income = 0;
                 if (typeof data[month].expense === 'undefined') data[month].expense = 0;
                 template.datasets[0].data.push(data[month].income);
                 template.datasets[1].data.push(data[month].expense);
             }
-            template.labels[0] = '';
+            // template.labels[0] = '';
             return template;
         },
 

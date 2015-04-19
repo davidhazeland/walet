@@ -28,7 +28,7 @@ define([
 		fetch: function(callback){
 			var query = {
 				start: 0,
-				end: 1
+				end: 10
 			};
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);

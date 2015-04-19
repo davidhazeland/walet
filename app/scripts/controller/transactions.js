@@ -17,16 +17,19 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 
 		Observer.subscribe('LoadTransactions', handleLoadTransactions);
 
+		var type = $routeParams.type
+
+		$scope.type = type;
 		$scope.$on('$destroy', function() {
 			Observer.unsubscribe('LoadTransactions', handleLoadTransactions);
 		});
 
 		Observer.publish('Navigate', {
-			page: $routeParams.type
+			page: type
 		});
 
 		CommandBus.execute('FetchTransaction', {
-			type: $routeParams.type
+			type: type
 		});
 	};
 

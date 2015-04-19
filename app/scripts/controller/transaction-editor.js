@@ -10,11 +10,15 @@
 /* global define */
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
-	var Controller = function($scope) {
+	var Controller = function($scope, $element) {
 		// Observer register
 		var handleOpenTransactionEditor = function(data) {
 				$scope.model = data;
 				$scope.visibility = true;
+			},
+			handleTransactionAdded = function() {
+				$scope.visibility = false;
+				$scope.$apply();
 			},
 			handleTransactionSaved = function() {
 				$scope.visibility = false;
@@ -22,11 +26,13 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			};
 
 		Observer.subscribe('OpenTransactionEditor', handleOpenTransactionEditor, this);
+		Observer.subscribe('TransactionAdded', handleTransactionAdded, this);
 		Observer.subscribe('TransactionSaved', handleTransactionSaved, this);
 
 		// Destroy observer
 		$scope.$on('$destroy', function() {
 			Observer.unsubscribe('OpenTransactionEditor', handleOpenTransactionEditor, this);
+			Observer.unsubscribe('TransactionAdded', handleTransactionAdded, this);
 			Observer.unsubscribe('TransactionSaved', handleTransactionSaved, this);
 
 		});
@@ -41,7 +47,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 		};
 	};
 
-	app.controller('TransactionEditorCtrl', ['$scope', Controller]);
+	app.controller('TransactionEditorCtrl', ['$scope', '$element', Controller]);
 
 	return Controller;
 });

@@ -416,69 +416,42 @@
 	"buffers":
 	[
 		{
-			"file": "app/scripts/service/dashboard-RESTful.js",
+			"file": "test/spec/behavior/index.js",
 			"settings":
 			{
-				"buffer_size": 657,
+				"buffer_size": 291,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/scripts/controller/tag-dashboard.js",
+			"file": "app/scripts/view/transaction-editor.html",
 			"settings":
 			{
-				"buffer_size": 963,
+				"buffer_size": 2493,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/scripts/directive/tag-dashboard.js",
+			"file": "app/scripts/controller/transaction-detail.js",
 			"settings":
 			{
-				"buffer_size": 1216,
+				"buffer_size": 1399,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/scripts/controller/overview.js",
+			"file": "app/scripts/handler/save-transaction.js",
 			"settings":
 			{
-				"buffer_size": 860,
+				"buffer_size": 747,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/scripts/view/overview.html",
+			"file": "app/scripts/service/RESTful.js",
 			"settings":
 			{
-				"buffer_size": 779,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/service/chart.js",
-			"settings":
-			{
-				"buffer_size": 865,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/scripts/service/dashboard.js",
-			"settings":
-			{
-				"buffer_size": 544,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{\n	\"tag\": {\n		\"networth\": [{\n			\"value\": 150,\n			\"color\": \"#FDB45C\",\n			\"highlight\": \"#FFC870\",\n			\"label\": \"Yellow\"\n		}, {\n			\"value\": 500,\n			\"color\": \"#967adc\",\n			\"highlight\": \"#FF5A5E\",\n			\"label\": \"Violet\"\n		}, {\n			\"value\": 170,\n			\"color\": \"#46BFBD\",\n			\"highlight\": \"#5AD3D1\",\n			\"label\": \"Green\"\n		}],\n		\"expense\": [{\n			\"value\": 200,\n			\"color\": \"#FDB45C\",\n			\"highlight\": \"#FFC870\",\n			\"label\": \"Yellow\"\n		}, {\n			\"value\": 80,\n			\"color\": \"#967adc\",\n			\"highlight\": \"#FF5A5E\",\n			\"label\": \"Violet\"\n		}, {\n			\"value\": 70,\n			\"color\": \"#46BFBD\",\n			\"highlight\": \"#5AD3D1\",\n			\"label\": \"Green\"\n		}],\n		\"income\": [{\n			\"value\": 100,\n			\"color\": \"#FDB45C\",\n			\"highlight\": \"#FFC870\",\n			\"label\": \"Yellow\"\n		}, {\n			\"value\": 180,\n			\"color\": \"#967adc\",\n			\"highlight\": \"#FF5A5E\",\n			\"label\": \"Violet\"\n		}, {\n			\"value\": 50,\n			\"color\": \"#46BFBD\",\n			\"highlight\": \"#5AD3D1\",\n			\"label\": \"Green\"\n		}]\n	},\n	\"compare\": {\n		\"labels\": [\"\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"],\n		\"datasets\": [{\n			\"label\": \"Income\",\n			\"fillColor\": \"rgba(160,212,104,0.2)\",\n			\"strokeColor\": \"rgba(160,212,104,1)\",\n			\"pointColor\": \"rgba(160,212,104,1)\",\n			\"pointStrokeColor\": \"#fff\",\n			\"pointHighlightFill\": \"#fff\",\n			\"pointHighlightStroke\": \"rgba(160,212,104,1)\",\n			\"data\": [65, 59, 80, 81, 56, 55, 40]\n		}, {\n			\"label\": \"Expense\",\n			\"fillColor\": \"rgba(237, 85 , 101, 0.2)\",\n			\"strokeColor\": \"rgba(237, 85 , 101, 0.8)\",\n			\"pointColor\": \"rgba(237, 85 , 101, 1)\",\n			\"pointStrokeColor\": \"#fff\",\n			\"pointHighlightFill\": \"#fff\",\n			\"pointHighlightStroke\": \"rgba(237, 85 , 101, 1)\",\n			\"data\": [28, 48, 40, 19, 86, 27, 90]\n		}]\n	},\n	\"overview\": {\n		\"networth\": 1000,\n		\"income\": 1300,\n		\"expense\": 700\n	}\n}",
-			"file": "data/dashboard.json",
-			"file_size": 1790,
-			"file_write_time": 130735568666460011,
-			"settings":
-			{
-				"buffer_size": 1712,
+				"buffer_size": 1481,
 				"line_ending": "Windows"
 			}
 		},
@@ -486,7 +459,23 @@
 			"file": "app/scripts/service/transactions.js",
 			"settings":
 			{
-				"buffer_size": 1029,
+				"buffer_size": 1030,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/handler/delete-transaction.js",
+			"settings":
+			{
+				"buffer_size": 471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/service/transaction.js",
+			"settings":
+			{
+				"buffer_size": 631,
 				"line_ending": "Windows"
 			}
 		}
@@ -498,8 +487,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 150.0,
-		"last_filter": "insta",
+		"height": 81.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -671,7 +660,6 @@
 		"/E/GitHub/walet/app/scripts/directive",
 		"/E/GitHub/walet/app/scripts/filter",
 		"/E/GitHub/walet/app/scripts/handler",
-		"/E/GitHub/walet/app/scripts/model",
 		"/E/GitHub/walet/app/scripts/service",
 		"/E/GitHub/walet/app/styles",
 		"/E/GitHub/walet/app/styles/states",
@@ -684,18 +672,39 @@
 	],
 	"file_history":
 	[
-		"/E/GitHub/walet/app/scripts/handler/view-dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/transactions.js",
-		"/E/GitHub/walet/app/scripts/service/dashboard.js",
-		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
-		"/E/GitHub/walet/app/scripts/service/transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/transaction-list.js",
-		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
-		"/E/GitHub/walet/app/scripts/handler/load-transaction.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
+		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
+		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
+		"/E/GitHub/walet/app/scripts/service/chart.js",
+		"/E/GitHub/walet/test/spec/behavior/save-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
+		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/save-transaction.js",
 		"/E/GitHub/walet/app/scripts/handler/fetch-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/load-transaction.js",
+		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
+		"/E/GitHub/walet/app/scripts/handler/load-transaction.js",
+		"/E/GitHub/walet/test/spec/main.js",
+		"/E/GitHub/walet/app/scripts/controller/dashboard.js",
+		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/handler/view-dashboard.js",
+		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
+		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
+		"/E/GitHub/walet/app/scripts/service/dashboard-RESTful.js",
+		"/E/GitHub/walet/app/scripts/service/transactions.js",
+		"/E/GitHub/walet/app/scripts/service/dashboard.js",
+		"/E/GitHub/walet/data/dashboard.json",
+		"/E/GitHub/walet/app/scripts/controller/overview.js",
+		"/E/GitHub/walet/app/scripts/view/overview.html",
+		"/E/GitHub/walet/app/scripts/filter/amount.js",
+		"/E/GitHub/walet/app/styles/modules/_overview.scss",
+		"/E/GitHub/walet/app/scripts/service/transaction-RESTful.js",
+		"/E/GitHub/walet/app/scripts/service/transaction.js",
+		"/E/GitHub/walet/app/scripts/controller/transaction-editor.js",
+		"/E/GitHub/walet/app/scripts/view/transaction-editor.html",
 		"/E/GitHub/walet/app/scripts/service/transaction-filter.js",
 		"/E/GitHub/walet/app/scripts/controller/date-filter.js",
 		"/E/GitHub/walet/app/scripts/handler/filter-transaction.js",
@@ -703,22 +712,15 @@
 		"/E/GitHub/walet/app/scripts/controller/transactions.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/view/total.html",
-		"/E/GitHub/walet/app/scripts/handler/edit-transaction.js",
 		"/E/GitHub/walet/app/scripts/service/RESTful.js",
 		"/E/GitHub/walet/app/scripts/filter/date-picker.js",
 		"/E/GitHub/walet/app/styles/states/_index.scss",
 		"/E/GitHub/walet/app/styles/utilities/_config.scss",
 		"/E/GitHub/walet/app/styles/states/_transaction-type.scss",
 		"/E/GitHub/walet/app/styles/modules/_transaction.scss",
-		"/E/GitHub/walet/app/styles/modules/_overview.scss",
-		"/E/GitHub/walet/test/spec/main.js",
-		"/E/GitHub/walet/app/styles/modules/_save-transaction.scss",
 		"/E/GitHub/walet/app/scripts/view/transaction-list.html",
-		"/E/GitHub/walet/app/scripts/view/overview.html",
-		"/E/GitHub/walet/app/scripts/filter/amount.js",
 		"/E/GitHub/walet/app/styles/layout/_content.scss",
 		"/E/GitHub/walet/app/scripts/filter/index.js",
-		"/E/GitHub/walet/app/scripts/view/transaction-detail.html",
 		"/E/GitHub/walet/data/transactions.json",
 		"/E/GitHub/walet/app/scripts/controller/header.js",
 		"/E/GitHub/walet/test/spec/filter/amount.js",
@@ -729,36 +731,25 @@
 		"/E/GitHub/walet/app/scripts/view/filter-picker.html",
 		"/E/GitHub/walet/app/scripts/view/date-filter.html",
 		"/E/GitHub/walet/app/scripts/controller/menu.js",
-		"/E/GitHub/walet/app/scripts/controller/overview.js",
 		"/E/GitHub/walet/app/scripts/view/menu.html",
 		"/E/GitHub/walet/gulpfile.js",
 		"/E/GitHub/walet/test/spec/behavior/overview.js",
-		"/E/GitHub/walet/app/scripts/directive/tag-dashboard.js",
 		"/E/GitHub/walet/app/scripts/controller/compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/directive/compare-dashboard.js",
-		"/E/GitHub/walet/app/scripts/controller/tag-dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/tag-dashboard.html",
 		"/E/GitHub/walet/test/spec/behavior/index.js",
-		"/E/GitHub/walet/data/dashboard.json",
-		"/E/GitHub/walet/test/spec/behavior/view-dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/header-app.html",
 		"/E/GitHub/walet/app/styles/modules/_icon.scss",
-		"/E/GitHub/walet/app/scripts/controller/search-transaction.js",
 		"/E/GitHub/walet/app/styles/modules/_search.scss",
 		"/E/GitHub/walet/app/scripts/controller/transaction-type.js",
 		"/E/GitHub/walet/app/scripts/handler/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/total.js",
 		"/E/GitHub/walet/test/spec/core/observe.js",
 		"/E/GitHub/walet/app/scripts/core/observer.js",
-		"/E/GitHub/walet/test/spec/behavior/fetch-transaction.js",
 		"/E/GitHub/walet/test/spec/core/index.js",
-		"/E/GitHub/walet/test/spec/behavior/load-transaction.js",
 		"/E/GitHub/walet/app/scripts/core/command-bus.js",
 		"/E/GitHub/walet/app/scripts/service/transaction-search.js",
-		"/E/GitHub/walet/test/spec/behavior/filter-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/save-transaction.js",
 		"/E/GitHub/walet/app/scripts/controller/transaction-detail.js",
-		"/E/GitHub/walet/test/spec/behavior/edit-transaction.js",
 		"/E/GitHub/walet/test/spec/behavior/view-transaction.js",
 		"/E/GitHub/coffee/main.coffee",
 		"/C/Users/ThanhCong/AppData/Roaming/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
@@ -768,9 +759,7 @@
 		"/E/GitHub/walet/app/styles/layout/_index.scss",
 		"/E/GitHub/walet/app/styles/layout/_transaction-editor.scss",
 		"/E/GitHub/walet/app/scripts/controller/add-single-transaction.js",
-		"/E/GitHub/walet/test/spec/behavior/search-transaction.js",
 		"/E/GitHub/walet/app/scripts/model/dashboard.js",
-		"/E/GitHub/walet/app/scripts/service/chart.js",
 		"/E/GitHub/walet/app/scripts/handler/view-transaction.js",
 		"/E/GitHub/walet/app/styles/layout/_feature.scss",
 		"/E/GitHub/walet/app/scripts/directive/total.js",
@@ -810,8 +799,7 @@
 		"/E/GitHub/walet/app/scripts/app.js",
 		"/E/GitHub/walet/app/scripts/handler/view-compare-dashboard.js",
 		"/E/GitHub/walet/app/scripts/view/compare-dashboard.html",
-		"/E/GitHub/walet/app/styles/layout/_chart.scss",
-		"/E/GitHub/walet/app/scripts/handler/view-tag-dashboard.js"
+		"/E/GitHub/walet/app/styles/layout/_chart.scss"
 	],
 	"find":
 	{
@@ -829,6 +817,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"}\n",
+			"data",
+			"            var data = {\n",
+			"data",
+			"a.month",
+			"income",
+			"'",
 			"TransactionRESTful",
 			"Transaction",
 			"term",
@@ -949,14 +944,7 @@
 			"top",
 			"repeat",
 			"check",
-			"popup__multi",
-			"popup__multi-tr",
-			"add",
-			"save-transaction",
-			".",
-			"rgba(140, 193, 82",
-			"rgba(218,68,83",
-			"rgba(151,187,205"
+			"popup__multi"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -993,112 +981,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/scripts/service/dashboard-RESTful.js",
+					"file": "test/spec/behavior/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 657,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								492,
-								492
-							]
-						],
-						"settings":
-						{
-							"_anf_new": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 163.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/scripts/controller/tag-dashboard.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 396.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/scripts/directive/tag-dashboard.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/scripts/controller/overview.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 860,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
+								255,
+								255
 							]
 						],
 						"settings":
@@ -1114,20 +1014,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/scripts/view/overview.html",
+					"buffer": 1,
+					"file": "app/scripts/view/transaction-editor.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 779,
+						"buffer_size": 2493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								254,
-								254
+								567,
+								567
 							]
 						],
 						"settings":
@@ -1136,27 +1036,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 132.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/scripts/service/chart.js",
+					"buffer": 2,
+					"file": "app/scripts/controller/transaction-detail.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 865,
+						"buffer_size": 1399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								612,
-								612
+								1289,
+								1289
 							]
 						],
 						"settings":
@@ -1165,115 +1065,136 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 440.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/scripts/service/dashboard.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								512,
-								512
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"file": "app/scripts/service/dashboard.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "data/dashboard.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								904,
-								904
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 47.0,
-						"translation.y": 924.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 3,
+					"file": "app/scripts/handler/save-transaction.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								536,
+								536
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/service/RESTful.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "app/scripts/service/transactions.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1029,
+						"buffer_size": 1030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								414,
+								414
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/scripts/handler/delete-transaction.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								439,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/scripts/service/transaction.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 631,
 						"regions":
 						{
 						},
@@ -1281,50 +1202,19 @@
 						[
 							[
 								0,
-								1029
+								0
 							]
 						],
 						"settings":
 						{
-							"history_list_is_closing": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.x": -0.0,
+						"translation.y": 330.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 0,
-					"file": "app/scripts/service/dashboard-RESTful.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 657,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								342,
-								342
-							]
-						],
-						"settings":
-						{
-							"_anf_new": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1347,18 +1237,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.635431918009,
 			1.0
 		],
 		"rows":
@@ -1390,20 +1273,120 @@
 		"selected_items":
 		[
 			[
+				"save",
+				"app\\scripts\\handler\\save-transaction.js"
+			],
+			[
+				"transaclis",
+				"app\\scripts\\controller\\transaction-list.js"
+			],
+			[
+				"rest",
+				"app\\scripts\\service\\RESTful.js"
+			],
+			[
+				"trande",
+				"app\\scripts\\view\\transaction-detail.html"
+			],
+			[
+				"transade",
+				"app\\scripts\\controller\\transaction-detail.js"
+			],
+			[
+				"transaction",
+				"app\\scripts\\service\\transaction.js"
+			],
+			[
+				"delete",
+				"app\\scripts\\handler\\delete-transaction.js"
+			],
+			[
+				"sertransacs",
+				"app\\scripts\\service\\transactions.js"
+			],
+			[
 				"chart",
 				"app\\scripts\\service\\chart.js"
 			],
 			[
-				"ov",
-				"app\\scripts\\view\\overview.html"
+				"transactionedit",
+				"app\\scripts\\view\\transaction-editor.html"
 			],
 			[
-				"overview",
-				"app\\scripts\\controller\\overview.js"
+				"edittr",
+				"test\\spec\\behavior\\edit-transaction.js"
+			],
+			[
+				"savet",
+				"test\\spec\\behavior\\save-transaction.js"
+			],
+			[
+				"search",
+				"app\\scripts\\controller\\search-transaction.js"
+			],
+			[
+				"filter",
+				"test\\spec\\behavior\\filter-transaction.js"
+			],
+			[
+				"savetr",
+				"app\\scripts\\handler\\save-transaction.js"
+			],
+			[
+				"loadtra",
+				"app\\scripts\\handler\\load-transaction.js"
+			],
+			[
+				"loadtr",
+				"test\\spec\\behavior\\load-transaction.js"
+			],
+			[
+				"fetch",
+				"app\\scripts\\handler\\fetch-transaction.js"
+			],
+			[
+				"view",
+				"app\\scripts\\handler\\view-dashboard.js"
 			],
 			[
 				"tagdash",
 				"app\\scripts\\directive\\tag-dashboard.js"
+			],
+			[
+				"tagds",
+				"app\\scripts\\controller\\tag-dashboard.js"
+			],
+			[
+				"dashboard",
+				"app\\scripts\\controller\\dashboard.js"
+			],
+			[
+				"behav",
+				"test\\spec\\behavior\\view-dashboard.js"
+			],
+			[
+				"specmain",
+				"test\\spec\\main.js"
+			],
+			[
+				"behavii",
+				"test\\spec\\behavior\\index.js"
+			],
+			[
+				"overvic",
+				"app\\styles\\modules\\_overview.scss"
+			],
+			[
+				"filteramou",
+				"app\\scripts\\filter\\amount.js"
+			],
+			[
+				"overview",
+				"app\\scripts\\view\\overview.html"
+			],
+			[
+				"ov",
+				"app\\scripts\\view\\overview.html"
 			],
 			[
 				"tagdashboar",
@@ -1426,10 +1409,6 @@
 				"app\\scripts\\service\\dashboard-RESTful.js"
 			],
 			[
-				"transaction",
-				"app\\scripts\\service\\transaction.js"
-			],
-			[
 				"transactions",
 				"app\\scripts\\service\\transactions.js"
 			],
@@ -1448,10 +1427,6 @@
 			[
 				"servicdas",
 				"app\\scripts\\service\\dashboard.js"
-			],
-			[
-				"dashboard",
-				"app\\scripts\\controller\\dashboard.js"
 			],
 			[
 				"transedi",
@@ -1486,10 +1461,6 @@
 				"app\\scripts\\view\\total.html"
 			],
 			[
-				"savetr",
-				"app\\scripts\\handler\\save-transaction.js"
-			],
-			[
 				"transae",
 				"app\\scripts\\view\\transaction-editor.html"
 			],
@@ -1502,28 +1473,12 @@
 				"app\\scripts\\handler\\save-transaction.js"
 			],
 			[
-				"edittr",
-				"app\\scripts\\handler\\edit-transaction.js"
-			],
-			[
-				"fetch",
-				"app\\scripts\\handler\\fetch-transaction.js"
-			],
-			[
 				"transaclist",
 				"app\\scripts\\controller\\transaction-list.js"
 			],
 			[
 				"restf",
 				"app\\scripts\\service\\RESTful.js"
-			],
-			[
-				"transaclis",
-				"app\\scripts\\controller\\transaction-list.js"
-			],
-			[
-				"save",
-				"app\\styles\\modules\\_save-transaction.scss"
 			],
 			[
 				"amount",
@@ -1540,10 +1495,6 @@
 			[
 				"transacscs",
 				"app\\styles\\modules\\_transaction.scss"
-			],
-			[
-				"specmain",
-				"test\\spec\\main.js"
 			],
 			[
 				"header",
@@ -1642,10 +1593,6 @@
 				"app\\scripts\\directive\\compare-dashboard.js"
 			],
 			[
-				"search",
-				"app\\styles\\modules\\_search.scss"
-			],
-			[
 				"icon",
 				"app\\styles\\modules\\_icon.scss"
 			],
@@ -1676,10 +1623,6 @@
 			[
 				"transacjs",
 				"data\\transactions.json"
-			],
-			[
-				"loadtra",
-				"app\\scripts\\handler\\load-transaction.js"
 			],
 			[
 				"handlef",
@@ -1714,10 +1657,6 @@
 				"app\\scripts\\view\\transaction-list.html"
 			],
 			[
-				"filter",
-				"test\\spec\\behavior\\filter-transaction.js"
-			],
-			[
 				"savetran",
 				"app\\scripts\\handler\\save-transaction.js"
 			],
@@ -1728,10 +1667,6 @@
 			[
 				"edittra",
 				"test\\spec\\behavior\\edit-transaction.js"
-			],
-			[
-				"transade",
-				"app\\scripts\\controller\\transaction-detail.js"
 			],
 			[
 				"beha",
@@ -1846,60 +1781,8 @@
 				"test\\spec\\behavior\\view-transaction.js"
 			],
 			[
-				"behav",
-				"test\\spec\\behavior\\index.js"
-			],
-			[
 				"behavi",
 				"test\\spec\\behavior\\index.js"
-			],
-			[
-				"fetchtran",
-				"test\\spec\\behavior\\fetch-transaction.js"
-			],
-			[
-				"searchtran",
-				"test\\spec\\behavior\\search-transaction.js"
-			],
-			[
-				"overv",
-				"app\\scripts\\controller\\overview.js"
-			],
-			[
-				"serchart",
-				"app\\scripts\\service\\chart.js"
-			],
-			[
-				"overvj",
-				"app\\scripts\\controller\\overview.js"
-			],
-			[
-				"dash",
-				"data\\dashboard.json"
-			],
-			[
-				"tagds",
-				"app\\scripts\\controller\\tag-dashboard.js"
-			],
-			[
-				"transadeh",
-				"app\\scripts\\view\\transaction-detail.html"
-			],
-			[
-				"transad",
-				"app\\scripts\\controller\\transaction-detail.js"
-			],
-			[
-				"multr",
-				"app\\scripts\\controller\\add-multi-transaction.js"
-			],
-			[
-				"addtra",
-				"app\\scripts\\controller\\add-single-transaction.js"
-			],
-			[
-				"transacd",
-				"app\\scripts\\view\\transaction-detail.html"
 			]
 		],
 		"width": 0.0

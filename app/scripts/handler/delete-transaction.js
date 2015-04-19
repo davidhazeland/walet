@@ -16,11 +16,9 @@ define(['observer', 'service/transaction'], function(Observer, Transaction){
 
 	handler.prototype = {
 		handle : function(data){
-			Transaction.remove(data, this.removeTransactionCallback);
-		},
-
-		removeTransactionCallback : function(data) {
-			Observer.publish('TransactionDeleted', data);
+			Transaction.remove(data, function(response){
+				Observer.publish('TransactionDeleted', data);
+			});
 		}
 	};
 

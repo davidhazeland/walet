@@ -23,14 +23,23 @@ define(['observer', 'service/transaction'], function(Observer, Transaction){
 	handler.prototype = {
 		handle : function(data){
 			if (!data.id) {
-				Transaction.add(data, this.saveTransactionCallback);
+				Transaction.add(data, function(response){
+					if (response.success) {
+						data.id = response.data.id;
+						Observer.publish('TransactionAdded', data);
+					}
+				});
 			} else {
-				Transaction.save(data, this.saveTransactionCallback);
+				Transaction.save(data, function(response){
+					if (response.success) {
+						Observer.publish('TransactionSaved', data);
+					}
+				});
 			}
 		},
 
 		saveTransactionCallback : function(data){
-			Observer.publish('TransactionSaved', data);
+			
 		}
 	};
 

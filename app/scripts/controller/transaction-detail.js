@@ -18,6 +18,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			},
 			handleTransactionDeleted = function() {
 				$scope.visibility = false;
+				$scope.$apply();
 			};
 
 		Observer.subscribe('RenderTransactionDetail', handleRenderTransactionDetail, this);
@@ -39,7 +40,7 @@ define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 			Observer.publish('OpenTransactionEditor', $scope.item);
 		};
 		$scope.handleDeleteBtnClick = function() {
-			CommandBus.execute('DeleteTransaction', {});
+			CommandBus.execute('DeleteTransaction', $scope.item);
 		};
 	};
 
