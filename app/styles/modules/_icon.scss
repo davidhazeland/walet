@@ -54,6 +54,10 @@
 	@include img-replace("icon/contact.svg", 22px, 24px, inline-block);
 }
 
+.about-icon {
+	@include img-replace("icon/about.svg", 22px, 21px, inline-block);
+}
+
 .sign-out-icon {
 	@include img-replace("icon/sign-out.svg", 22px, 22px, inline-block);
 }
