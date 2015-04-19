@@ -10,91 +10,103 @@
 /* global define */
 
 define([
-	'angularMock',
-	'commandBus',
-	'observer',
-	'controller/transactions',
-	'controller/search-transaction',
-	'handler/search-transaction',
-	'service/transaction-search'
+    'angularMock',
+    'commandBus',
+    'observer',
+    'controller/transactions',
+    'controller/search-transaction',
+    'handler/search-transaction',
+    'service/transaction-search'
 ], function(
-	angularMock,
-	CommandBus,
-	Observer,
-	TransactionsCtrl,
-	SearchTransactionCtrl,
-	SearchTransactionHandler,
-	TransactionSearch
+    angularMock,
+    CommandBus,
+    Observer,
+    TransactionsCtrl,
+    SearchTransactionCtrl,
+    SearchTransactionHandler,
+    TransactionSearch
 ) {
-	describe('Give a Search box and Transaction list', function() {
-		var searchTransCtrl,
-			searchTransScope,
-			transScope,
-			transCtrl,
-			searchTransElement;
+    describe('Give a Search box and Transaction list', function() {
+        var searchTransCtrl,
+            searchTransScope,
+            transScope,
+            transCtrl,
+            searchTransElement;
 
-		beforeEach(module('portfolio'));
+        beforeEach(module('portfolio'));
 
-		//////////////////////////////////
-		// Inject angular controller //
-		//////////////////////////////////
-		beforeEach(inject(function(_$controller_) {
-			searchTransScope = {};
-			searchTransElement = {};
-			transScope = {};
-			searchTransCtrl = _$controller_('SearchTransactionCtrl', {
-				$scope: searchTransScope,
-				$element: searchTransElement
-			});
-			transCtrl = _$controller_('TransactionsCtrl', {
-				$scope: transScope
-			});
-		}));
+        //////////////////////////////////
+        // Inject angular controller //
+        //////////////////////////////////
+        beforeEach(inject(function(_$controller_) {
+            searchTransScope = {
+            	$on: function(){
 
-		describe('When search box submit', function() {
-			beforeEach(function() {
-				spyOn(searchTransScope, 'handleSearchBoxSubmit').and.callFake(function() {
-					CommandBus.execute('SearchTransaction', {
-						term: 'lr'
-					});
-				});
-				spyOn(CommandBus, 'execute').and.callThrough();
-				spyOn(SearchTransactionHandler, 'handle').and.callThrough();
-				spyOn(TransactionSearch, 'update').and.callThrough();
-				spyOn(Observer, 'publish').and.callThrough();
-				spyOn(transCtrl, 'load').and.callThrough();
-			});
+            	}
+            };
+            searchTransElement = {};
+            transScope = {
+            	$on: function(){
+            		
+            	}
+            };
+            searchTransCtrl = _$controller_('SearchTransactionCtrl', {
+                $scope: searchTransScope,
+                $element: {
+                    find: function() {
 
-			beforeEach(function() {
-				searchTransScope.handleSearchBoxSubmit();
-			});
+                    }
+                }
+            });
+            transCtrl = _$controller_('TransactionsCtrl', {
+                $scope: transScope
+            });
+        }));
 
-			it('then execute() in CommandBus should be called with SearchTransaction command', function() {
-				expect(CommandBus.execute).toHaveBeenCalled();
-				expect(CommandBus.execute).toHaveBeenCalledWith('SearchTransaction', {
-					term: 'lr'
-				});
-			});
+        describe('When search box submit', function() {
+            beforeEach(function() {
+                spyOn(searchTransScope, 'handleSearchBoxKeyUp').and.callFake(function() {
+                    CommandBus.execute('SearchTransaction', {
+                        term: 'lr'
+                    });
+                });
+                spyOn(CommandBus, 'execute').and.callThrough();
+                spyOn(SearchTransactionHandler, 'handle').and.callThrough();
+                spyOn(TransactionSearch, 'update').and.callThrough();
+                spyOn(Observer, 'publish').and.callThrough();
+                // spyOn(transCtrl, 'load').and.callThrough();
+            });
 
-			it('then SearchTransactionHandler should be handled command', function() {
-				expect(SearchTransactionHandler.handle).toHaveBeenCalled();
-			});
+            beforeEach(function() {
+                searchTransScope.handleSearchBoxKeyUp();
+            });
 
-			it('then TransactionSearch should be updated term', function() {
-				expect(TransactionSearch.update).toHaveBeenCalled();
-				expect(TransactionSearch.update).toHaveBeenCalledWith('lr');
-			});
+            it('then execute() in CommandBus should be called with SearchTransaction command', function() {
+                expect(CommandBus.execute).toHaveBeenCalled();
+                expect(CommandBus.execute).toHaveBeenCalledWith('SearchTransaction', {
+                    term: 'lr'
+                });
+            });
 
-			it('then Observer should be published LoadTransaction message', function() {
-				expect(Observer.publish).toHaveBeenCalled();
-				expect(Observer.publish).toHaveBeenCalledWith('LoadTransactions');
-			});
+            it('then SearchTransactionHandler should be handled command', function() {
+                expect(SearchTransactionHandler.handle).toHaveBeenCalled();
+            });
 
-			it('then TransactionListCtrl load() should be called', function() {
-				expect(transCtrl.load).toHaveBeenCalled();
-			});
-		});
+            it('then TransactionSearch should be updated term', function() {
+                expect(TransactionSearch.update).toHaveBeenCalled();
+                expect(TransactionSearch.update).toHaveBeenCalledWith('lr');
+            });
 
-	});
+            it('then Observer should be published LoadTransaction message', function() {
+                expect(Observer.publish).toHaveBeenCalled();
+                expect(Observer.publish).toHaveBeenCalledWith('LoadTransactions');
+            });
+
+            // it('then TransactionListCtrl load() should be called', function() {
+            //     expect(transCtrl.load).toHaveBeenCalled();
+            // });
+        });
+
+    });
 
 });

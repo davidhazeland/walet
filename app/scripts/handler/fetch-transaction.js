@@ -26,7 +26,7 @@ define(['observer', 'service/transactions', 'model/transactions', 'service/trans
             fetchTransactionsCallback: function(response) {
                 if (response.success) {
                     var transactions = response.data;
-                    TransactionsModel.load(transactions);
+                    // TransactionsModel.load(transactions);
                     observer.publish('TransactionsFetched', transactions);
                 }
             }

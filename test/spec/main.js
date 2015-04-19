@@ -4,8 +4,8 @@
 
 require([
 	'jquery',
-	// 'spec/behavior/index',
-	'spec/filter/index'
+	'spec/behavior/index'
+	// 'spec/filter/index'
 	], 
 function($) {
     // Run all the loaded test specs.

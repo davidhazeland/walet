@@ -55,6 +55,9 @@ define([
 				transEditorScope = {
 					$on: function(){
 						
+					},
+					$apply: function(){
+						
 					}
 				};
 				transDetailCtrl = _$controller_('TransactionDetailCtrl', {

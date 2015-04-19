@@ -41,11 +41,17 @@ define([
 				transListScope = {
 					$on: function(){
 
+					},
+					$apply: function(){
+
 					}
 				};
 				transEditorScope = {
 					$on: function(){
 
+					},
+					$apply: function(){
+						
 					}
 				};
 				transListCtrl = _$controller_('TransactionListCtrl', {
