@@ -35,10 +35,6 @@
 			&:last-child {
 				border-bottom: none;
 			}
-			td.amount {
-				color: $grass--shade;
-			}
-
 			td {
 				&.name,
 				&.amount {
@@ -111,9 +107,11 @@
 	tfoot {
 		td {
 			text-align: center;
-			a {
+			button {
 				color: $white;
 				background: $dark-gray--tint;
+				border: none;
+				outline: none;
 				font-size: em(14px);
 				font-weight: $font-weight--bold;
 				text-align: center;

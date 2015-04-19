@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 10:29:41
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-09 16:55:32
+ * @Last Modified time: 2015-04-15 10:31:23
  */
 
 'use strict';
@@ -26,17 +26,28 @@ define([
 
 	Service.prototype = {
 		fetch: function(callback){
-			var query = {};
+			var query = {
+				start: 0,
+				end: 1
+			};
 			query = TransactionType.decorate(query);
 			query = TransactionFilter.decorate(query);
 			query = TransactionSearch.decorate(query);
-
-			TransactionRESTful.get(query, callback);
+			
+			TransactionRESTful
+				.get(query)
+				.success(callback);
 		},
 
-		getById: function(id) {
-			var transaction = TransactionRESTful.get(id);
-			return transaction;
+		load: function(query, callback) {
+			var query = query || {};
+			query = TransactionType.decorate(query);
+			query = TransactionFilter.decorate(query);
+			query = TransactionSearch.decorate(query);
+			
+			TransactionRESTful
+				.get(query)
+				.success(callback);
 		}
 	};
 

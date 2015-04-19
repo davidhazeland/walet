@@ -1,0 +1,27 @@
+<div class="popup" ng-controller="TransactionDetailCtrl" ng-show="visibility">
+	<section id="popup__transaction-detail" class="transaction-detail" >
+		<h3 class="group transaction-detail__title">
+		TRANSACTION DETALS<i class="close-icon fr" ng-click="visibility = false"></i>
+		</h3>	
+		<ul class="transaction-detail-content">
+			<li class="transaction-detail-content__item">
+				<span class="title">Name</span>
+				<span class="content" ng-bind="item.name"></span>
+			</li>
+			<li class="transaction-detail-content__item">
+				<span class="title">Amount</span>
+				<span class="content" ng-class="item.type" ng-bind="item.amount | amount:item.type"></span>
+			</li>
+			<li class="transaction-detail-content__item">
+				<span class="title">Tag</span>
+				<span class="content" ng-bind="item.tag"></span>
+			</li>
+			<li class="transaction-detail-content__item">
+				<span class="title">Date</span>
+				<span class="content" ng-bind="item.date | date"></span>
+			</li>
+		</ul>
+		<button class="transaction-detail__edit fl" ng-click="handleEditBtnClick()">Edit</button>
+		<button class="transaction-detail__delete fr">Delete</button>
+	</section>
+</div>

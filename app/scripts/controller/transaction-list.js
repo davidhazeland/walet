@@ -1,53 +1,68 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-04 17:33:45
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 10:22:41
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-04 17:33:45
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-15 19:55:32
+ */
 
 'use strict';
 
 /* global define */
 
-define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer){
+define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
-		$scope.handleItemClick = this.handleItemClick;
+		// Observer register
 
-		Observer.subscribe('LoadTransactions', function(data) {
-			this.load();
-		}, this);
-		Observer.subscribe('RenderTransactions', function(data) {
-			this.render(data);
-		}, this);
-		Observer.subscribe('TransactionSaved', function(data) {
-			this.refresh(data);
-		}, this);
-		Observer.subscribe('TransactionDeleted', function(data) {
-			this.refresh(data);
-		}, this);
-	};
+		var handleTransactionsFetched = function(data) {
+				for (var i = 0; i < data.items.length; i++) {
+					data.items[i].date = new Date(data.items[i].date);
+				};
+				$scope.model = data.items;
+				$scope.$apply();
+			},
 
-	Controller.prototype = {
-		load : function (){
-			CommandBus.execute('FetchTransaction', {});
-		},
+			handleTransactionsLoaded = function(data) {
+				data = data.items;
+				for (var i = 0; i < data.length; i++) {
+					data[i].date = new Date(data[i].date);
+					$scope.model.push(data[i]);
+				};
+				$scope.$apply();
+			},
 
-		render : function(data) {
+			handleTransactionSaved = function(data) {
 
-		},
+			},
 
-		refresh : function() {
+			handleTransactionDeleted = function(data) {
 
-		},
+			};
 
-		handleItemClick: function () {
-			CommandBus.execute('ViewTransaction', {
-				id: 13
+		Observer.subscribe('TransactionsFetched', handleTransactionsFetched);
+		Observer.subscribe('TransactionsLoaded', handleTransactionsLoaded);
+		Observer.subscribe('TransactionSaved', handleTransactionSaved);
+		Observer.subscribe('TransactionDeleted', handleTransactionDeleted);
+
+		// Destroy observer
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('TransactionsFetched', handleTransactionsFetched);
+			Observer.unsubscribe('TransactionsLoaded', handleTransactionsLoaded);
+			Observer.unsubscribe('TransactionSaved', handleTransactionSaved);
+			Observer.unsubscribe('TransactionDeleted', handleTransactionDeleted);
+		});
+
+		// Scope handler
+		$scope.handleItemClick = function(item) {
+			Observer.publish('RenderTransactionDetail', angular.copy(item));
+		};
+		$scope.handleLoadMoreBtnClick = function(){
+			CommandBus.execute('LoadTransaction', {
+				length: $scope.model.length
 			});
-		}
+		};
 	};
 
-	app.controller('TransactionListCtrl',['$scope', Controller]);
+	app.controller('TransactionListCtrl', ['$scope', Controller]);
 
 	return Controller;
 });

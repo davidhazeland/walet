@@ -1,30 +1,35 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-08 16:35:18
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 16:39:22
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-08 16:35:18
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-15 14:02:53
+ */
 
 'use strict';
 
 /* global define */
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
-	var Controller = function($scope) {
-		$scope.handleSearchBoxSubmit = this.handleSearchBoxSubmit;
-	};
-
-	Controller.prototype = {
-		render : function(data){
-			
-		},
-
-		handleSearchBoxSubmit : function(){
-			CommandBus.execute('SearchTransaction', {});
+	var Controller = function($scope, $element) {
+		var input = $element.find('input');
+		
+		$scope.isTyping = false;
+		$scope.handleSearchBoxKeyUp = function(e) {
+			var term = input.val();
+			if (e.keyCode == 13) {
+				CommandBus.execute('SearchTransaction', {
+					term: term
+				});
+			}
+			$scope.isTyping = (term == '') ? false : true;
+		}
+		$scope.handleCancelBtnClick = function(){
+			input.val('');
+			$scope.isTyping = false;
 		}
 	};
 
-	app.controller('SearchTransactionCtrl',['$scope', Controller]);
+	app.controller('SearchTransactionCtrl', ['$scope', '$element', Controller]);
 
 	return Controller;
 });

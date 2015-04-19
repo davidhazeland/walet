@@ -23,12 +23,13 @@ header {
 		.search {
 			float: left;
 		}
-		a {
+		.add-button {
 			border: none;
 			background: none;
 			color: white;
 			font-size: em(18px);
 			margin-top: 14px;
+			cursor: pointer;
 			.add-circle-icon {
 				float: none;
 				margin-top: 0px;

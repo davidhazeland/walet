@@ -31,8 +31,16 @@ define([
 			// Inject angular controller //
 			//////////////////////////////////
 			beforeEach(inject(function(_$controller_) {
-				transListScope = {};
-				transDetailScope = {};
+				transListScope = {
+					$on: function(event, callback){
+						callback();
+					}
+				};
+				transDetailScope = {
+					$on: function(event, callback){
+						callback();
+					}
+				};
 				transListCtrl = _$controller_('TransactionListCtrl', {
 					$scope: transListScope
 				});
@@ -58,39 +66,22 @@ define([
 				//////////////////////
 				beforeEach(function() {
 					spyOn(transListScope, 'handleItemClick').and.callThrough();
-					spyOn(CommandBus, 'execute').and.callThrough();
-					spyOn(ViewTransactionHandler, 'handle').and.callThrough();
-					spyOn(Transactions, 'getById').and.callFake(function() {
-						return data;
-					});
 					spyOn(Observer, 'publish').and.callThrough();
-					spyOn(transDetailCtrl, 'render').and.callThrough();
 				});
 
 				beforeEach(function() {
-					transListScope.handleItemClick();
+					transListScope.handleItemClick(data);
 				});
 
-				it('handleItemClick() should be called', function() {
-					expect(transListScope.handleItemClick).toHaveBeenCalled();
-				});
-				it('then execute() in CommandBus should be called with ViewTransaction command', function() {
-					expect(CommandBus.execute).toHaveBeenCalled();
-					expect(CommandBus.execute).toHaveBeenCalledWith('ViewTransaction', jasmine.any(Object));
-				});
-				it('then ViewTransactionHandler should be handled command', function() {
-					expect(ViewTransactionHandler.handle).toHaveBeenCalled();
-					expect(ViewTransactionHandler.handle).toHaveBeenCalledWith(jasmine.any(Object));
-				});
-				it('then should be called getById() in Transactions service', function() {
-					expect(Transactions.getById).toHaveBeenCalled();
-				});
-				it('then Observer should be publish RenderTransactionDetail message', function() {
+				it('Observer should be pushlished RenderTransactionDetail message with item', function() {
 					expect(Observer.publish).toHaveBeenCalled();
 					expect(Observer.publish).toHaveBeenCalledWith('RenderTransactionDetail', data);
 				});
-				it('then TransactionDetail should be called render()', function() {
-					expect(transDetailCtrl.render).toHaveBeenCalled();
+				it('then TransactionDetail scope should be equal data', function() {
+					expect(transDetailScope.item).toEqual(data);
+				});
+				it('then should be show Transaction detail popup', function(){
+					expect(transDetailScope.visibility).toEqual(true);
 				});
 			});
 		});

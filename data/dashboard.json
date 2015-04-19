@@ -1,0 +1,79 @@
+{
+	"tag": {
+		"networth": [{
+			"value": 150,
+			"color": "#FDB45C",
+			"highlight": "#FFC870",
+			"label": "Yellow"
+		}, {
+			"value": 500,
+			"color": "#967adc",
+			"highlight": "#FF5A5E",
+			"label": "Violet"
+		}, {
+			"value": 170,
+			"color": "#46BFBD",
+			"highlight": "#5AD3D1",
+			"label": "Green"
+		}],
+		"expense": [{
+			"value": 200,
+			"color": "#FDB45C",
+			"highlight": "#FFC870",
+			"label": "Yellow"
+		}, {
+			"value": 80,
+			"color": "#967adc",
+			"highlight": "#FF5A5E",
+			"label": "Violet"
+		}, {
+			"value": 70,
+			"color": "#46BFBD",
+			"highlight": "#5AD3D1",
+			"label": "Green"
+		}],
+		"income": [{
+			"value": 100,
+			"color": "#FDB45C",
+			"highlight": "#FFC870",
+			"label": "Yellow"
+		}, {
+			"value": 180,
+			"color": "#967adc",
+			"highlight": "#FF5A5E",
+			"label": "Violet"
+		}, {
+			"value": 50,
+			"color": "#46BFBD",
+			"highlight": "#5AD3D1",
+			"label": "Green"
+		}]
+	},
+	"compare": {
+		"labels": ["", "February", "March", "April", "May", "June", "July"],
+		"datasets": [{
+			"label": "Income",
+			"fillColor": "rgba(160,212,104,0.2)",
+			"strokeColor": "rgba(160,212,104,1)",
+			"pointColor": "rgba(160,212,104,1)",
+			"pointStrokeColor": "#fff",
+			"pointHighlightFill": "#fff",
+			"pointHighlightStroke": "rgba(160,212,104,1)",
+			"data": [65, 59, 80, 81, 56, 55, 40]
+		}, {
+			"label": "Expense",
+			"fillColor": "rgba(237, 85 , 101, 0.2)",
+			"strokeColor": "rgba(237, 85 , 101, 0.8)",
+			"pointColor": "rgba(237, 85 , 101, 1)",
+			"pointStrokeColor": "#fff",
+			"pointHighlightFill": "#fff",
+			"pointHighlightStroke": "rgba(237, 85 , 101, 1)",
+			"data": [28, 48, 40, 19, 86, 27, 90]
+		}]
+	},
+	"overview": {
+		"networth": 1000,
+		"income": 1300,
+		"expense": 700
+	}
+}

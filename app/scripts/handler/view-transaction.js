@@ -2,7 +2,7 @@
 * @Author: ThanhCong
 * @Date:   2015-04-06 09:59:15
 * @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-08 16:40:28
+* @Last Modified time: 2015-04-11 21:04:29
 */
 
 'use strict';
@@ -16,8 +16,7 @@ define(['observer', 'service/transactions'], function(Observer, Transactions){
 
 	handler.prototype = {
 		handle : function(data){
-			var transaction = Transactions.getById(data.id);
-			Observer.publish('RenderTransactionDetail', transaction);
+			
 		}
 	};
 

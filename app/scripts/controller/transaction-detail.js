@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-06 13:48:39
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-09 10:17:12
+ * @Last Modified time: 2015-04-14 17:06:01
  */
 
 'use strict';
@@ -11,33 +11,36 @@
 
 define(['app', 'commandBus', 'observer'], function(app, CommandBus, Observer) {
 	var Controller = function($scope) {
-		Observer.subscribe('RenderTransactionDetail', function(data) {
-			this.render(data);
-		}, this);
-		Observer.subscribe('TransactionDeleted', function(data) {
-			this.collapse();
-		}, this);
+		// Observer register
+		var handleRenderTransactionDetail = function(item) {
+				$scope.item = item;
+				$scope.visibility = true;
+			},
+			handleTransactionDeleted = function() {
+				$scope.visibility = false;
+			};
 
-		$scope.handleEditBtnClick = this.handleEditBtnClick;
-		$scope.handleDeleteBtnClick = this.handleDeleteBtnClick;
-	};
+		Observer.subscribe('RenderTransactionDetail', handleRenderTransactionDetail, this);
+		Observer.subscribe('TransactionDeleted', handleTransactionDeleted, this);
 
-	Controller.prototype = {
-		render: function(data) {
+		// Destroy Observer
+		$scope.$on('$destroy', function() {
+			Observer.unsubscribe('RenderTransactionDetail', handleRenderTransactionDetail, this);
+			Observer.unsubscribe('TransactionDeleted', handleTransactionDeleted, this);
+		});
 
-		},
-
-		collapse : function () {
-
-		},
-
-		handleEditBtnClick: function() {
-			CommandBus.execute('EditTransaction', {});
-		},
-
-		handleDeleteBtnClick: function() {
+		// Scope property
+		$scope.visibility = false;
+		$scope.handleCloseBtnClick = function() {
+			$scope.visibility = false;
+		};
+		$scope.handleEditBtnClick = function() {
+			$scope.visibility = false;
+			Observer.publish('OpenTransactionEditor', $scope.item);
+		};
+		$scope.handleDeleteBtnClick = function() {
 			CommandBus.execute('DeleteTransaction', {});
-		}
+		};
 	};
 
 	app.controller('TransactionDetailCtrl', ['$scope', Controller]);

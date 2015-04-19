@@ -1,0 +1,15 @@
+<header ng-controller="HeaderCtrl">
+	<div class="container is-collapsed-desktop">
+		<span class="title">Dashboard</span>
+		<i class="menu-icon" ng-click="toggleMenu()"></i>
+		<i class="add-icon" ng-click="handleAddBtnClick()"></i>
+	</div>	
+	<div class="container">
+		<section class="search is-expanded-desktop" ng-controller="SearchTransactionCtrl">
+			<input type="search" class="search__input" ng-keyup="handleSearchBoxKeyUp($event)"/>
+			<i class="search-icon search__icon" ng-show="!isTyping"></i>
+			<i class="cancel-icon search__cancel" ng-show="isTyping" ng-click="handleCancelBtnClick()"></i>
+		</section>
+		<span class="add-button fr is-expanded-desktop" ng-click="handleAddBtnClick()"><i class="add-circle-icon"></i>ADD</span>
+	</div>
+</header>

@@ -2,7 +2,7 @@
  * @Author: ThanhCong
  * @Date:   2015-04-08 13:21:09
  * @Last Modified by:   ThanhCong
- * @Last Modified time: 2015-04-08 15:26:40
+ * @Last Modified time: 2015-04-15 10:07:51
  */
 
 'use strict';
@@ -38,8 +38,22 @@ define([
 			// Inject angular controller //
 			//////////////////////////////////
 			beforeEach(inject(function(_$controller_) {
-				transListScope = {};
-				transEditorScope = {};
+				transListScope = {
+					$on: function(){
+
+					},
+					$apply: function(){
+
+					}
+				};
+				transEditorScope = {
+					$on: function(){
+
+					},
+					$apply: function(){
+						
+					}
+				};
 				transListCtrl = _$controller_('TransactionListCtrl', {
 					$scope: transListScope
 				});
@@ -65,8 +79,6 @@ define([
 						});
 					});
 					spyOn(Observer, 'publish').and.callThrough();
-					spyOn(transEditorCtrl, 'collapse').and.callThrough();
-					spyOn(transListCtrl, 'refresh').and.callThrough();
 				});
 
 				describe('If transaction existed', function() {
@@ -93,7 +105,7 @@ define([
 					});
 
 					it('then save() in Tranasction service should be called', function() {
-						expect(Transaction.save).toHaveBeenCalled();
+					expect(Transaction.save).toHaveBeenCalled();
 					});
 
 					it('then Observer should publish TransactionSaved message', function() {
@@ -102,12 +114,12 @@ define([
 					});
 
 					it('then Transaction editor should be collapsed', function() {
-						expect(transEditorCtrl.collapse).toHaveBeenCalled();
+						expect(transEditorScope.visibility).toEqual(false);
 					});
 
-					it('then Transaction list should be refreshed', function() {
-						expect(transListCtrl.refresh).toHaveBeenCalled();
-					});
+					// it('then Transaction list should be refreshed', function() {
+					// 	expect(transListCtrl.refresh).toHaveBeenCalled();
+					// });
 				});
 				describe('Else', function() {
 					beforeEach(function() {
@@ -138,12 +150,12 @@ define([
 					});
 
 					it('then Transaction editor should be collapsed', function() {
-						expect(transEditorCtrl.collapse).toHaveBeenCalled();
+						expect(transEditorScope.visibility).toEqual(false);
 					});
 
-					it('then Transaction list should be refreshed', function() {
-						expect(transListCtrl.refresh).toHaveBeenCalled();
-					});
+					// it('then Transaction list should be refreshed', function() {
+					// 	expect(transListCtrl.refresh).toHaveBeenCalled();
+					// });
 				});
 			});
 		});

@@ -1,0 +1,25 @@
+	<table class="transaction" ng-controller="TransactionListCtrl">
+				<thead class="is-expanded-desktop">
+					<tr>
+						<th class="name">Name</th>
+						<th class="amount">Amount</th>
+						<th class="tag">Tag</th>
+						<th class="date">Date</th>
+					</tr>
+				</thead>
+				<tbody class="transaction__content">
+					<tr ng-repeat="item in model" class="group" ng-click="handleItemClick(item)">
+						<td class="name" ng-bind="item.name"></td>
+						<td class="amount" ng-class="item.type" ng-bind="item.amount | amount:item.type"></td>
+						<td class="tag" ng-bind="item.tag"></td>
+						<td class="date" ng-bind="item.date | date"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<button ng-click="handleLoadMoreBtnClick()">LOAD MORE</button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>

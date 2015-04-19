@@ -3,6 +3,13 @@
 /* global define */
 
 define([
-	'./tag-dashboard'
-	], function() {
-});
+    './view-dashboard',
+    './fetch-transaction',
+    './load-transaction',
+    './view-transaction',
+    './edit-transaction',
+    './save-transaction',
+    './filter-transaction',
+    './search-transaction',
+    './overview'
+], function() {});

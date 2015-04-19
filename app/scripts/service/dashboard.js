@@ -1,29 +1,32 @@
 /* 
-* @Author: ThanhCong
-* @Date:   2015-04-09 10:53:17
-* @Last Modified by:   ThanhCong
-* @Last Modified time: 2015-04-09 20:15:08
-*/
+ * @Author: ThanhCong
+ * @Date:   2015-04-09 10:53:17
+ * @Last Modified by:   ThanhCong
+ * @Last Modified time: 2015-04-11 23:57:03
+ */
 
 'use strict';
 
 /* global define */
 
-define(['./transaction-RESTful'], function(TransactionRESTful) {
+define([
+	'./dashboard-RESTful',
+	'./transaction-filter'
+	], function(
+		DashboardRESTful,
+		TransactionFilter
+		) {
 	var Service = function() {
 
 	};
 
 	Service.prototype = {
-		getTagData: function(callback) {
-			TransactionRESTful
-				.get()
-				.success(callback);
-		},
-
-		getCompareData: function(callback) {
-			TransactionRESTful
-				.get()
+		fetch: function(callback){
+			var query = {};
+			query = TransactionFilter.decorate(query);
+			
+			DashboardRESTful
+				.get(query)
 				.success(callback);
 		}
 	};

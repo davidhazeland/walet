@@ -1,0 +1,18 @@
+<div class="popup" ng-show="visibility" ng-controller="FilterPickerCtrl">
+	<section class="picker">
+		<h3 class="group picker__title">
+			SELECT DATE FILTER
+			<i class="close-icon fr" ng-click="visibility = false"></i>
+		</h3>	
+		<ul class="picker-selection">
+			<li 
+			class="picker-selection__item" 
+			ng-repeat="item in filters" 
+			ng-click="handleSelectionClick(item)"
+			ng-class="current == item.filter ? actived : ''" 
+			>
+				<span>{{item.name}}</span><i class="tick-icon fr"></i>
+			</li>
+		</ul>
+	</section>
+</div>

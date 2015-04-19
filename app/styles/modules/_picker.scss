@@ -17,24 +17,24 @@
 		font-size: em(14px);
 		i {
 			margin-top: 3px;
+			cursor: pointer;
 		}
 	}
 	.picker-selection {
 		&__item {
 			border-bottom: 1px solid #ccc;
+			display: block;
+			padding: 10px 15px;
+			cursor: pointer;
+			i {
+				margin-top: 3px;
+			}
 			&:last-child {
 				border-bottom: none;
 			}
 			&--current {
 				color: $white;
 				background: $primary-color;
-			}
-			a {
-				display: block;
-				padding: 10px 15px;
-				i {
-				margin-top: 3px;
-				}
 			}
 		}
 	}

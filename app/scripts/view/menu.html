@@ -1,0 +1,36 @@
+<div id="menu" ng-controller="MenuCtrl">
+	<section id="brand">
+		<div class="container">
+			<a href="#" class="logo"></a>
+		</div>
+	</section>
+	<section class="search is-collapsed-desktop">
+		<div class="container">
+			<input type="search" class="search__input"/>
+			<i class="search-icon search__icon"></i>
+		</div>
+	</section>
+	<nav>
+		<ul class="navigation">
+			<li class="navigation__item" ng-class="current == 'dashboard' ? actived : ''">
+				<a href="#/dashboard"><i class="dashboard-icon"></i>Dashboard</a>
+			</li>
+			<li class="navigation__item" ng-class="current == 'expense' ? actived : ''">
+				<a href="#/transactions/expense"><i class="expense-icon"></i>Expense</a>
+			</li>
+			<li class="navigation__item" ng-class="current == 'income' ? actived : ''">
+				<a href="#/transactions/income"><i class="income-icon"></i>Income</a>
+			</li>
+			<li class="navigation__item">
+				<a href="http://davidhazeland.com/about.html" target="_blank">
+					<i class="contact-icon"></i>About Us
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="account">
+		<img src="images/avatar.jpg" class="account__ava"/>
+		<span class="account__name ellipsis">David Hazeland</span>
+		<a href="#" class="account__sign-out">Log out</a>
+	</section>
+</div>

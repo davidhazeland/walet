@@ -1,15 +1,14 @@
 .overview {
 	margin-top: 20px;
 	&__item {
+		span {
+			cursor: pointer;
+		}
 		.net-worth-value,
 		.expense-value,
 		.income-value {
 			font-size: em(18px);
 		}
-
-		.net-worth-value {
-			color: $grass--shade;
-		}	
 
 		.expense-value {
 			color: $grapefruit--shade;
